@@ -12,10 +12,29 @@
   --mp: #5aa9ff;
   --money: #f4c560;
 
-  /* Weapon damage types */
+  /* Physical damage (weapons + affinity icons) */
   --dmg-blunt: #f0a35e;
   --dmg-slash: #ff6b81;
   --dmg-pierce: #6bc1ff;
+  --elem-blunt: var(--dmg-blunt);
+  --elem-slash: var(--dmg-slash);
+  --elem-pierce: var(--dmg-pierce);
+
+  /* Elemental damage (affinity icons — each a unique hue) */
+  --elem-fire: #ff5722;
+  --elem-ice: #4dd0e1;
+  --elem-thunder: #ffca28;
+  --elem-wind: #50f358;
+  --elem-nuclear: #06db94;
+  --elem-psychic: #eb33c3;
+  --elem-light: #fff9bf;
+  --elem-dark: #7e65b3;
+  --elem-almighty: #c5b3ff;
+
+  /* Non-damage attack elements */
+  --elem-heal: #f5b4ce;
+  --elem-status: #b04ddb;
+  --elem-support: var(--accent);
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
 

@@ -6,12 +6,13 @@ import { useI18n } from '../../composables/useI18n'
 import { lineIcon } from '../icons/iconRegistry'
 import AppIcon from '../icons/AppIcon.vue'
 import StatBonusList from './StatBonusList.vue'
+import AffinityTable from './AffinityTable.vue'
 import WeaponList from './WeaponList.vue'
 import AttackList from './AttackList.vue'
 
 const selection = useSelectionStore()
 const selectedClass = toRef(selection, 'selectedClass')
-const { attacks, statBonuses, weapons } = useClassDetails(selectedClass)
+const { attacks, statBonuses, weapons, affinities } = useClassDetails(selectedClass)
 const { t, tm } = useI18n()
 
 const iconKey = computed(() => selection.selectedLine?.icon ?? '')
@@ -31,6 +32,7 @@ const iconKey = computed(() => selection.selectedLine?.icon ?? '')
       </header>
 
       <StatBonusList :bonuses="statBonuses" />
+      <AffinityTable :affinities="affinities" />
       <WeaponList :weapons="weapons" />
       <AttackList :attacks="attacks" />
     </div>

@@ -31,7 +31,7 @@ const LINE_ICONS: Record<string, string> = {
 const ELEMENT_ICONS: Record<AttackElement, string> = {
   blunt: 'game-icons:flat-hammer',
   slash: 'game-icons:saber-slash',
-  pierce: 'game-icons:arrowhead',
+  pierce: 'game-icons:barbed-spear',
   fire: 'game-icons:flame',
   ice: 'game-icons:frozen-orb',
   thunder: 'game-icons:lightning-arc',
@@ -58,8 +58,8 @@ const WEAPON_ICONS: Record<WeaponId, string> = {
   sword: 'game-icons:broadsword',
   katana: 'game-icons:katana',
   dagger: 'game-icons:plain-dagger',
-  spear: 'game-icons:barbed-spear',
-  rapier: 'game-icons:fencer',
+  spear: 'game-icons:arrowhead',
+  rapier: 'game-icons:stiletto',
   bow: 'game-icons:pocket-bow',
   crossbow: 'game-icons:crossbow',
 }
@@ -75,3 +75,9 @@ export function weaponIcon(weapon: WeaponId): string {
 export function elementIcon(element: AttackElement): string {
   return ELEMENT_ICONS[element] ?? FALLBACK_ICON
 }
+
+/** CSS color variable for any attack element icon. */
+export function attackElementColor(element: AttackElement): string {
+  return `var(--elem-${element})`
+}
+

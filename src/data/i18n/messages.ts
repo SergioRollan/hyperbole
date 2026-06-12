@@ -12,7 +12,7 @@ export const MESSAGES = {
     es: 'Despliega cada línea para ver sus evoluciones y elige una clase.',
     en: 'Expand each line to see its evolutions and pick a class.',
   },
-  statBonuses: { es: 'Bonus de atributos', en: 'Stat bonuses' },
+  statBonuses: { es: 'Atributos', en: 'Stats' },
   noStatBonuses: {
     es: 'Esta clase aún no define bonus de atributos.',
     en: 'This class has no stat bonuses defined yet.',

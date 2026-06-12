@@ -33,7 +33,7 @@ export const CLASS_WEAPONS: Record<string, ClassWeaponry> = {
   thief: { weapons: ['dagger'], signature: 'dagger' },
   assassin: { weapons: ['dagger'], signature: 'dagger' },
   umbramancer: { weapons: ['dagger', 'grimoire'], signature: 'grimoire' },
-  ninja: { weapons: ['dagger', 'katana'], signature: 'katana' },
+  ninja: { weapons: ['dagger', 'katana'], signature: 'dagger' },
 
   // --- Warrior line ---
   warrior: { weapons: ['sword', 'mace', 'bow'], signature: 'sword' },
@@ -56,7 +56,7 @@ export const CLASS_WEAPONS: Record<string, ClassWeaponry> = {
   guardian: { weapons: ['spear', 'axe', 'shield'], signature: 'shield' },
   rider: { weapons: ['spear', 'sword'], signature: 'spear' },
   valkyrie: { weapons: ['spear', 'sword', 'staff'], signature: 'spear' },
-  dark_paladin: { weapons: ['spear', 'sword', 'rapier', 'shield'], signature: 'sword' },
+  dark_paladin: { weapons: ['sword', 'rapier', 'shield'], signature: 'sword' },
 
   // --- Druid line ---
   druid: { weapons: ['grimoire', 'staff'], signature: 'grimoire' },
@@ -64,27 +64,27 @@ export const CLASS_WEAPONS: Record<string, ClassWeaponry> = {
   spiritualist: { weapons: ['grimoire', 'staff', 'dagger'], signature: 'grimoire' },
   necromancer: { weapons: ['grimoire', 'staff', 'dagger'], signature: 'grimoire' },
   scientist: { weapons: ['grimoire', 'staff', 'rapier'], signature: 'grimoire' },
-  astromancer: { weapons: ['grimoire', 'staff', 'dagger', 'rapier'], signature: 'grimoire' },
-  chronomancer: { weapons: ['grimoire', 'staff', 'dagger', 'rapier'], signature: 'grimoire' },
+  astromancer: { weapons: ['grimoire', 'staff', 'rapier'], signature: 'grimoire' },
+  chronomancer: { weapons: ['grimoire', 'staff', 'rapier'], signature: 'grimoire' },
 
   // --- Captain line ---
   captain: { weapons: ['axe'], signature: 'axe' },
-  commander: { weapons: ['axe', 'hammer', 'shield'], signature: 'axe' },
-  general: { weapons: ['axe', 'hammer', 'rapier', 'shield'], signature: 'axe' },
+  commander: { weapons: ['axe', 'shield'], signature: 'axe' },
+  general: { weapons: ['axe', 'hammer', 'shield'], signature: 'axe' },
 
   // --- Artist line ---
   artist: { weapons: ['rapier'], signature: 'rapier' },
-  jester: { weapons: ['dagger', 'rapier'], signature: 'dagger' },
-  bard: { weapons: ['dagger', 'rapier', 'staff'], signature: 'rapier' },
-  dancer: { weapons: ['dagger', 'katana', 'rapier', 'grimoire'], signature: 'dagger' },
+  jester: { weapons: ['dagger', 'rapier'], signature: 'rapier' },
+  bard: { weapons: ['dagger', 'rapier', 'mace'], signature: 'mace' },
+  dancer: { weapons: ['dagger', 'katana', 'rapier'], signature: 'rapier' },
   charlatan: { weapons: ['rapier', 'mace'], signature: 'rapier' },
   magnate: { weapons: ['rapier', 'mace', 'crossbow'], signature: 'rapier' },
 
   // --- Explorer line ---
   explorer: { weapons: ['dagger', 'mace', 'bow'], signature: 'bow' },
-  survivor: { weapons: ['dagger', 'mace', 'bow'], signature: 'dagger' },
-  apothecary: { weapons: ['dagger', 'mace', 'bow', 'staff'], signature: 'staff' },
-  hunter: { weapons: ['dagger', 'fist', 'mace', 'bow'], signature: 'bow' },
+  survivor: { weapons: ['dagger', 'mace', 'bow'], signature: 'bow' },
+  apothecary: { weapons: ['dagger', 'mace', 'staff'], signature: 'mace' },
+  hunter: { weapons: ['dagger', 'fist', 'bow'], signature: 'bow' },
 }
 
 /** Returns the weaponry of that class only — never merged with ancestors. */

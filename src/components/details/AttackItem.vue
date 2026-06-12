@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import type { Attack } from '../../domain'
 import { useI18n } from '../../composables/useI18n'
-import { elementIcon } from '../icons/iconRegistry'
+import { attackElementColor, elementIcon } from '../icons/iconRegistry'
 import AppIcon from '../icons/AppIcon.vue'
 
 const props = defineProps<{
@@ -38,6 +38,7 @@ const cost = computed<CostView>(() => {
       :name="elementIcon(attack.element)"
       size="1.5em"
       class="attack-item__icon"
+      :style="{ color: attackElementColor(attack.element) }"
     />
 
     <div class="attack-item__body">
@@ -74,7 +75,6 @@ const cost = computed<CostView>(() => {
 
 .attack-item__icon {
   flex: none;
-  color: var(--accent);
   padding-top: 0.1rem;
 }
 

@@ -1,6 +1,15 @@
 import { computed, type Ref } from 'vue'
-import type { Attack, AttributeKey, LocalizedText, RpgClass, Weapon } from '../domain'
-import { ATTRIBUTES } from '../domain'
+import type {
+  AffinityLevel,
+  Attack,
+  AttributeKey,
+  DamageElement,
+  LocalizedText,
+  RpgClass,
+  Weapon,
+} from '../domain'
+import { AFFINITY_LABELS, ATTACK_ELEMENTS, ATTRIBUTES, DAMAGE_ELEMENTS } from '../domain'
+import { affinitiesFor } from '../data/affinities/class-affinities.data'
 import { statValue } from '../data/stats/build-stat-bonuses'
 import { statsFor } from '../data/stats/class-stats.data'
 import { weaponryFor } from '../data/weapons/class-weapons.data'
@@ -26,11 +35,20 @@ export interface WeaponEntry {
   isSignature: boolean
 }
 
+/** One cell of the affinity table. */
+export interface AffinityEntry {
+  element: DamageElement
+  elementLabel: LocalizedText
+  level: AffinityLevel
+  label: LocalizedText
+}
+
 /**
  * Resolves class details for the UI:
  *  - attacks resolved by id, sorted ascending by level (earliest first)
  *  - all eight stat bonuses for the selected class only (0–8 scale, not cumulative)
  *  - usable weapons, with the class-defining one flagged as signature
+ *  - damage affinities for every damage element (missing = normal)
  */
 export function useClassDetails(rpgClass: Ref<RpgClass | undefined>) {
   const attacks = computed<ResolvedAttack[]>(() => {
@@ -68,5 +86,21 @@ export function useClassDetails(rpgClass: Ref<RpgClass | undefined>) {
     }))
   })
 
-  return { attacks, statBonuses, weapons }
+  const affinities = computed<AffinityEntry[]>(() => {
+    const current = rpgClass.value
+    if (!current) return []
+    const classAffinities = affinitiesFor(current.id)
+    return DAMAGE_ELEMENTS.map((element) => {
+      const level = classAffinities[element] ?? 'normal'
+      return {
+        element,
+        elementLabel:
+          ATTACK_ELEMENTS.find((meta) => meta.key === element)?.label ?? { es: '', en: '' },
+        level,
+        label: AFFINITY_LABELS[level],
+      }
+    })
+  })
+
+  return { attacks, statBonuses, weapons, affinities }
 }
