@@ -14,7 +14,7 @@ import type { ClassAffinities } from '../../domain'
  */
 export const CLASS_AFFINITIES: Record<string, ClassAffinities> = {
   // --- Mage line: fragile to blades; elemental mastery grows with phase ---
-  mage: { slash: 'weak', fire: 'resist' },
+  mage: { slash: 'weak', ice: 'resist' },
   archmage: { slash: 'weak', fire: 'resist', ice: 'resist' },
   shaman: { slash: 'weak', thunder: 'resist', wind: 'resist' },
   pyromancer: { ice: 'weak', fire: 'absorb', nuclear: 'resist' },
@@ -31,10 +31,10 @@ export const CLASS_AFFINITIES: Record<string, ClassAffinities> = {
 
   // --- Healer line: vulnerable to darkness; light and faith protect ---
   healer: { dark: 'weak', light: 'resist' },
-  cleric: { dark: 'weak', light: 'resist', blunt: 'resist' },
-  sacromancer: { dark: 'weak', light: 'absorb', blunt: 'resist' },
-  sage: { dark: 'weak', light: 'null', blunt: 'null' },
-  heretic: { slash: 'weak', light: 'resist', dark: 'resist', blunt: 'resist' },
+  cleric: { dark: 'weak', light: 'resist', fire: 'resist' },
+  sacromancer: { dark: 'weak', light: 'absorb', fire: 'resist' },
+  sage: { dark: 'weak', light: 'null', fire: 'resist' },
+  heretic: { slash: 'weak', light: 'resist', dark: 'resist', fire: 'resist' },
 
   // --- Thief line: blunt hits hard; agility and shadow help ---
   thief: { light: 'weak', wind: 'resist' },
@@ -54,7 +54,7 @@ export const CLASS_AFFINITIES: Record<string, ClassAffinities> = {
   // --- Fighter line: piercing breaks guard; fists endure ---
   fighter: { pierce: 'weak', blunt: 'resist' },
   pugilist: { pierce: 'weak', blunt: 'resist', slash: 'resist' },
-  monk: { pierce: 'weak', blunt: 'resist', slash: 'resist', thunder: 'resist' },
+  monk: { pierce: 'weak', blunt: 'resist', slash: 'null', thunder: 'resist' },
 
   // --- Paladin line: darkness is the foe; blades and holy wards ---
   paladin: { dark: 'weak', blunt: 'resist' },
@@ -77,7 +77,7 @@ export const CLASS_AFFINITIES: Record<string, ClassAffinities> = {
   // --- Captain line: ice slows the march; heavy weapons endure ---
   captain: { thunder: 'weak', ice: 'resist' },
   commander: { thunder: 'weak', ice: 'resist', slash: 'resist' },
-  general: { thunder: 'weak', ice: 'null', slash: 'null' },
+  general: { thunder: 'weak', ice: 'null', slash: 'resist' },
 
   // --- Artist line: blunt staggers performers; wit and charm shield ---
   artist: { blunt: 'weak', slash: 'resist' },

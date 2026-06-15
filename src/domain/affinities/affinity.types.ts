@@ -29,7 +29,7 @@ export type AffinityLevel = 'normal' | 'weak' | 'resist' | 'null' | 'absorb' | '
 /** Short labels shown in the affinity table. */
 export const AFFINITY_LABELS: Record<AffinityLevel, LocalizedText> = {
   normal: { es: '·', en: '·' },
-  weak: { es: 'Deb', en: 'Wk' },
+  weak: { es: 'Déb', en: 'Wk' },
   resist: { es: 'Res', en: 'Res' },
   null: { es: 'Nul', en: 'Null' },
   absorb: { es: 'Abs', en: 'Abs' },
