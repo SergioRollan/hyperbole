@@ -77,8 +77,9 @@ export const CLASS_WEAPONS: Record<string, ClassWeaponry> = {
   jester: { weapons: ['dagger', 'rapier'], signature: 'rapier' },
   bard: { weapons: ['dagger', 'rapier', 'mace'], signature: 'mace' },
   dancer: { weapons: ['dagger', 'katana', 'rapier'], signature: 'rapier' },
-  charlatan: { weapons: ['rapier', 'mace'], signature: 'rapier' },
-  magnate: { weapons: ['rapier', 'mace', 'crossbow'], signature: 'rapier' },
+  charlatan: { weapons: ['dagger', 'mace'], signature: 'dagger' },
+  trickster: { weapons: ['dagger', 'mace', 'crossbow'], signature: 'dagger' },
+  magnate: { weapons: ['dagger', 'rapier', 'crossbow'], signature: 'dagger' },
 
   // --- Explorer line ---
   explorer: { weapons: ['dagger', 'mace', 'bow'], signature: 'bow' },

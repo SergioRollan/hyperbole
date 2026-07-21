@@ -118,9 +118,9 @@ export const ATTACKS: Record<string, Attack> = {
   },
 
   // --- fire ---
-  spark: {
-    id: 'spark',
-    name: { es: 'Chispa', en: 'Spark' },
+  fire_1: {
+    id: 'fire_1',
+    name: { es: 'Agi', en: 'Agi' },
     description: {
       es: 'Inflige daño mágico de fuego leve a un enemigo.',
       en: 'Deals light fire magic damage to one enemy.',
@@ -128,31 +128,91 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'fire',
     cost: { kind: 'mp', amount: 4 },
   },
-  fireball: {
-    id: 'fireball',
-    name: { es: 'Bola de fuego', en: 'Fireball' },
+  fire_2: {
+    id: 'fire_2',
+    name: { es: 'Maragi', en: 'Maragi' },
+    description: {
+      es: 'Inflige daño mágico de fuego leve a todos los enemigos.',
+      en: 'Deals light fire magic damage to all enemies.',
+    },
+    element: 'fire',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  fire_3: {
+    id: 'fire_3',
+    name: { es: 'Agilao', en: 'Agilao' },
     description: {
       es: 'Inflige daño mágico de fuego medio a un enemigo.',
       en: 'Deals medium fire magic damage to one enemy.',
     },
     element: 'fire',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  fire_4: {
+    id: 'fire_4',
+    name: { es: 'Maragion', en: 'Maragion' },
+    description: {
+      es: 'Inflige daño mágico de fuego medio a todos los enemigos.',
+      en: 'Deals medium fire magic damage to all enemies.',
+    },
+    element: 'fire',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  fire_5: {
+    id: 'fire_5',
+    name: { es: 'Agidyne', en: 'Agidyne' },
+    description: {
+      es: 'Inflige daño mágico de fuego grave a un enemigo.',
+      en: 'Deals heavy fire magic damage to one enemy.',
+    },
+    element: 'fire',
     cost: { kind: 'mp', amount: 12 },
   },
-  inferno: {
-    id: 'inferno',
-    name: { es: 'Infierno', en: 'Inferno' },
+  fire_6: {
+    id: 'fire_6',
+    name: { es: 'Maragidyne', en: 'Maragidyne' },
     description: {
-      es: 'Inflige daño mágico de fuego severo a todos los enemigos.',
+      es: 'Inflige daño mágico de fuego grave a todos los enemigos.',
       en: 'Deals heavy fire magic damage to all enemies.',
     },
     element: 'fire',
-    cost: { kind: 'mp', amount: 38 },
+    cost: { kind: 'mp', amount: 28 },
+  },
+  fire_7: {
+    id: 'fire_7',
+    name: { es: 'Agibarion', en: 'Agibarion' },
+    description: {
+      es: 'Inflige daño mágico de fuego severo a un enemigo.',
+      en: 'Deals severe fire magic damage to one enemy.',
+    },
+    element: 'fire',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  fire_8: {
+    id: 'fire_8',
+    name: { es: 'Maragibarion', en: 'Maragibarion' },
+    description: {
+      es: 'Inflige daño mágico de fuego severo a todos los enemigos.',
+      en: 'Deals severe fire magic damage to all enemies.',
+    },
+    element: 'fire',
+    cost: { kind: 'mp', amount: 45 },
+  },
+  fire_9: {
+    id: 'fire_9',
+    name: { es: 'Meteoro', en: 'Meteor' },
+    description: {
+      es: 'Inflige daño mágico de fuego colosal a todos los enemigos, con probabilidad baja de infligir quemadura.',
+      en: 'Deals colossal fire magic damage to all enemies, with a low chance of inflicting burn.',
+    },
+    element: 'fire',
+    cost: { kind: 'mp', amount: 66 },
   },
 
   // --- ice ---
-  frost: {
-    id: 'frost',
-    name: { es: 'Escarcha', en: 'Frost' },
+  ice_1: {
+    id: 'ice_1',
+    name: { es: 'Bufu', en: 'Bufu' },
     description: {
       es: 'Inflige daño mágico de hielo leve a un enemigo.',
       en: 'Deals light ice magic damage to one enemy.',
@@ -160,9 +220,29 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'ice',
     cost: { kind: 'mp', amount: 4 },
   },
-  blizzard: {
-    id: 'blizzard',
-    name: { es: 'Ventisca', en: 'Blizzard' },
+  ice_2: {
+    id: 'ice_2',
+    name: { es: 'Mabufu', en: 'Mabufu' },
+    description: {
+      es: 'Inflige daño mágico de hielo leve a todos los enemigos.',
+      en: 'Deals light ice magic damage to all enemies.',
+    },
+    element: 'ice',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  ice_3: {
+    id: 'ice_3',
+    name: { es: 'Bufula', en: 'Bufula' },
+    description: {
+      es: 'Inflige daño mágico de hielo medio a un enemigo.',
+      en: 'Deals medium ice magic damage to one enemy.',
+    },
+    element: 'ice',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  ice_4: {
+    id: 'ice_4',
+    name: { es: 'Mabufula', en: 'Mabufula' },
     description: {
       es: 'Inflige daño mágico de hielo medio a todos los enemigos.',
       en: 'Deals medium ice magic damage to all enemies.',
@@ -170,43 +250,163 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'ice',
     cost: { kind: 'mp', amount: 18 },
   },
-  deluge: {
-    id: 'deluge',
-    name: { es: 'Diluvio', en: 'Deluge' },
+  ice_5: {
+    id: 'ice_5',
+    name: { es: 'Bufudyne', en: 'Bufudyne' },
     description: {
-      es: 'Inflige daño mágico de hielo severo a todos los enemigos.',
+      es: 'Inflige daño mágico de hielo grave a un enemigo.',
+      en: 'Deals heavy ice magic damage to one enemy.',
+    },
+    element: 'ice',
+    cost: { kind: 'mp', amount: 12 },
+  },
+  ice_6: {
+    id: 'ice_6',
+    name: { es: 'Mabufudyne', en: 'Mabufudyne' },
+    description: {
+      es: 'Inflige daño mágico de hielo grave a todos los enemigos.',
       en: 'Deals heavy ice magic damage to all enemies.',
     },
     element: 'ice',
-    cost: { kind: 'mp', amount: 38 },
+    cost: { kind: 'mp', amount: 28 },
+  },
+  ice_7: {
+    id: 'ice_7',
+    name: { es: 'Bufubarion', en: 'Bufubarion' },
+    description: {
+      es: 'Inflige daño mágico de hielo severo a un enemigo.',
+      en: 'Deals severe ice magic damage to one enemy.',
+    },
+    element: 'ice',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  ice_8: {
+    id: 'ice_8',
+    name: { es: 'Mabufubarion', en: 'Mabufubarion' },
+    description: {
+      es: 'Inflige daño mágico de hielo severo a todos los enemigos.',
+      en: 'Deals severe ice magic damage to all enemies.',
+    },
+    element: 'ice',
+    cost: { kind: 'mp', amount: 45 },
+  },
+  ice_9: {
+    id: 'ice_9',
+    name: { es: 'Iceberg', en: 'Iceberg' },
+    description: {
+      es: 'Inflige daño mágico de hielo extremo a un enemigo, con probabilidad baja de infligir congelación.',
+      en: 'Deals extreme ice magic damage to one enemy, with a low chance of inflicting freeze.',
+    },
+    element: 'ice',
+    cost: { kind: 'mp', amount: 66 },
   },
 
   // --- thunder ---
-  lightning_bolt: {
-    id: 'lightning_bolt',
-    name: { es: 'Rayo', en: 'Lightning bolt' },
+  thunder_1: {
+    id: 'thunder_1',
+    name: { es: 'Zio', en: 'Zio' },
+    description: {
+      es: 'Inflige daño mágico de trueno leve a un enemigo.',
+      en: 'Deals light thunder magic damage to one enemy.',
+    },
+    element: 'thunder',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  thunder_2: {
+    id: 'thunder_2',
+    name: { es: 'Mazio', en: 'Mazio' },
+    description: {
+      es: 'Inflige daño mágico de trueno leve a todos los enemigos.',
+      en: 'Deals light thunder magic damage to all enemies.',
+    },
+    element: 'thunder',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  thunder_3: {
+    id: 'thunder_3',
+    name: { es: 'Zionga', en: 'Zionga' },
     description: {
       es: 'Inflige daño mágico de trueno medio a un enemigo.',
       en: 'Deals medium thunder magic damage to one enemy.',
     },
     element: 'thunder',
-    cost: { kind: 'mp', amount: 14 },
+    cost: { kind: 'mp', amount: 8 },
   },
-  electric_storm: {
-    id: 'electric_storm',
-    name: { es: 'Tormenta eléctrica', en: 'Electric storm' },
+  thunder_4: {
+    id: 'thunder_4',
+    name: { es: 'Mazionga', en: 'Mazionga' },
     description: {
-      es: 'Inflige daño mágico de trueno severo a todos los enemigos.',
+      es: 'Inflige daño mágico de trueno medio a todos los enemigos.',
+      en: 'Deals medium thunder magic damage to all enemies.',
+    },
+    element: 'thunder',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  thunder_5: {
+    id: 'thunder_5',
+    name: { es: 'Ziodyne', en: 'Ziodyne' },
+    description: {
+      es: 'Inflige daño mágico de trueno grave a un enemigo.',
+      en: 'Deals heavy thunder magic damage to one enemy.',
+    },
+    element: 'thunder',
+    cost: { kind: 'mp', amount: 12 },
+  },
+  thunder_6: {
+    id: 'thunder_6',
+    name: { es: 'Maziodyne', en: 'Maziodyne' },
+    description: {
+      es: 'Inflige daño mágico de trueno grave a todos los enemigos.',
       en: 'Deals heavy thunder magic damage to all enemies.',
     },
     element: 'thunder',
-    cost: { kind: 'mp', amount: 40 },
+    cost: { kind: 'mp', amount: 28 },
+  },
+  thunder_7: {
+    id: 'thunder_7',
+    name: { es: 'Ziobarion', en: 'Ziobarion' },
+    description: {
+      es: 'Inflige daño mágico de trueno severo a un enemigo.',
+      en: 'Deals severe thunder magic damage to one enemy.',
+    },
+    element: 'thunder',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  thunder_8: {
+    id: 'thunder_8',
+    name: { es: 'Maziobarion', en: 'Maziobarion' },
+    description: {
+      es: 'Inflige daño mágico de trueno severo a todos los enemigos.',
+      en: 'Deals severe thunder magic damage to all enemies.',
+    },
+    element: 'thunder',
+    cost: { kind: 'mp', amount: 45 },
+  },
+  thunder_9: {
+    id: 'thunder_9',
+    name: { es: 'Sobrecarga', en: 'Overcharge' },
+    description: {
+      es: 'Inflige daño mágico de trueno extremo a un enemigo, con probabilidad baja de infligir parálisis.',
+      en: 'Deals extreme thunder magic damage to one enemy, with a low chance of inflicting paralysis.',
+    },
+    element: 'thunder',
+    cost: { kind: 'mp', amount: 66 },
   },
 
   // --- wind ---
-  gust: {
-    id: 'gust',
-    name: { es: 'Ráfaga', en: 'Gust' },
+  wind_1: {
+    id: 'wind_1',
+    name: { es: 'Garu', en: 'Garu' },
+    description: {
+      es: 'Inflige daño mágico de viento leve a un enemigo.',
+      en: 'Deals light wind magic damage to one enemy.',
+    },
+    element: 'wind',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  wind_2: {
+    id: 'wind_2',
+    name: { es: 'Magaru', en: 'Magaru' },
     description: {
       es: 'Inflige daño mágico de viento leve a todos los enemigos.',
       en: 'Deals light wind magic damage to all enemies.',
@@ -214,157 +414,827 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'wind',
     cost: { kind: 'mp', amount: 10 },
   },
-  tornado: {
-    id: 'tornado',
-    name: { es: 'Tornado', en: 'Tornado' },
+  wind_3: {
+    id: 'wind_3',
+    name: { es: 'Garula', en: 'Garula' },
     description: {
-      es: 'Inflige daño mágico de viento severo a un enemigo.',
+      es: 'Inflige daño mágico de viento medio a un enemigo.',
+      en: 'Deals medium wind magic damage to one enemy.',
+    },
+    element: 'wind',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  wind_4: {
+    id: 'wind_4',
+    name: { es: 'Magarula', en: 'Magarula' },
+    description: {
+      es: 'Inflige daño mágico de viento medio a todos los enemigos.',
+      en: 'Deals medium wind magic damage to all enemies.',
+    },
+    element: 'wind',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  wind_5: {
+    id: 'wind_5',
+    name: { es: 'Garudyne', en: 'Garudyne' },
+    description: {
+      es: 'Inflige daño mágico de viento grave a un enemigo.',
       en: 'Deals heavy wind magic damage to one enemy.',
     },
     element: 'wind',
-    cost: { kind: 'mp', amount: 36 },
+    cost: { kind: 'mp', amount: 12 },
+  },
+  wind_6: {
+    id: 'wind_6',
+    name: { es: 'Magarudyne', en: 'Magarudyne' },
+    description: {
+      es: 'Inflige daño mágico de viento grave a todos los enemigos.',
+      en: 'Deals heavy wind magic damage to all enemies.',
+    },
+    element: 'wind',
+    cost: { kind: 'mp', amount: 28 },
+  },
+  wind_7: {
+    id: 'wind_7',
+    name: { es: 'Garubarion', en: 'Garubarion' },
+    description: {
+      es: 'Inflige daño mágico de viento severo a un enemigo.',
+      en: 'Deals severe wind magic damage to one enemy.',
+    },
+    element: 'wind',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  wind_8: {
+    id: 'wind_8',
+    name: { es: 'Magarubarion', en: 'Magarubarion' },
+    description: {
+      es: 'Inflige daño mágico de viento severo a todos los enemigos.',
+      en: 'Deals severe wind magic damage to all enemies.',
+    },
+    element: 'wind',
+    cost: { kind: 'mp', amount: 45 },
+  },
+  wind_9: {
+    id: 'wind_9',
+    name: { es: 'Huracán', en: 'Hurricane' },
+    description: {
+      es: 'Inflige daño mágico de viento colosal a todos los enemigos, con probabilidad baja de infligir mareo.',
+      en: 'Deals colossal wind magic damage to all enemies, with a low chance of inflicting dizzy.',
+    },
+    element: 'wind',
+    cost: { kind: 'mp', amount: 66 },
   },
 
   // --- nuclear ---
-  fission: {
-    id: 'fission',
-    name: { es: 'Fisión', en: 'Fission' },
+  nuclear_1: {
+    id: 'nuclear_1',
+    name: { es: 'Frei', en: 'Frei' },
     description: {
-      es: 'Inflige daño nuclear medio a todos los enemigos.',
-      en: 'Deals medium nuclear damage to all enemies.',
+      es: 'Inflige daño mágico nuclear leve a un enemigo.',
+      en: 'Deals light nuclear magic damage to one enemy.',
     },
     element: 'nuclear',
-    cost: { kind: 'mp', amount: 30 },
+    cost: { kind: 'mp', amount: 4 },
   },
-  atomic_detonation: {
-    id: 'atomic_detonation',
-    name: { es: 'Detonación atómica', en: 'Atomic detonation' },
+  nuclear_2: {
+    id: 'nuclear_2',
+    name: { es: 'Mafrei', en: 'Mafrei' },
     description: {
-      es: 'Inflige daño nuclear severo a todos los enemigos.',
-      en: 'Deals heavy nuclear damage to all enemies.',
+      es: 'Inflige daño mágico nuclear leve a todos los enemigos.',
+      en: 'Deals light nuclear magic damage to all enemies.',
     },
     element: 'nuclear',
-    cost: { kind: 'mp', amount: 44 },
+    cost: { kind: 'mp', amount: 10 },
+  },
+  nuclear_3: {
+    id: 'nuclear_3',
+    name: { es: 'Freila', en: 'Freila' },
+    description: {
+      es: 'Inflige daño mágico nuclear medio a un enemigo.',
+      en: 'Deals medium nuclear magic damage to one enemy.',
+    },
+    element: 'nuclear',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  nuclear_4: {
+    id: 'nuclear_4',
+    name: { es: 'Mafreila', en: 'Mafreila' },
+    description: {
+      es: 'Inflige daño mágico nuclear medio a todos los enemigos.',
+      en: 'Deals medium nuclear magic damage to all enemies.',
+    },
+    element: 'nuclear',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  nuclear_5: {
+    id: 'nuclear_5',
+    name: { es: 'Freidyne', en: 'Freidyne' },
+    description: {
+      es: 'Inflige daño mágico nuclear grave a un enemigo.',
+      en: 'Deals heavy nuclear magic damage to one enemy.',
+    },
+    element: 'nuclear',
+    cost: { kind: 'mp', amount: 12 },
+  },
+  nuclear_6: {
+    id: 'nuclear_6',
+    name: { es: 'Mafreidyne', en: 'Mafreidyne' },
+    description: {
+      es: 'Inflige daño mágico nuclear grave a todos los enemigos.',
+      en: 'Deals heavy nuclear magic damage to all enemies.',
+    },
+    element: 'nuclear',
+    cost: { kind: 'mp', amount: 28 },
+  },
+  nuclear_7: {
+    id: 'nuclear_7',
+    name: { es: 'Freibarion', en: 'Freibarion' },
+    description: {
+      es: 'Inflige daño mágico nuclear severo a un enemigo.',
+      en: 'Deals severe nuclear magic damage to one enemy.',
+    },
+    element: 'nuclear',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  nuclear_8: {
+    id: 'nuclear_8',
+    name: { es: 'Mafreibarion', en: 'Mafreibarion' },
+    description: {
+      es: 'Inflige daño mágico nuclear severo a todos los enemigos.',
+      en: 'Deals severe nuclear magic damage to all enemies.',
+    },
+    element: 'nuclear',
+    cost: { kind: 'mp', amount: 45 },
+  },
+  nuclear_9: {
+    id: 'nuclear_9',
+    name: { es: 'Cataclismo de vacío', en: 'Vaccum Cataclysm' },
+    description: {
+      es: 'Inflige daño mágico nuclear colosal a todos los enemigos, con probabilidad baja de infligir veneno.',
+      en: 'Deals colossal nuclear magic damage to all enemies, with a low chance of inflicting veneno.',
+    },
+    element: 'nuclear',
+    cost: { kind: 'mp', amount: 66 },
   },
 
   // --- psychic ---
-  psychic_wave: {
-    id: 'psychic_wave',
-    name: { es: 'Onda psíquica', en: 'Psychic wave' },
+  psychic_1: {
+    id: 'psychic_1',
+    name: { es: 'Psi', en: 'Psi' },
     description: {
-      es: 'Inflige daño psíquico a un enemigo.',
-      en: 'Deals psychic damage to one enemy.',
+      es: 'Inflige daño mágico psíquico leve a un enemigo.',
+      en: 'Deals light psychic magic damage to one enemy.',
+    },
+    element: 'psychic',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  psychic_2: {
+    id: 'psychic_2',
+    name: { es: 'Mapsi', en: 'Mapsi' },
+    description: {
+      es: 'Inflige daño mágico psíquico leve a todos los enemigos.',
+      en: 'Deals light psychic magic damage to all enemies.',
+    },
+    element: 'psychic',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  psychic_3: {
+    id: 'psychic_3',
+    name: { es: 'Psio', en: 'Psio' },
+    description: {
+      es: 'Inflige daño mágico psíquico medio a un enemigo.',
+      en: 'Deals medium psychic magic damage to one enemy.',
+    },
+    element: 'psychic',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  psychic_4: {
+    id: 'psychic_4',
+    name: { es: 'Mapsio', en: 'Mapsio' },
+    description: {
+      es: 'Inflige daño mágico psíquico medio a todos los enemigos.',
+      en: 'Deals medium psychic magic damage to all enemies.',
+    },
+    element: 'psychic',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  psychic_5: {
+    id: 'psychic_5',
+    name: { es: 'Psiodyne', en: 'Psiodyne' },
+    description: {
+      es: 'Inflige daño mágico psíquico grave a un enemigo.',
+      en: 'Deals heavy psychic magic damage to one enemy.',
     },
     element: 'psychic',
     cost: { kind: 'mp', amount: 12 },
   },
-  mind_domination: {
-    id: 'mind_domination',
-    name: { es: 'Dominación mental', en: 'Mind domination' },
+  psychic_6: {
+    id: 'psychic_6',
+    name: { es: 'Mapsiodyne', en: 'Mapsiodyne' },
     description: {
-      es: 'Inflige daño psíquico severo y puede confundir.',
-      en: 'Deals heavy psychic damage and may confuse.',
+      es: 'Inflige daño mágico psíquico grave a todos los enemigos.',
+      en: 'Deals heavy psychic magic damage to all enemies.',
     },
     element: 'psychic',
-    cost: { kind: 'mp', amount: 24 },
+    cost: { kind: 'mp', amount: 28 },
+  },
+  psychic_7: {
+    id: 'psychic_7',
+    name: { es: 'Psiobarion', en: 'Psiobarion' },
+    description: {
+      es: 'Inflige daño mágico psíquico severo a un enemigo.',
+      en: 'Deals severe psychic magic damage to one enemy.',
+    },
+    element: 'psychic',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  psychic_8: {
+    id: 'psychic_8',
+    name: { es: 'Mapsiobarion', en: 'Mapsiobarion' },
+    description: {
+      es: 'Inflige daño mágico psíquico severo a todos los enemigos.',
+      en: 'Deals severe psychic magic damage to all enemies.',
+    },
+    element: 'psychic',
+    cost: { kind: 'mp', amount: 45 },
+  },
+  psychic_9: {
+    id: 'psychic_9',
+    name: { es: 'Psicorruptura', en: 'Psycho Break' },
+    description: {
+      es: 'Inflige daño mágico psíquico extremo a un enemigo, con probabilidad baja de infligir amnesia.',
+      en: 'Deals extreme psychic magic damage to one enemy, with a low chance of inflicting forget.',
+    },
+    element: 'psychic',
+    cost: { kind: 'mp', amount: 66 },
   },
 
-  // --- light ---
-  holy_flash: {
-    id: 'holy_flash',
-    name: { es: 'Destello sagrado', en: 'Holy flash' },
+  // --- bless ---
+  bless_1O: {
+    id: 'bless_1O',
+    name: { es: 'Hama', en: 'Hama' },
     description: {
-      es: 'Inflige daño de luz a un enemigo.',
-      en: 'Deals light damage to one enemy.',
+      es: 'Probabilidad baja de matar instantáneamente a un enemigo.',
+      en: 'Low chance of insta-killing one enemy.',
+    },
+    element: 'light',
+    cost: { kind: 'mp', amount: 6 },
+  },
+  bless_2O: {
+    id: 'bless_2O',
+    name: { es: 'Mahama', en: 'Mahama' },
+    description: {
+      es: 'Probabilidad baja de matar instantáneamente a todos los enemigos.',
+      en: 'Low chance of insta-killing all enemies.',
+    },
+    element: 'light',
+    cost: { kind: 'mp', amount: 16 },
+  },
+  bless_3O: {
+    id: 'bless_3O',
+    name: { es: 'Hamaon', en: 'Hamaon' },
+    description: {
+      es: 'Probabilidad media de matar instantáneamente a un enemigo.',
+      en: 'Medium chance of insta-killing one enemy.',
+    },
+    element: 'light',
+    cost: { kind: 'mp', amount: 12 },
+  },
+  bless_4O: {
+    id: 'bless_4O',
+    name: { es: 'Mahamaon', en: 'Mahamaon' },
+    description: {
+      es: 'Probabilidad media de matar instantáneamente a todos los enemigos.',
+      en: 'Medium chance of insta-killin all enemies.',
+    },
+    element: 'light',
+    cost: { kind: 'mp', amount: 26 },
+  },
+  bless_5O: {
+    id: 'bless_5O',
+    name: { es: 'Samsara', en: 'Samsara' },
+    description: {
+      es: 'Probabilidad alta de matar instantáneamente a todos los enemigos.',
+      en: 'High chance of insta-killing all enemies.',
+    },
+    element: 'light',
+    cost: { kind: 'mp', amount: 40 },
+  },
+  bless_1: {
+    id: 'bless_1',
+    name: { es: 'Kouha', en: 'Kouha' },
+    description: {
+      es: 'Inflige daño mágico de bendición leve a un enemigo.',
+      en: 'Deals light bless magic damage to one enemy.',
+    },
+    element: 'light',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  bless_2: {
+    id: 'bless_2',
+    name: { es: 'Makouha', en: 'Makouha' },
+    description: {
+      es: 'Inflige daño mágico de bendición leve a todos los enemigos.',
+      en: 'Deals light bless magic damage to all enemies.',
     },
     element: 'light',
     cost: { kind: 'mp', amount: 10 },
   },
-  divine_judgment: {
-    id: 'divine_judgment',
-    name: { es: 'Juicio divino', en: 'Divine judgment' },
+  bless_3: {
+    id: 'bless_3',
+    name: { es: 'Kouga', en: 'Kouga' },
     description: {
-      es: 'Inflige daño de luz severo a todos los enemigos.',
-      en: 'Deals heavy light damage to all enemies.',
+      es: 'Inflige daño mágico de bendición medio a un enemigo.',
+      en: 'Deals medium bless magic damage to one enemy.',
     },
     element: 'light',
-    cost: { kind: 'mp', amount: 34 },
+    cost: { kind: 'mp', amount: 8 },
+  },
+  bless_4: {
+    id: 'bless_4',
+    name: { es: 'Makouga', en: 'Makouga' },
+    description: {
+      es: 'Inflige daño mágico de bendición medio a todos los enemigos.',
+      en: 'Deals medium bless magic damage to all enemies.',
+    },
+    element: 'light',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  bless_5: {
+    id: 'bless_5',
+    name: { es: 'Kougaon', en: 'Kougaon' },
+    description: {
+      es: 'Inflige daño mágico de bendición grave a un enemigo.',
+      en: 'Deals heavy bless magic damage to one enemy.',
+    },
+    element: 'light',
+    cost: { kind: 'mp', amount: 12 },
+  },
+  bless_6: {
+    id: 'bless_6',
+    name: { es: 'Makougaon', en: 'Makougaon' },
+    description: {
+      es: 'Inflige daño mágico de bendición grave a todos los enemigos.',
+      en: 'Deals heavy bless magic damage to all enemies.',
+    },
+    element: 'light',
+    cost: { kind: 'mp', amount: 28 },
+  },
+  bless_7: {
+    id: 'bless_7',
+    name: { es: 'Juicio divino', en: 'Divine judgement' },
+    description: {
+      es: 'Inflige daño mágico de bendición severo a un enemigo. Probabilidad baja de muerte instantánea.',
+      en: 'Deals severe bless magic damage to one enemy. Low chance of insta-kill.',
+    },
+    element: 'light',
+    cost: { kind: 'mp', amount: 38 },
+  },
+  bless_8: {
+    id: 'bless_8',
+    name: { es: 'Flechas brillantes', en: 'Shining arrows' },
+    description: {
+      es: 'Inflige daño mágico de bendición leve a todos los enemigos de 5 a 9 veces. Probabilidad baja de muerte instantánea.',
+      en: 'Deals light bless magic damage to all enemies 5 to 9 times. Low chance of insta-kill.',
+    },
+    element: 'light',
+    cost: { kind: 'mp', amount: 48 },
   },
 
-  // --- dark ---
-  dark_blood: {
-    id: 'dark_blood',
-    name: { es: 'Sangre oscura', en: 'Dark blood' },
+  // --- curse ---
+  curse_1O: {
+    id: 'curse_1O',
+    name: { es: 'Mudo', en: 'Mudo' },
     description: {
-      es: 'Sacrifica vida propia para infligir daño oscuro severo.',
-      en: 'Sacrifices own HP to deal heavy dark damage.',
+      es: 'Probabilidad baja de matar instantáneamente a un enemigo.',
+      en: 'Low chance of insta-killing one enemy.',
     },
     element: 'dark',
-    cost: { kind: 'hp_percent', amount: 20 },
+    cost: { kind: 'mp', amount: 6 },
   },
-  shadow_curse: {
-    id: 'shadow_curse',
-    name: { es: 'Maldición umbría', en: 'Shadow curse' },
+  curse_2O: {
+    id: 'curse_2O',
+    name: { es: 'Mamudo', en: 'Mamudo' },
     description: {
-      es: 'Inflige daño de oscuridad a un enemigo.',
-      en: 'Deals dark damage to one enemy.',
+      es: 'Probabilidad baja de matar instantáneamente a todos los enemigos.',
+      en: 'Low chance of insta-killing all enemies.',
     },
     element: 'dark',
-    cost: { kind: 'mp', amount: 14 },
+    cost: { kind: 'mp', amount: 16 },
   },
-  void: {
-    id: 'void',
-    name: { es: 'Vacío', en: 'Void' },
+  curse_3O: {
+    id: 'curse_3O',
+    name: { es: 'Mudoon', en: 'Mudoon' },
     description: {
-      es: 'Inflige daño de oscuridad severo a todos los enemigos.',
-      en: 'Deals heavy dark damage to all enemies.',
+      es: 'Probabilidad media de matar instantáneamente a un enemigo.',
+      en: 'Medium chance of insta-killing one enemy.',
     },
     element: 'dark',
-    cost: { kind: 'mp', amount: 32 },
+    cost: { kind: 'mp', amount: 12 },
+  },
+  curse_4O: {
+    id: 'curse_4O',
+    name: { es: 'Mamudoon', en: 'Mamudoon' },
+    description: {
+      es: 'Probabilidad media de matar instantáneamente a todos los enemigos.',
+      en: 'Medium chance of insta-killin all enemies.',
+    },
+    element: 'dark',
+    cost: { kind: 'mp', amount: 26 },
+  },
+  curse_5O: {
+    id: 'curse_5O',
+    name: { es: '¡Morid por mí!', en: 'Die for me!' },
+    description: {
+      es: 'Probabilidad alta de matar instantáneamente a todos los enemigos.',
+      en: 'High chance of insta-killing all enemies.',
+    },
+    element: 'dark',
+    cost: { kind: 'mp', amount: 40 },
+  },
+  curse_1: {
+    id: 'curse_1',
+    name: { es: 'Eiha', en: 'Eiha' },
+    description: {
+      es: 'Inflige daño mágico de maldición leve a un enemigo.',
+      en: 'Deals light curse magic damage to one enemy.',
+    },
+    element: 'dark',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  curse_2: {
+    id: 'curse_2',
+    name: { es: 'Maeiha', en: 'Maeiha' },
+    description: {
+      es: 'Inflige daño mágico de maldición leve a todos los enemigos.',
+      en: 'Deals light curse magic damage to all enemies.',
+    },
+    element: 'dark',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  curse_3: {
+    id: 'curse_3',
+    name: { es: 'Eiga', en: 'Eiga' },
+    description: {
+      es: 'Inflige daño mágico de maldición medio a un enemigo.',
+      en: 'Deals medium curse magic damage to one enemy.',
+    },
+    element: 'dark',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  curse_4: {
+    id: 'curse_4',
+    name: { es: 'Maeiga', en: 'Maeiga' },
+    description: {
+      es: 'Inflige daño mágico de maldición medio a todos los enemigos.',
+      en: 'Deals medium curse magic damage to all enemies.',
+    },
+    element: 'dark',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  curse_5: {
+    id: 'curse_5',
+    name: { es: 'Eigaon', en: 'Eigaon' },
+    description: {
+      es: 'Inflige daño mágico de maldición grave a un enemigo.',
+      en: 'Deals heavy curse magic damage to one enemy.',
+    },
+    element: 'dark',
+    cost: { kind: 'mp', amount: 12 },
+  },
+  curse_6: {
+    id: 'curse_6',
+    name: { es: 'Maeigaon', en: 'Maeigaon' },
+    description: {
+      es: 'Inflige daño mágico de maldición grave a todos los enemigos.',
+      en: 'Deals heavy curse magic damage to all enemies.',
+    },
+    element: 'dark',
+    cost: { kind: 'mp', amount: 28 },
+  },
+  curse_7: {
+    id: 'curse_7',
+    name: { es: 'Decreto demoníaco', en: 'Demonic decree' },
+    description: {
+      es: 'Inflige daño mágico de maldición severo a un enemigo. Probabilidad baja de muerte instantánea.',
+      en: 'Deals severe curse magic damage to one enemy. Low chance of insta-kill.',
+    },
+    element: 'dark',
+    cost: { kind: 'mp', amount: 38 },
+  },
+  curse_8: {
+    id: 'curse_8',
+    name: { es: 'Alas abisales', en: 'Abyssal wings' },
+    description: {
+      es: 'Inflige daño mágico de maldición severo a todos los enemigos. Probabilidad baja de muerte instantánea.',
+      en: 'Deals severe curse magic damage to all enemies. Low chance of insta-kill.',
+    },
+    element: 'dark',
+    cost: { kind: 'mp', amount: 48 },
   },
 
   // --- almighty ---
-  annihilation: {
-    id: 'annihilation',
-    name: { es: 'Aniquilación', en: 'Annihilation' },
+  almighty_1: {
+    id: 'almighty_1',
+    name: { es: 'Megido', en: 'Megido' },
     description: {
-      es: 'Inflige daño todopoderoso que ignora resistencias.',
-      en: 'Deals almighty damage that ignores resistances.',
+      es: 'Inflige daño mágico de maldición medio a todos los enemigos.',
+      en: 'Deals medium almighty magic damage to all enemies.',
     },
     element: 'almighty',
-    cost: { kind: 'mp', amount: 48 },
+    cost: { kind: 'mp', amount: 15 },
   },
-  final_judgment: {
-    id: 'final_judgment',
-    name: { es: 'Juicio final', en: 'Final judgment' },
+  almighty_2: {
+    id: 'almighty_2',
+    name: { es: 'Gidola', en: 'Gidola' },
     description: {
-      es: 'Inflige daño todopoderoso masivo a todos los enemigos.',
-      en: 'Deals massive almighty damage to all enemies.',
+      es: 'Inflige daño mágico de maldición grave a un enemigo.',
+      en: 'Deals heavy almighty magic damage to one enemy.',
     },
     element: 'almighty',
-    cost: { kind: 'mp', amount: 60 },
+    cost: { kind: 'mp', amount: 10 },
+  },
+  almighty_3: {
+    id: 'almighty_3',
+    name: { es: 'Megidola', en: 'Megidola' },
+    description: {
+      es: 'Inflige daño mágico de maldición grave a todos los enemigos.',
+      en: 'Deals heavy almighty magic damage to all enemies.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 25 },
+  },
+  almighty_4: {
+    id: 'almighty_4',
+    name: { es: 'Gidolaon', en: 'Gidolaon' },
+    description: {
+      es: 'Inflige daño mágico de maldición severo a un enemigo.',
+      en: 'Deals severe almighty magic damage to one enemy.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  almighty_5: {
+    id: 'almighty_5',
+    name: { es: 'Megidolaon', en: 'Megidolaon' },
+    description: {
+      es: 'Inflige daño mágico de maldición severo a todos los enemigos.',
+      en: 'Deals severe almighty magic damage to all enemies.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 50 },
+  },
+  almighty_6: {
+    id: 'almighty_6',
+    name: { es: 'Omniburst', en: 'Omniburst' },
+    description: {
+      es: 'Inflige daño mágico muy leve de fuego, hielo, trueno, viento, nuclear y psíquico a todos los enemigos.',
+      en: 'Deals very light fire, ice, thunder, wind, nuclear and psychic magic damage to all enemies.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 66 },
   },
 
   // --- status ---
-  lethal_poison: {
-    id: 'lethal_poison',
-    name: { es: 'Veneno letal', en: 'Lethal poison' },
+  ailment_burn: {
+    id: 'ailment_burn',
+    name: { es: 'Combustión', en: 'Combustion' },
     description: {
-      es: 'Envenena a un enemigo, infligiendo daño cada turno.',
-      en: 'Poisons one enemy, dealing damage each turn.',
+      es: 'Probabilidad alta de infligir quemadura a un enemigo.',
+      en: 'High chance of inflicting burn to an enemy.',
     },
     element: 'status',
-    cost: { kind: 'mp', amount: 12 },
+    cost: { kind: 'mp', amount: 3 },
   },
-  petrify: {
-    id: 'petrify',
-    name: { es: 'Petrificar', en: 'Petrify' },
+  ailment_burn_a: {
+    id: 'ailment_burn_a',
+    name: { es: 'Flor calcinante', en: 'Scorching rose' },
     description: {
-      es: 'Puede convertir en piedra a un enemigo.',
-      en: 'May turn one enemy to stone.',
+      es: 'Probabilidad media de infligir quemadura a todos los enemigos.',
+      en: 'Medium chance of inflicting burn to all enemies.',
     },
     element: 'status',
-    cost: { kind: 'mp', amount: 18 },
+    cost: { kind: 'mp', amount: 8 },
+  },
+  ailment_freeze: {
+    id: 'ailment_freeze',
+    name: { es: 'Brisa ártica', en: 'Fridge breeze' },
+    description: {
+      es: 'Probabilidad alta de infligir congelación a un enemigo.',
+      en: 'High chance of inflicting freeze to an enemy.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  ailment_freeze_a: {
+    id: 'ailment_freeze_a',
+    name: { es: 'Brisa antártica', en: 'Antartic breeze' },
+    description: {
+      es: 'Probabilidad media de infligir congelación a todos los enemigos.',
+      en: 'Medium chance of inflicting freeze to all enemies.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  ailment_dizzy: {
+    id: 'ailment_dizzy',
+    name: { es: 'Remolino rápido', en: 'Quick swirl' },
+    description: {
+      es: 'Probabilidad alta de infligir mareo a un enemigo.',
+      en: 'High chance of inflicting dizzy to an enemy.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  ailment_dizzy_a: {
+    id: 'ailment_dizzy_a',
+    name: { es: 'Vendaval deslumbrante', en: 'Flashing gale' },
+    description: {
+      es: 'Probabilidad media de infligir mareo a todos los enemigos.',
+      en: 'Medium chance of inflicting dizzy to all enemies.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  ailment_paralysis: {
+    id: 'ailment_paralysis',
+    name: { es: 'Chispa', en: 'Thunder spark' },
+    description: {
+      es: 'Probabilidad alta de infligir parálisis a un enemigo.',
+      en: 'High chance of inflicting paralysis to an enemy.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  ailment_paralysis_a: {
+    id: 'ailment_paralysis_a',
+    name: { es: 'Electrorred', en: 'Electric web' },
+    description: {
+      es: 'Probabilidad media de infligir parálisis a todos los enemigos.',
+      en: 'Medium chance of inflicting paralysis to all enemies.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  ailment_poison: {
+    id: 'ailment_poison',
+    name: { es: 'Radiación', en: 'Radiation' },
+    description: {
+      es: 'Probabilidad alta de infligir veneno a un enemigo.',
+      en: 'High chance of inflicting poison to an enemy.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  ailment_poison_a: {
+    id: 'ailment_poison_a',
+    name: { es: 'Accidente de exposición', en: 'Exposure accident' },
+    description: {
+      es: 'Probabilidad media de infligir veneno a todos los enemigos.',
+      en: 'Medium chance of inflicting poison to all enemies.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  ailment_amnesia: {
+    id: 'ailment_amnesia',
+    name: { es: 'Makajama', en: 'Makajama' },
+    description: {
+      es: 'Probabilidad alta de infligir amnesia a un enemigo.',
+      en: 'High chance of inflicting amnesia to an enemy.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  ailment_amnesia_a: {
+    id: 'ailment_amnesia_a',
+    name: { es: 'Makajamaon', en: 'Makajamaon' },
+    description: {
+      es: 'Probabilidad media de infligir amnesia a todos los enemigos.',
+      en: 'Medium chance of inflicting amnesia to all enemies.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  ailment_brainwash: {
+    id: 'ailment_brainwash',
+    name: { es: 'Marin Karin', en: 'Marin Karin' },
+    description: {
+      es: 'Probabilidad alta de infligir lavado de cerebro a un enemigo.',
+      en: 'High chance of inflicting brainwash to an enemy.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  ailment_brainwash_a: {
+    id: 'ailment_brainwash_a',
+    name: { es: 'Brain Jack', en: 'Brain Jack' },
+    description: {
+      es: 'Probabilidad media de infligir lavado de cerebro a todos los enemigos.',
+      en: 'Medium chance of inflicting brainwash to all enemies.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  ailment_sleep: {
+    id: 'ailment_sleep',
+    name: { es: 'Dormina', en: 'Dormina' },
+    description: {
+      es: 'Probabilidad alta de infligir sueño a un enemigo.',
+      en: 'High chance of inflicting sleep to an enemy.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  ailment_sleep_a: {
+    id: 'ailment_sleep_a',
+    name: { es: 'Lullaby', en: 'Lullaby' },
+    description: {
+      es: 'Probabilidad media de infligir sueño a todos los enemigos.',
+      en: 'Medium chance of inflicting sleep to all enemies.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  ailment_confusion: {
+    id: 'ailment_confusion',
+    name: { es: 'Pulinpa', en: 'Pulinpa' },
+    description: {
+      es: 'Probabilidad alta de infligir confusión a un enemigo.',
+      en: 'High chance of inflicting confusion to an enemy.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  ailment_confusion_a: {
+    id: 'ailment_confusion_a',
+    name: { es: 'Tentarafoo', en: 'Tentarafoo' },
+    description: {
+      es: 'Probabilidad media de infligir confusión a todos los enemigos.',
+      en: 'Medium chance of inflicting confusion to all enemies.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  ailment_fear: {
+    id: 'ailment_fear',
+    name: { es: 'Roce siniestro', en: 'Evil touch' },
+    description: {
+      es: 'Probabilidad alta de infligir miedo a un enemigo.',
+      en: 'High chance of inflicting fear to an enemy.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  ailment_fear_a: {
+    id: 'ailment_fear_a',
+    name: { es: 'Sonrisa malvada', en: 'Evil smile' },
+    description: {
+      es: 'Probabilidad media de infligir miedo a todos los enemigos.',
+      en: 'Medium chance of inflicting fear to all enemies.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  ailment_despair: {
+    id: 'ailment_despair',
+    name: { es: 'Palabras ominosas', en: 'Ominous words' },
+    description: {
+      es: 'Probabilidad alta de infligir miedo a un enemigo.',
+      en: 'High chance of inflicting despair to an enemy.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  ailment_despair_a: {
+    id: 'ailment_despair_a',
+    name: { es: 'Arranque abismal', en: 'Abysmal surge' },
+    description: {
+      es: 'Probabilidad media de infligir miedo a todos los enemigos.',
+      en: 'Medium chance of inflicting despair to all enemies.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  ailment_rage: {
+    id: 'ailment_rage',
+    name: { es: 'Mofa', en: 'Taunt' },
+    description: {
+      es: 'Probabilidad alta de infligir furia a un enemigo.',
+      en: 'High chance of inflicting rage to an enemy.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  ailment_rage_a: {
+    id: 'ailment_rage_a',
+    name: { es: 'Presupuesto ilimitado', en: 'Wage war' },
+    description: {
+      es: 'Probabilidad media de infligir furia a todos los enemigos.',
+      en: 'Medium chance of inflicting rage to all enemies.',
+    },
+    element: 'status',
+    cost: { kind: 'mp', amount: 8 },
   },
 
   // --- heal ---
@@ -385,7 +1255,7 @@ export const ATTACKS: Record<string, Attack> = {
       es: 'Restaura mucha HP a todos los aliados.',
       en: 'Restores a large amount of HP to all allies.',
     },
-    element: 'heal',
+    element: 'passive',
     cost: { kind: 'mp', amount: 20 },
   },
   revive: {

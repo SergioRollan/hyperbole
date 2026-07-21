@@ -34,8 +34,8 @@ export const mageLine: EvolutionLine = {
             id: 'pyromancer',
             name: { es: 'Piromante', en: 'Pyromancer' },
             attacks: [
-              { attackId: 'fireball', level: 1 },
-              { attackId: 'inferno', level: 28 },
+              { attackId: 'fire_5', level: 1 },
+              { attackId: 'fire_9', level: 17 },
             ],
             evolutions: [],
           },

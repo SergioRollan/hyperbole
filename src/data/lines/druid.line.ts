@@ -29,7 +29,7 @@ export const druidLine: EvolutionLine = {
         evolutions: [
           {
             id: 'spiritualist',
-            name: { es: 'Espiritista', en: 'Spiritualist' },
+            name: { es: 'Espiritista', en: 'Spirit Master' },
             attacks: [
               { attackId: 'mind_domination', level: 1 },
               { attackId: 'revive', level: 30 },

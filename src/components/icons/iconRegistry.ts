@@ -44,6 +44,7 @@ const ELEMENT_ICONS: Record<AttackElement, string> = {
   status: 'game-icons:poison-bottle',
   heal: 'game-icons:hearts',
   support: 'game-icons:encirclement',
+  passive: 'game-icons:cycle',
 }
 
 /** Icons per weapon. */

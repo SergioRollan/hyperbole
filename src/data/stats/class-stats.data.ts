@@ -10,8 +10,8 @@ export const CLASS_STATS: Record<string, StatBonuses> = {
   mage: sb(0, 2, 0, 0, 1, 0, 0, 2),
   archmage: sb(0, 5, 1, 0, 2, 1, 0, 2),
   shaman: sb(1, 4, 0, 1, 2, 0, 0, 3),
-  pyromancer: sb(8, 2, 0, 0, 3, 4, 0, 5),
-  cryomancer: sb(8, 5, 0, 0, 4, 2, 0, 3),
+  pyromancer: sb(0, 8, 2, 0, 3, 4, 0, 5),
+  cryomancer: sb(0, 8, 5, 0, 4, 2, 0, 3),
   electromancer: sb(3, 8, 2, 0, 4, 0, 0, 5),
   aeromancer: sb(1, 8, 0, 1, 3, 3, 0, 6),
 
@@ -20,14 +20,14 @@ export const CLASS_STATS: Record<string, StatBonuses> = {
   sorcerer: sb(0, 2, 5, 0, 0, 3, 0, 1),
   nucleomancer: sb(0, 4, 8, 1, 0, 6, 0, 3),
   psychomancer: sb(0, 2, 8, 0, 0, 7, 0, 5),
-  omnimancer: sb(6, 6, 0, 0, 0, 6, 0, 4),
+  omnimancer: sb(0, 6, 6, 0, 0, 6, 0, 4),
 
   // --- Healer line ---
   healer: sb(0, 0, 2, 0, 0, 1, 0, 2),
   cleric: sb(0, 1, 5, 1, 1, 1, 0, 2),
-  sacromancer: sb(4, 0, 7, 1, 2, 2, 0, 6),
+  sacromancer: sb(0, 4, 7, 1, 2, 2, 0, 6),
   sage: sb(0, 4, 8, 1, 1, 1, 0, 7),
-  heretic: sb(3, 0, 7, 2, 7, 2, 0, 1),
+  heretic: sb(0, 3, 7, 2, 7, 2, 0, 1),
 
   // --- Thief line ---
   thief: sb(1, 0, 0, 1, 0, 0, 2, 1),
@@ -78,7 +78,8 @@ export const CLASS_STATS: Record<string, StatBonuses> = {
   bard: sb(0, 0, 6, 1, 4, 6, 0, 5),
   dancer: sb(0, 0, 2, 4, 6, 4, 4, 2),
   charlatan: sb(0, 0, 0, 1, 1, 1, 3, 5),
-  magnate: sb(2, 0, 0, 3, 3, 3, 3, 8),
+  trickster: sb(2, 2, 1, 2, 2, 2, 4, 8),
+  magnate: sb(5, 0, 0, 1, 3, 3, 3, 7),
 
   // --- Explorer line ---
   explorer: sb(1, 1, 0, 0, 2, 0, 1, 0),

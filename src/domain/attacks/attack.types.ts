@@ -20,6 +20,7 @@ export type AttackElement =
   | 'status'
   | 'heal'
   | 'support'
+  | 'passive'
 
 /** Resource consumed by an attack. */
 export type AttackCostKind = 'mp' | 'hp_percent' | 'money'
@@ -56,10 +57,11 @@ export const ATTACK_ELEMENTS: readonly AttackElementMeta[] = [
   { key: 'wind', label: { es: 'Viento', en: 'Wind' } },
   { key: 'nuclear', label: { es: 'Nuclear', en: 'Nuclear' } },
   { key: 'psychic', label: { es: 'Psíquico', en: 'Psychic' } },
-  { key: 'light', label: { es: 'Luz', en: 'Light' } },
-  { key: 'dark', label: { es: 'Oscuridad', en: 'Dark' } },
+  { key: 'light', label: { es: 'Bendición', en: 'Bless' } },
+  { key: 'dark', label: { es: 'Maldición', en: 'Curse' } },
   { key: 'almighty', label: { es: 'Todopoderoso', en: 'Almighty' } },
   { key: 'status', label: { es: 'Estados alterados', en: 'Status' } },
   { key: 'heal', label: { es: 'Cura', en: 'Heal' } },
   { key: 'support', label: { es: 'Apoyo', en: 'Support' } },
+  { key: 'passive', label: { es: 'Pasivo', en: 'Passive' } },
 ] as const

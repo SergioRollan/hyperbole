@@ -35,6 +35,7 @@
   --elem-heal: #f5b4ce;
   --elem-status: #b04ddb;
   --elem-support: var(--accent);
+  --elem-passive: #ffd900;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
 

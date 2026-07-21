@@ -85,6 +85,7 @@ export const CLASS_AFFINITIES: Record<string, ClassAffinities> = {
   bard: { blunt: 'weak', thunder: 'reflect', slash: 'resist'},
   dancer: { blunt: 'weak', slash: 'reflect', wind: 'resist' },
   charlatan: { wind: 'weak', fire: 'resist', slash: 'resist' },
+  trickster: { wind: 'weak', thunder: 'resist', fire: 'resist', dark: 'resist' },
   magnate: { wind: 'weak', slash: 'resist', fire: 'reflect' },
 
   // --- Explorer line: darkness in the wild; elements of survival ---
