@@ -1200,7 +1200,7 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'ailment_despair',
     name: { es: 'Palabras ominosas', en: 'Ominous words' },
     description: {
-      es: 'Probabilidad alta de infligir miedo a un enemigo.',
+      es: 'Probabilidad alta de infligir desesperación a un enemigo.',
       en: 'High chance of inflicting despair to an enemy.',
     },
     element: 'status',
@@ -1210,7 +1210,7 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'ailment_despair_a',
     name: { es: 'Arranque abismal', en: 'Abysmal surge' },
     description: {
-      es: 'Probabilidad media de infligir miedo a todos los enemigos.',
+      es: 'Probabilidad media de infligir desesperación a todos los enemigos.',
       en: 'Medium chance of inflicting despair to all enemies.',
     },
     element: 'status',
@@ -1238,86 +1238,464 @@ export const ATTACKS: Record<string, Attack> = {
   },
 
   // --- heal ---
-  healing_light: {
-    id: 'healing_light',
-    name: { es: 'Curación', en: 'Healing' },
+  heal_1: {
+    id: 'heal_1',
+    name: { es: 'Dia', en: 'Dia' },
+    description: {
+      es: 'Restaura una pequeña cantidad de HP a un aliado.',
+      en: "Slightly restore one ally's HP.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  heal_2: {
+    id: 'heal_2',
+    name: { es: 'Media', en: 'Media' },
+    description: {
+      es: 'Restaura una pequeña cantidad de HP a todos los aliados.',
+      en: "Slightly restore all allies' HP.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 7 },
+  },
+  heal_3: {
+    id: 'heal_3',
+    name: { es: 'Diarama', en: 'Diarama' },
     description: {
       es: 'Restaura una cantidad moderada de HP a un aliado.',
-      en: 'Restores a moderate amount of HP to one ally.',
+      en: "Moderately restore one ally's HP.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 6 },
+  },
+  heal_4: {
+    id: 'heal_4',
+    name: { es: 'Mediarama', en: 'Mediarama' },
+    description: {
+      es: 'Restaura una cantidad moderada de HP a todos los aliados.',
+      en: "Moderately restore all allies' HP.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 14 },
+  },
+  heal_5: {
+    id: 'heal_5',
+    name: { es: 'Diarahan', en: 'Diarahan' },
+    description: {
+      es: 'Restaura una cantidad grande de HP a un aliado.',
+      en: "Greatly restore one ally's HP.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 16 },
+  },
+  heal_6: {
+    id: 'heal_6',
+    name: { es: 'Mediarahan', en: 'Mediarahan' },
+    description: {
+      es: 'Restaura una cantidad grande de HP a todos los aliados.',
+      en: "Greatly restore all allies' HP.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 35 },
+  },
+  ailm_1: {
+    id: 'ailm_1',
+    name: { es: 'Baisudi', en: 'Baisudi' },
+    description: {
+      es: 'Cura la quemadura/congelación/parálisis/veneno de un aliado.',
+      en: "Cure Burn/Freeze/Paralysis/Poison of one ally.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  ailm_2: {
+    id: 'ailm_2',
+    name: { es: 'Mabaisudi', en: 'Mabaisudi' },
+    description: {
+      es: 'Cura la quemadura/congelación/parálisis/veneno de todos los aliados.',
+      en: "Cure Burn/Freeze/Paralysis/Poison of all allies.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 9 },
+  },
+  ailm_3: {
+    id: 'ailm_3',
+    name: { es: 'Patra', en: 'Patra' },
+    description: {
+      es: 'Cura el mareo/amnesia/lavado de cerebro/sueño de un aliado.',
+      en: "Cure Dizzy/Forget/Brainwash/Sleep of one ally.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  ailm_4: {
+    id: 'ailm_4',
+    name: { es: 'Me patra', en: 'Me patra' },
+    description: {
+      es: 'Cura el mareo/amnesia/lavado de cerebro/sueño de todos los aliados.',
+      en: "Cure Dizzy/Forget/Brainwash/Sleep of all allies.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 9 },
+  },
+  ailm_5: {
+    id: 'ailm_5',
+    name: { es: 'Energy drop', en: 'Energy drop' },
+    description: {
+      es: 'Cura la confusión/miedo/desesperación/furia de un aliado.',
+      en: "Cure Confusion/Fear/Despair/Rage of one ally.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  ailm_6: {
+    id: 'ailm_6',
+    name: { es: 'Energy shower', en: 'Energy shower' },
+    description: {
+      es: 'Cura la confusión/miedo/desesperación/furia de todos los aliados.',
+      en: "Cure Confusion/Fear/Despair/Rage of all allies.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 9 },
+  },
+  ailm_7: {
+    id: 'ailm_7',
+    name: { es: 'Amrita drop', en: 'Amrita drop' },
+    description: {
+      es: 'Cura todos los estados alterados de un aliado.',
+      en: "Cure all ailments of one ally.",
     },
     element: 'heal',
     cost: { kind: 'mp', amount: 8 },
   },
-  great_heal: {
-    id: 'great_heal',
-    name: { es: 'Gran curación', en: 'Great heal' },
+  ailm_8: {
+    id: 'ailm_8',
+    name: { es: 'Amrita shower', en: 'Amrita shower' },
     description: {
-      es: 'Restaura mucha HP a todos los aliados.',
-      en: 'Restores a large amount of HP to all allies.',
-    },
-    element: 'passive',
-    cost: { kind: 'mp', amount: 20 },
-  },
-  revive: {
-    id: 'revive',
-    name: { es: 'Revivir', en: 'Revive' },
-    description: {
-      es: 'Revive a un aliado caído con parte de su HP.',
-      en: 'Revives a fallen ally with part of their HP.',
+      es: 'Cura todos los estados alterados de todos los aliados.',
+      en: "Cure all ailments of all allies.",
     },
     element: 'heal',
-    cost: { kind: 'mp', amount: 40 },
+    cost: { kind: 'mp', amount: 17 },
+  },
+  revive_1: {
+    id: 'revive_1',
+    name: { es: 'Recarm', en: 'Recarm' },
+    description: {
+      es: 'Revive a un aliado con 25-50% de HP.',
+      en: "Revive one ally with 25-50% of HP.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 7 },
+  },
+  revive_2: {
+    id: 'revive_2',
+    name: { es: 'Samarecarm', en: 'Samarecarm' },
+    description: {
+      es: 'Revive a un aliado con 65-90% de HP.',
+      en: "Revive one ally with 65-90% of HP.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 15 },
+  },
+  heal_ailm_1: {
+    id: 'heal_ailm_1',
+    name: { es: 'Diamrita', en: 'Diamrita' },
+    description: {
+      es: 'Restaura una cantidad enorme de HP y cura los estados alterados a un aliado.',
+      en: "Hugely restore HP and cure all ailments of one ally.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 28 },
+  },
+  heal_ailm_2: {
+    id: 'heal_ailm_2',
+    name: { es: 'Salvación', en: 'Salvation' },
+    description: {
+      es: 'Restaura todos los HP y cura los estados alterados a todos los aliados.',
+      en: "Restore all allies full HP and cure all ailments and debuffs.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 48 },
+  },
+  revive_heal_ailm: {
+    id: 'revive_heal_ailm',
+    name: { es: 'Benevolencia sagrada', en: 'Holy benevolence' },
+    description: {
+      es: 'Revive a todos los aliados con el 100% de HP.',
+      en: "Revive all allies with full HP.",
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 15 },
   },
 
   // --- support ---
-  focus: {
-    id: 'focus',
-    name: { es: 'Concentrar', en: 'Focus' },
+  taru_1: {
+    id: 'taru_1',
+    name: { es: 'Tarukaja', en: 'Tarukaja' },
     description: {
-      es: 'Aumenta el daño mágico del lanzador en el próximo turno.',
-      en: "Increases the caster's magic damage next turn.",
+      es: 'Aumenta el ataque de un aliado en un nivel durante 3 turnos.',
+      en: "Increases one ally's attack by one level for 3 turns.",
     },
     element: 'support',
-    cost: { kind: 'mp', amount: 6 },
+    cost: { kind: 'mp', amount: 8 },
   },
-  arcane_shield: {
-    id: 'arcane_shield',
-    name: { es: 'Escudo arcano', en: 'Arcane shield' },
+  taru_2: {
+    id: 'taru_2',
+    name: { es: 'Matarukaja', en: 'Matarukaja' },
     description: {
-      es: 'Crea una barrera que reduce el daño recibido.',
-      en: 'Creates a barrier that reduces damage taken.',
+      es: 'Aumenta el ataque de todos los aliados en un nivel durante 3 turnos.',
+      en: "Increases all allies attack by one level for 3 turns.",
     },
     element: 'support',
-    cost: { kind: 'mp', amount: 12 },
+    cost: { kind: 'mp', amount: 24 },
   },
-  blessing: {
-    id: 'blessing',
-    name: { es: 'Bendición', en: 'Blessing' },
+  taru_3: {
+    id: 'taru_3',
+    name: { es: 'Tarunda', en: 'Tarunda' },
     description: {
-      es: 'Aumenta los atributos de todos los aliados.',
-      en: 'Raises the stats of all allies.',
+      es: 'Disminuye el ataque de un enemigo en un nivel durante 3 turnos.',
+      en: "Decreases one enemy's attack by one level for 3 turns.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  taru_4: {
+    id: 'taru_4',
+    name: { es: 'Matarunda', en: 'Matarunda' },
+    description: {
+      es: 'Disminuye el ataque de todos los enemigos en un nivel durante 3 turnos.',
+      en: "Decreases all enemies attack by one level for 3 turns.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 24 },
+  },
+  raku_1: {
+    id: 'raku_1',
+    name: { es: 'Rakukaja', en: 'Rakukaja' },
+    description: {
+      es: 'Aumenta la defensa de un aliado en un nivel durante 3 turnos.',
+      en: "Increases one ally's defense by one level for 3 turns.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  raku_2: {
+    id: 'raku_2',
+    name: { es: 'Marakukaja', en: 'Marakukaja' },
+    description: {
+      es: 'Aumenta la defensa de todos los aliados en un nivel durante 3 turnos.',
+      en: "Increases all allies defense by one level for 3 turns.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 24 },
+  },
+  raku_3: {
+    id: 'raku_3',
+    name: { es: 'Rakunda', en: 'Rakunda' },
+    description: {
+      es: 'Disminuye la defensa de un enemigo en un nivel durante 3 turnos.',
+      en: "Decreases one enemy's defense by one level for 3 turns.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  raku_4: {
+    id: 'raku_4',
+    name: { es: 'Marakunda', en: 'Marakunda' },
+    description: {
+      es: 'Disminuye la defensa de todos los enemigos en un nivel durante 3 turnos.',
+      en: "Decreases all enemies defense by one level for 3 turns.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 24 },
+  },
+  suku_1: {
+    id: 'suku_1',
+    name: { es: 'Sukukaja', en: 'Sukukaja' },
+    description: {
+      es: 'Aumenta la precisión y la evasión de un aliado en un nivel durante 3 turnos.',
+      en: "Increases one ally's precision/evasion by one level for 3 turns.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  suku_2: {
+    id: 'suku_2',
+    name: { es: 'Masukukaja', en: 'Masukukaja' },
+    description: {
+      es: 'Aumenta la precisión y la evasión de todos los aliados en un nivel durante 3 turnos.',
+      en: "Increases all allies precision/evasion by one level for 3 turns.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 24 },
+  },
+  suku_3: {
+    id: 'suku_3',
+    name: { es: 'Sukunda', en: 'Sukunda' },
+    description: {
+      es: 'Disminuye la precisión y la evasión de un enemigo en un nivel durante 3 turnos.',
+      en: "Decreases one enemy's precision/evasion by one level for 3 turns.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  suku_4: {
+    id: 'suku_4',
+    name: { es: 'Masukunda', en: 'Masukunda' },
+    description: {
+      es: 'Disminuye la precisión y la evasión de todos los enemigos en un nivel durante 3 turnos.',
+      en: "Decreases all enemies precision/evasion by one level for 3 turns.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 24 },
+  },
+  support_1: {
+    id: 'support_1',
+    name: { es: 'Subidón', en: 'Heat riser' },
+    description: {
+      es: 'Aumenta el ataque, la defensa, la precisión y la evasión de un aliado en un nivel durante 3 turnos.',
+      en: "Increases one ally's attack/defense/precision/evasion by one level for 3 turns.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 30 },
+  },
+  support_2: {
+    id: 'support_2',
+    name: { es: 'Debilitar', en: 'Debilitate' },
+    description: {
+      es: 'Disminuye el ataque, la defensa, la precisión y la evasión de un enemigo en un nivel durante 3 turnos.',
+      en: "Decreases one enemy's attack/defense/precision/evasion by one level for 3 turns.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 30 },
+  },
+  support_3: {
+    id: 'support_3',
+    name: { es: 'Hyakka Ryouran', en: 'Hyakka Ryouran' },
+    description: {
+      es: 'Aumenta el ataque, la defensa, la precisión y la evasión de todos los aliados en un nivel durante 3 turnos.',
+      en: "Increases all allies attack/defense/precision/evasion by one level for 3 turns.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 90 },
+  },
+  support_4: {
+    id: 'support_4',
+    name: { es: 'Jaque mate', en: 'Checkmate' },
+    description: {
+      es: 'Disminuye el ataque, la defensa, la precisión y la evasión de todos los enemigos en un nivel durante 3 turnos.',
+      en: "Decreases all enemies attack/defense/precision/evasion by one level for 3 turns.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 90 },
+  },
+  double_1: {
+    id: 'double_1',
+    name: { es: 'Carga', en: 'Charge' },
+    description: {
+      es: 'El siguiente ataque físico inflige más del doble de daño.',
+      en: "The next physical attack inflicts more than double the damage.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 15 },
+  },
+  double_2: {
+    id: 'double_2',
+    name: { es: 'Asistencia en carga', en: "Help charge" },
+    description: {
+      es: 'El siguiente ataque físico de un aliado inflige más del doble de daño.',
+      en: "The next physical attack of one ally inflicts more than double the damage.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  double_3: {
+    id: 'double_3',
+    name: { es: 'Espíritu de lucha', en: "Fighting spirit" },
+    description: {
+      es: 'El siguiente ataque físico de cada aliado inflige más del doble de daño.',
+      en: "The next physical attack of every ally inflicts more than double the damage.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 80 },
+  },
+  double_4: {
+    id: 'double_4',
+    name: { es: 'Concentrar', en: 'Concentrate' },
+    description: {
+      es: 'El siguiente ataque mágico elemental, espiritual o todopoderoso inflige más del doble de daño.',
+      en: "The next elemental, spiritual or almighty magical attack inflicts more than double the damage.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 15 },
+  },
+  double_5: {
+    id: 'double_5',
+    name: { es: 'Asistencia a concentrar', en: 'Help concentrate' },
+    description: {
+      es: 'El siguiente ataque mágico elemental, espiritual o todopoderoso de un aliado inflige más del doble de daño.',
+      en: "The next elemental, spiritual or almighty magical attack of one ally inflicts more than double the damage.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  double_6: {
+    id: 'double_6',
+    name: { es: 'Energía rebosante', en: "High energy" },
+    description: {
+      es: 'El siguiente ataque mágico elemental, espiritual o todopoderoso de cada aliado inflige más del doble de daño.',
+      en: "The next elemental, spiritual or almighty magical attack of every ally inflicts more than double the damage.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 80 },
+  },
+  double_7: {
+    id: 'double_7',
+    name: { es: 'Preparación médica', en: 'Medic tool warmup' },
+    description: {
+      es: 'La siguiente curación o resurrección recuperará más del doble de HP.',
+      en: "The next heal or revival will recover more than double the HP.",
     },
     element: 'support',
     cost: { kind: 'mp', amount: 10 },
   },
-  bribe: {
-    id: 'bribe',
-    name: { es: 'Soborno', en: 'Bribe' },
+  double_8: {
+    id: 'double_8',
+    name: { es: 'Gran resurgimiento', en: 'Great resurface' },
     description: {
-      es: 'Gasta dinero para evitar el combate contra un enemigo.',
-      en: 'Spends money to avoid fighting one enemy.',
+      es: 'La siguiente resurrección aumentará el ataque, la defensa, la precisión y la evasión del aliado en dos niveles durante 3 turnos.',
+      en: "The next revival will increase the ally's attack/defense/precision/evasion by two levels for 3 turns.",
     },
     element: 'support',
-    cost: { kind: 'money', amount: 500 },
+    cost: { kind: 'mp', amount: 25 },
   },
-  hire_mercenary: {
-    id: 'hire_mercenary',
-    name: { es: 'Contratar mercenario', en: 'Hire mercenary' },
+  crit_1: {
+    id: 'crit_1',
+    name: { es: 'Rebelión', en: 'Rebellion' },
     description: {
-      es: 'Paga para invocar a un aliado temporal en combate.',
-      en: 'Pays to summon a temporary ally in battle.',
+      es: 'Aumenta un 7% la probabilidad de crítico de un aliado durante 3 turnos.',
+      en: 'Increases crit rate by 7% for one ally for three turns',
     },
     element: 'support',
-    cost: { kind: 'money', amount: 1000 },
+    cost: { kind: 'mp', amount: 5 },
   },
+  crit_2: {
+    id: 'crit_2',
+    name: { es: 'Revolución', en: 'Revolution' },
+    description: {
+      es: 'Aumenta un 15% la probabilidad de crítico de todos los aliados y todos los enemigos durante 3 turnos.',
+      en: 'Increases crit rate by 15% for all allies and enemies for three turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 5 },
+  },
+
+  
+
+  // --- passive ---
+
+
+  // --- line-exclusive ---
+
 }
