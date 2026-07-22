@@ -1690,6 +1690,246 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'support',
     cost: { kind: 'mp', amount: 5 },
   },
+  protect_1:{
+    id: 'protect_1',
+    name: { es: 'Muro físico', en: 'Physical wall' },
+    description: {
+      es: 'Levanta una protección sobre un aliado que reduce a la mitad todo el daño contundente, cortante y perforante recibido y cubre debilidades innatas a ambos durante 3 turnos.',
+      en: 'Erects a shield on one ally to halve blunt, slash and pierce damage received and cover innate weaknesses to them for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 27 },
+  },
+  protect_2:{
+    id: 'protect_2',
+    name: { es: 'Muro de llama oscura', en: 'Dark fire wall' },
+    description: {
+      es: 'Levanta una protección sobre un aliado que reduce a la mitad todo el daño de fuego y de maldición recibido y cubre debilidades innatas a ambos durante 3 turnos.',
+      en: 'Erects a shield on one ally to halve fire and curse damage received and cover innate weaknesses to them for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 21 },
+  },
+  protect_3:{
+    id: 'protect_3',
+    name: { es: 'Muro de destello', en: 'Lightning wall' },
+    description: {
+      es: 'Levanta una protección sobre un aliado que reduce a la mitad todo el daño de trueno y de bendición recibido y cubre debilidades innatas a ambos durante 3 turnos.',
+      en: 'Erects a shield on one ally to halve thunder and bless damage received and cover innate weaknesses to them for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 21 },
+  },
+  protect_4:{
+    id: 'protect_4',
+    name: { es: 'Muro de explosión natural', en: 'Natural burst wall' },
+    description: {
+      es: 'Levanta una protección sobre un aliado que reduce a la mitad todo el daño de viento y nuclear recibido y cubre debilidades innatas a ambos durante 3 turnos.',
+      en: 'Erects a shield on one ally to halve wind and nuclear damage received and cover innate weaknesses to them for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 21 },
+  },
+  protect_5:{
+    id: 'protect_5',
+    name: { es: 'Muro de congelación cerebral', en: 'Brain freeze wall' },
+    description: {
+      es: 'Levanta una protección sobre un aliado que reduce a la mitad todo el daño de hielo y psíquico recibido y cubre debilidades innatas a ambos durante 3 turnos.',
+      en: 'Erects a shield on one ally to halve ice and psychic damage received and cover innate weaknesses to them for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 21 },
+  },
+  protect_6:{
+    id: 'protect_6',
+    name: { es: 'Guardia física', en: 'Physic guard' },
+    description: {
+      es: 'Levanta una protección sobre un aliado que reduce a la mitad todo el daño contundente, cortante y perforante recibido durante 1 turno.',
+      en: 'Erects a shield on one ally to halve blunt, slash and pierce damage received for 1 turn.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 11 },
+  },
+  protect_7:{
+    id: 'protect_7',
+    name: { es: 'Guardia elemental', en: 'Elemental guard' },
+    description: {
+      es: 'Levanta una protección sobre un aliado que reduce a la mitad todo el daño de fuego, hielo, viento y trueno recibido durante 1 turno.',
+      en: 'Erects a shield on one ally to halve fire, ice, wind and thunder damage received for 1 turn.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 11 },
+  },
+  protect_8:{
+    id: 'protect_8',
+    name: { es: 'Guardia espiritual', en: 'Spiritual guard' },
+    description: {
+      es: 'Levanta una protección sobre un aliado que reduce a la mitad todo el daño nuclear, psíquico, de bendición y de maldición recibido durante 1 turno.',
+      en: 'Erects a shield on one ally to halve nuclear, psychic, bless and curse damage received for 1 turn.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 11 },
+  },
+  protect_9:{
+    id: 'protect_9',
+    name: { es: 'Tetrakarn', en: 'Tetrakarn' },
+    description: {
+      es: 'Levanta una protección sobre un aliado que repele un ataque físico de daño contundente, cortante o perforante una vez.',
+      en: 'Erects a shield on one ally to repel a physical blunt, slash or pierce damage attack once.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 29 },
+  },
+  protect_10:{
+    id: 'protect_10',
+    name: { es: 'Makarakarn', en: 'Makarakarn' },
+    description: {
+      es: 'Levanta una protección sobre un aliado que repele un ataque mágico de daño de fuego, hielo, viento o trueno una vez.',
+      en: 'Erects a shield on one ally to repel a magic fire, ice, wind or thunder damage attack once.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 29 },
+  },
+  protect_11:{
+    id: 'protect_11',
+    name: { es: 'Spirikarn', en: 'Spirikarn' },
+    description: {
+      es: 'Levanta una protección sobre un aliado que repele un ataque mágico de daño nuclear, psíquico, de bendición o de maldición una vez.',
+      en: 'Erects a shield on one ally to repel a magic nuclear, psychic, bless or curse damage attack once.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 29 },
+  },
+  protect_12:{
+    id: 'protect_12',
+    name: { es: 'Muralla vital', en: 'Life wall' },
+    description: {
+      es: 'Levanta una protección sobre un aliado que repele un ataque (excepto todopoderoso) una vez.',
+      en: 'Erects a shield on one ally to repel one single attack (except almighty).',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 95 },
+  },
+  protect_13:{
+    id: 'protect_13',
+    name: { es: 'Tetraja', en: 'Tetraja' },
+    description: {
+      es: 'Levanta una protección sobre un aliado que anula un efecto de muerte instantánea una vez.',
+      en: 'Erects a shield on one ally to null an insta-kill effect once.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 23 },
+  },
+  break_1:{
+    id: 'break_1',
+    name: { es: 'Dekaja', en: 'Dekaja' },
+    description: {
+      es: 'Anula todos los efectos -kaja de todos los enemigos.',
+      en: 'Negates all -kaja buffs of all enemies.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 9 },
+  },
+  break_2:{
+    id: 'break_2',
+    name: { es: 'Dekunda', en: 'Dekunda' },
+    description: {
+      es: 'Anula todos los efectos -nda de todos los aliados.',
+      en: 'Negates all -nda debuffs of all allies.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 9 },
+  },
+  break_3:{
+    id: 'break_3',
+    name: { es: 'Fire Break', en: 'Fire Break' },
+    description: {
+      es: 'Elimina resistencias a fuego de todos los enemigos durante 3 turnos.',
+      en: 'Suppresses innate Fire resistances of all foes for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 6 },
+  },
+  break_4:{
+    id: 'break_4',
+    name: { es: 'Ice Break', en: 'Ice Break' },
+    description: {
+      es: 'Elimina resistencias a hielo de todos los enemigos durante 3 turnos.',
+      en: 'Suppresses innate Ice resistances of all foes for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 6 },
+  },
+  break_5:{
+    id: 'break_5',
+    name: { es: 'Wind Break', en: 'Wind Break' },
+    description: {
+      es: 'Elimina resistencias a viento de todos los enemigos durante 3 turnos.',
+      en: 'Suppresses innate Wind resistances of all foes for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 6 },
+  },
+  break_6:{
+    id: 'break_6',
+    name: { es: 'Thunder Break', en: 'Thunder Break' },
+    description: {
+      es: 'Elimina resistencias a trueno de todos los enemigos durante 3 turnos.',
+      en: 'Suppresses innate Thunder resistances of all foes for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 6 },
+  },
+  break_7:{
+    id: 'break_7',
+    name: { es: 'Nuke Break', en: 'Nuke Break' },
+    description: {
+      es: 'Elimina resistencias a nuclear de todos los enemigos durante 3 turnos.',
+      en: 'Suppresses innate Nuclear resistances of all foes for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 6 },
+  },
+  break_8:{
+    id: 'break_8',
+    name: { es: 'Psy Break', en: 'Psy Break' },
+    description: {
+      es: 'Elimina resistencias a psíquico de todos los enemigos durante 3 turnos.',
+      en: 'Suppresses innate Psy resistances of all foes for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 6 },
+  },
+  break_9:{
+    id: 'break_9',
+    name: { es: 'Tetra Break', en: 'Tetra Break' },
+    description: {
+      es: 'Elimina efectos de Tetrakarn activos de todos los enemigos.',
+      en: 'Removes active Tetrakarn effects from all enemies.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 9 },
+  },
+  break_10:{
+    id: 'break_10',
+    name: { es: 'Makara Break', en: 'Makara Break' },
+    description: {
+      es: 'Elimina efectos de Makarakarn activos de todos los enemigos.',
+      en: 'Removes active Makarakarn effects from all enemies.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 9 },
+  },
+  break_11:{
+    id: 'break_11',
+    name: { es: 'Spirik Break', en: 'Spirik Break' },
+    description: {
+      es: 'Elimina efectos de Spirikarn activos de todos los enemigos.',
+      en: 'Removes active Spirikarn effects from all enemies.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 9 },
+  },
 
   
 
