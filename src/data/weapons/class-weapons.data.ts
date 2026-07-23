@@ -31,9 +31,9 @@ export const CLASS_WEAPONS: Record<string, ClassWeaponry> = {
 
   // --- Thief line ---
   thief: { weapons: ['dagger'], signature: 'dagger' },
-  assassin: { weapons: ['dagger'], signature: 'dagger' },
+  assassin: { weapons: ['dagger', 'bow'], signature: 'dagger' },
   umbramancer: { weapons: ['dagger', 'grimoire'], signature: 'grimoire' },
-  ninja: { weapons: ['dagger', 'katana'], signature: 'dagger' },
+  ninja: { weapons: ['dagger', 'katana', 'bow'], signature: 'dagger' },
 
   // --- Warrior line ---
   warrior: { weapons: ['sword', 'mace', 'bow'], signature: 'sword' },
@@ -75,17 +75,17 @@ export const CLASS_WEAPONS: Record<string, ClassWeaponry> = {
   // --- Artist line ---
   artist: { weapons: ['rapier'], signature: 'rapier' },
   jester: { weapons: ['dagger', 'rapier'], signature: 'rapier' },
-  bard: { weapons: ['dagger', 'rapier', 'mace'], signature: 'mace' },
+  bard: { weapons: ['dagger', 'rapier', 'bow'], signature: 'bow' },
   dancer: { weapons: ['dagger', 'katana', 'rapier'], signature: 'rapier' },
   charlatan: { weapons: ['dagger', 'mace'], signature: 'dagger' },
   trickster: { weapons: ['dagger', 'mace', 'crossbow'], signature: 'dagger' },
   magnate: { weapons: ['dagger', 'rapier', 'crossbow'], signature: 'dagger' },
 
   // --- Explorer line ---
-  explorer: { weapons: ['dagger', 'mace', 'bow'], signature: 'bow' },
-  survivor: { weapons: ['dagger', 'mace', 'bow'], signature: 'bow' },
-  apothecary: { weapons: ['dagger', 'mace', 'staff'], signature: 'mace' },
-  hunter: { weapons: ['dagger', 'fist', 'bow'], signature: 'bow' },
+  explorer: { weapons: ['dagger', 'mace', 'bow'], signature: 'mace' },
+  survivor: { weapons: ['dagger', 'mace', 'bow'], signature: 'mace' },
+  apothecary: { weapons: ['dagger', 'mace', 'staff'], signature: 'staff' },
+  hunter: { weapons: ['dagger', 'mace', 'bow'], signature: 'mace' },
 }
 
 /** Returns the weaponry of that class only — never merged with ancestors. */

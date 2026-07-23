@@ -21,101 +21,1016 @@ import type { Attack } from '../../domain'
  * Grouped by element for easy icon coverage overview.
  */
 export const ATTACKS: Record<string, Attack> = {
-  // --- blunt ---
-  crushing_blow: {
-    id: 'crushing_blow',
-    name: { es: 'Golpe aplastante', en: 'Crushing blow' },
-    description: {
-      es: 'Inflige daño físico contundente a un enemigo.',
-      en: 'Deals blunt physical damage to one enemy.',
-    },
-    element: 'blunt',
-    cost: { kind: 'mp', amount: 8 },
-  },
-  mace_smash: {
-    id: 'mace_smash',
-    name: { es: 'Mazazo', en: 'Mace smash' },
-    description: {
-      es: 'Inflige daño contundente medio y puede aturdir.',
-      en: 'Deals medium blunt damage and may stun.',
-    },
-    element: 'blunt',
-    cost: { kind: 'mp', amount: 14 },
-  },
-  shattering_fist: {
-    id: 'shattering_fist',
-    name: { es: 'Puño demoledor', en: 'Shattering fist' },
-    description: {
-      es: 'Inflige daño contundente severo a un enemigo.',
-      en: 'Deals heavy blunt damage to one enemy.',
-    },
-    element: 'blunt',
-    cost: { kind: 'mp', amount: 22 },
-  },
 
-  // --- slash ---
-  slash_strike: {
-    id: 'slash_strike',
-    name: { es: 'Tajo', en: 'Slash' },
+  // --- dagger ---
+  
+  dagger_1: {
+    id: 'dagger_1',
+    name: { es: 'Corte fugaz', en: 'Quick slash' },
     description: {
-      es: 'Inflige daño físico cortante a un enemigo.',
-      en: 'Deals slashing physical damage to one enemy.',
+      es: 'Con daga. Inflige daño físico cortante leve a un enemigo.',
+      en: 'With dagger. Deals light slash physical damage to one enemy.',
     },
     element: 'slash',
-    cost: { kind: 'mp', amount: 6 },
+    cost: { kind: 'mp', amount: 4 },
   },
-  swift_cut: {
-    id: 'swift_cut',
-    name: { es: 'Corte veloz', en: 'Swift cut' },
+  dagger_2: {
+    id: 'dagger_2',
+    name: { es: 'Puñalada múltiple', en: 'Multistabs' },
     description: {
-      es: 'Inflige daño cortante a un enemigo con alta prioridad.',
-      en: 'Deals slashing damage to one enemy with high priority.',
+      es: 'Con daga. Inflige daño físico cortante leve a todos los enemigos.',
+      en: 'With dagger. Deals light slash physical damage to all enemies.',
     },
     element: 'slash',
     cost: { kind: 'mp', amount: 10 },
   },
-  bloody_edge: {
-    id: 'bloody_edge',
-    name: { es: 'Filo sangriento', en: 'Bloody edge' },
+  dagger_3: {
+    id: 'dagger_3',
+    name: { es: 'Super corte', en: 'Super cut' },
     description: {
-      es: 'Sacrifica vida propia para infligir daño cortante severo.',
-      en: 'Sacrifices own HP to deal heavy slashing damage.',
+      es: 'Con daga. Inflige daño físico cortante medio a un enemigo.',
+      en: 'With dagger. Deals medium slash physical damage to one enemy.',
     },
     element: 'slash',
-    cost: { kind: 'hp_percent', amount: 15 },
+    cost: { kind: 'mp', amount: 8 },
+  },
+  dagger_4: {
+    id: 'dagger_4',
+    name: { es: 'Remolino de acero', en: 'Steel whirlwind' },
+    description: {
+      es: 'Con daga. Inflige daño físico cortante medio a todos los enemigos.',
+      en: 'With dagger. Deals medium slash physical damage to all enemies.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  dagger_5: {
+    id: 'dagger_5',
+    name: { es: 'Danza sangrienta', en: 'Bloody dance' },
+    description: {
+      es: 'Con daga. Inflige daño físico cortante grave a un enemigo.',
+      en: 'With dagger. Deals heavy slash physical damage to one enemy.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 12 },
+  },
+  dagger_5nm: {
+    id: 'dagger_5nm',
+    name: { es: 'Rebanada mística', en: 'Mystic cut' },
+    description: {
+      es: 'Con daga. Inflige daño físico cortante grave a un enemigo. Inflige mucho más daño a enemigos no-muertos y zombis.',
+      en: 'With dagger. Deals heavy slash physical damage to one enemy. Inflicts far greater damage to zombies and undead creatures.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 17 },
+  },
+  dagger_5h: {
+    id: 'dagger_5h',
+    name: { es: 'Rebanada perfecta', en: 'Perfect cut' },
+    description: {
+      es: 'Con daga. Inflige daño físico cortante grave a un enemigo. Inflige mucho más daño a bestias y animales.',
+      en: 'With dagger. Deals heavy slash physical damage to one enemy. Inflicts far greater damage to beasts and animals.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 17 },
+  },
+  dagger_6: {
+    id: 'dagger_6',
+    name: { es: 'Lluvia de acero', en: 'Steel rain' },
+    description: {
+      es: 'Con daga. Inflige daño físico cortante grave a todos los enemigos.',
+      en: 'With dagger. Deals heavy slash physical damage to all enemies.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 28 },
+  },
+  dagger_7: {
+    id: 'dagger_7',
+    name: { es: 'Eclipse carmesí', en: 'Crimson eclipse' },
+    description: {
+      es: 'Con daga. Inflige daño físico cortante severo a un enemigo.',
+      en: 'With dagger. Deals severe slash physical damage to one enemy.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  dagger_8: {
+    id: 'dagger_8',
+    name: { es: 'Cortos sueños', en: 'Swift dreams' },
+    description: {
+      es: 'Con daga. Inflige daño cortante extremo a un enemigo que se vuelve poderoso según la agilidad del atacante.',
+      en: 'With dagger. Deals extreme slash damage to one enemy, more powerful the more agilty the attacker has.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 48 },
   },
 
-  // --- pierce ---
-  thrust: {
-    id: 'thrust',
-    name: { es: 'Estocada', en: 'Thrust' },
+  // --- sword ---
+  
+  sword_1: {
+    id: 'sword_1',
+    name: { es: 'Corte potente', en: 'Power slash' },
     description: {
-      es: 'Inflige daño físico perforante a un enemigo.',
-      en: 'Deals piercing physical damage to one enemy.',
+      es: 'Con espada. Inflige daño físico cortante leve a un enemigo.',
+      en: 'With sword. Deals light slash physical damage to one enemy.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  sword_2: {
+    id: 'sword_2',
+    name: { es: 'Corte vacío', en: 'Vacuum slash' },
+    description: {
+      es: 'Con espada. Inflige daño físico cortante leve a todos los enemigos.',
+      en: 'With sword. Deals light slash physical damage to all enemies.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  sword_3: {
+    id: 'sword_3',
+    name: { es: 'Tajo cruzado', en: 'Cross slash' },
+    description: {
+      es: 'Con espada. Inflige daño físico cortante medio a un enemigo.',
+      en: 'With sword. Deals medium slash physical damage to one enemy.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  sword_4: {
+    id: 'sword_4',
+    name: { es: 'Tormento de espadas', en: 'Sword torment' },
+    description: {
+      es: 'Con espada. Inflige daño físico cortante medio a todos los enemigos.',
+      en: 'With sword. Deals medium slash physical damage to all enemies.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  sword_5: {
+    id: 'sword_5',
+    name: { es: 'Filo espiral', en: 'Spiral blade' },
+    description: {
+      es: 'Con espada. Inflige daño físico cortante grave a un enemigo. Tiene precisión muy alta.',
+      en: 'With sword. Deals heavy slash physical damage to one enemy. Very low chance of miss.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 14 },
+  },
+  sword_6: {
+    id: 'sword_6',
+    name: { es: 'Miriada de cortes', en: 'Thousand cuts' },
+    description: {
+      es: 'Con espada y katana. Inflige daño físico cortante colosal a todos los enemigos.',
+      en: 'With sword. Deals colossal slash physical damage to all enemies.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 46 },
+  },
+
+  // --- katana ---
+  
+  katana_1: {
+    id: 'katana_1',
+    name: { es: 'Corte relámpago', en: 'Lightning draw' },
+    description: {
+      es: 'Con katana. Inflige daño físico cortante leve a un enemigo.',
+      en: 'With katana. Deals light slash physical damage to one enemy.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  katana_2: {
+    id: 'katana_2',
+    name: { es: 'Corte furioso', en: 'Blade of Fury' },
+    description: {
+      es: 'Con katana. Inflige daño físico cortante leve a todos los enemigos.',
+      en: 'With katana. Deals light slash physical damage to all enemies.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  katana_3: {
+    id: 'katana_3',
+    name: { es: 'Corte tempestad', en: 'Tempest slash' },
+    description: {
+      es: 'Con katana. Inflige daño físico cortante medio a un enemigo.',
+      en: 'With katana. Deals medium slash physical damage to one enemy.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  katana_4: {
+    id: 'katana_4',
+    name: { es: 'Corte gigante', en: 'Giant slice' },
+    description: {
+      es: 'Con katana. Inflige daño físico cortante medio a todos los enemigos.',
+      en: 'With katana. Deals medium slash physical damage to all enemies.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  katana_5: {
+    id: 'katana_5',
+    name: { es: 'Filo valiente', en: 'Brave blade' },
+    description: {
+      es: 'Con katana. Inflige daño físico cortante grave a un enemigo. Alta probabilidad de crítico.',
+      en: 'With katana. Deals heavy slash physical damage to one enemy. High chance of critical hit.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 16 },
+  },
+  katana_6: {
+    id: 'katana_6',
+    name: { es: 'Katana vorpal', en: 'Vorpal blade' },
+    description: {
+      es: 'Con katana. Inflige daño físico cortante grave a todos los enemigos.',
+      en: 'With katana. Deals heavy slash physical damage to all enemies.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 28 },
+  },
+  katana_7: {
+    id: 'katana_7',
+    name: { es: 'Jugada infinita', en: 'Play of infinite' },
+    description: {
+      es: 'Con katana. Inflige daño leve cortante leve a un enemigo entre 11 y 14 veces.',
+      en: 'With katana. Deals light slash physical damage to one enemy 11 to 14 times.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 33 },
+  },
+
+  // --- axe ---
+  
+  axe_1: {
+    id: 'axe_1',
+    name: { es: 'Hachazo lateral', en: 'Axe chop' },
+    description: {
+      es: 'Con hacha. Inflige daño físico cortante leve a un enemigo.',
+      en: 'With axe. Deals light slash physical damage to one enemy.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  axe_2: {
+    id: 'axe_2',
+    name: { es: 'Medialuna', en: 'Half moon' },
+    description: {
+      es: 'Con hacha. Inflige daño físico cortante leve a todos los enemigos.',
+      en: 'With axe. Deals light slash physical damage to all enemies.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  axe_3: {
+    id: 'axe_3',
+    name: { es: 'Luna creciente', en: 'Crescent moon' },
+    description: {
+      es: 'Con hacha. Inflige daño físico cortante medio a un enemigo. Nunca falla, pero nunca realiza golpe crítico.',
+      en: 'With axe. Deals medium slash physical damage to one enemy. Always hits, but never crits.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  axe_4: {
+    id: 'axe_4',
+    name: { es: 'Luna nueva', en: 'New moon' },
+    description: {
+      es: 'Con hacha. Inflige daño físico cortante medio a todos los enemigos. Precisión baja pero probabilidad de crítico alta.',
+      en: 'With axe. Deals medium slash physical damage to all enemies. Lower chance of hit but higher chance of crit.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  axe_5: {
+    id: 'axe_5',
+    name: { es: 'Luna menguante', en: 'Waning moon' },
+    description: {
+      es: 'Con hacha. Inflige daño físico cortante grave a un enemigo. Precisión baja pero probabilidad de crítico alta.',
+      en: 'With axe. Deals heavy slash physical damage to one enemy. Lower chance of hit but higher chance of crit.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 12 },
+  },
+  axe_6: {
+    id: 'axe_6',
+    name: { es: 'Luna llena', en: 'Full moon' },
+    description: {
+      es: 'Con hacha. Inflige daño físico cortante grave a todos los enemigos. Nunca falla, pero nunca realiza golpe crítico.',
+      en: 'With axe. Deals heavy slash physical damage to all enemies. Always hits, but never crits.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 28 },
+  },
+  axe_7: {
+    id: 'axe_7',
+    name: { es: 'Ragnarök', en: 'Ragnarök' },
+    description: {
+      es: 'Con hacha. Inflige daño físico cortante severo a un enemigo.',
+      en: 'With axe. Deals severe slash physical damage to one enemy.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  axe_8: {
+    id: 'axe_8',
+    name: { es: 'Valhalla', en: 'Valhalla' },
+    description: {
+      es: 'Con hacha. Inflige daño físico cortante severo a todos los enemigos.',
+      en: 'With axe. Deals severe slash physical damage to all enemies.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 40 },
+  },
+
+  // --- fists ---
+  
+  fists_1: {
+    id: 'fists_1',
+    name: { es: 'Demolición', en: 'Crushing jab' },
+    description: {
+      es: 'Con puños. Inflige daño físico contundente leve a un enemigo.',
+      en: 'With fists. Deals light blunt physical damage to one enemy.',
+    },
+    element: 'blunt',
+    cost: { kind: 'hp_percent', amount: 6 },
+  },
+  fists_2: {
+    id: 'fists_2',
+    name: { es: 'Onda de golpes', en: 'Wave of blows' },
+    description: {
+      es: 'Con puños. Inflige daño físico contundente leve a enemigos aleatorios entre 3 y 5 veces.',
+      en: 'With fists. Deals light blunt physical damage to random enemies 3 to 5 times.',
+    },
+    element: 'blunt',
+    cost: { kind: 'hp_percent', amount: 18 },
+  },
+  fists_3: {
+    id: 'fists_3',
+    name: { es: 'Gancho brutal', en: 'Brutal hook' },
+    description: {
+      es: 'Con puños. Inflige daño físico contundente medio a un enemigo.',
+      en: 'With fists. Deals medium blunt physical damage to one enemy.',
+    },
+    element: 'blunt',
+    cost: { kind: 'hp_percent', amount: 11 },
+  },
+  fists_4: {
+    id: 'fists_4',
+    name: { es: 'Huracán de furia', en: 'Hurricane fury' },
+    description: {
+      es: 'Con puños. Inflige daño físico contundente medio a todos los enemigos.',
+      en: 'With fists. Deals medium blunt physical damage to all enemies.',
+    },
+    element: 'blunt',
+    cost: { kind: 'hp_percent', amount: 19 },
+  },
+  fists_5: {
+    id: 'fists_5',
+    name: { es: 'Nudillo nocturno', en: 'Nightly knuckle' },
+    description: {
+      es: 'Con puños. Inflige daño físico contundente grave a un enemigo. Alta probabilidad de crítico.',
+      en: 'With fists. Deals heavy blunt physical damage to one enemy. High chance of a critical hit.',
+    },
+    element: 'blunt',
+    cost: { kind: 'hp_percent', amount: 13 },
+  },
+  fists_6: {
+    id: 'fists_6',
+    name: { es: 'Impacto sísmico', en: 'Seismic impact' },
+    description: {
+      es: 'Con puños. Inflige daño físico contundente grave a todos los enemigos.',
+      en: 'With fists. Deals heavy blunt physical damage to all enemies.',
+    },
+    element: 'blunt',
+    cost: { kind: 'hp_percent', amount: 22 },
+  },
+  fists_7: {
+    id: 'fists_7',
+    name: { es: 'Mano de Dios', en: 'God\'s hand' },
+    description: {
+      es: 'Con puños. Inflige daño físico contundente severo a un enemigo.',
+      en: 'With fists. Deals severe blunt physical damage to one enemy.',
+    },
+    element: 'blunt',
+    cost: { kind: 'hp_percent', amount: 20 },
+  },
+  fists_8: {
+    id: 'fists_8',
+    name: { es: 'Avalancha de rabia', en: 'Avalanche of rage' },
+    description: {
+      es: 'Con puños. Inflige daño físico contundente medio a todos los enemigos entre 4 y 6 veces. Si se usa justo después de curarse del estado Furia, hace el doble de daño.',
+      en: 'With fists. Deals medium blunt physical damage to all enemies 4 to 6 times. If used immediately after recovering from Rage, deals double the damage.',
+    },
+    element: 'blunt',
+    cost: { kind: 'hp_percent', amount: 25 },
+  },
+  fists_7s: {
+    id: 'fists_7s',
+    name: { es: 'Golpe anestésico', en: 'Anesthesic fist' },
+    description: {
+      es: 'Con puños. Inflige daño físico contundente severo a un enemigo. Probabilidad media de infligir sueño.',
+      en: 'With fists. Deals severe blunt physical damage to one enemy. Medium chance of inflicting sleep.',
+    },
+    element: 'blunt',
+    cost: { kind: 'hp_percent', amount: 28 },
+  },
+
+  // --- mace ---
+  
+    mace_1: {
+    id: 'mace_1',
+    name: { es: 'Golpe pesado', en: 'Heavy strike' },
+    description: {
+      es: 'Con maza. Inflige daño físico contundente leve a un enemigo.',
+      en: 'With mace. Deals light blunt physical damage to one enemy.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  mace_2: {
+    id: 'mace_2',
+    name: { es: 'Barrido ferreo', en: 'Iron sweep' },
+    description: {
+      es: 'Con maza. Inflige daño físico contundente leve a todos los enemigos.',
+      en: 'With mace. Deals light blunt physical damage to all enemies.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  mace_3: {
+    id: 'mace_3',
+    name: { es: 'Quebrantahuesos', en: 'Bone breaker' },
+    description: {
+      es: 'Con maza. Inflige daño físico contundente medio a un enemigo. Baja su ataque en un nivel durante un turno.',
+      en: 'With mace. Deals medium blunt physical damage to one enemy. Lowers enemy\'s attack by one level for one turn.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 11 },
+  },
+  mace_4: {
+    id: 'mace_4',
+    name: { es: 'Temblor', en: 'Quake' },
+    description: {
+      es: 'Con maza. Inflige daño físico contundente medio a todos los enemigos.',
+      en: 'With mace. Deals medium blunt physical damage to all enemies.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  mace_5: {
+    id: 'mace_5',
+    name: { es: 'Aplastamiento', en: 'Crushing blow' },
+    description: {
+      es: 'Con maza. Inflige daño físico contundente grave a un enemigo. Baja su precisión y evasión en un nivel durante un turno.',
+      en: 'With mace. Deals heavy blunt physical damage to one enemy. Lowers enemy\'s precision/evasion by one level for one turn.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 15 },
+  },
+  mace_6: {
+    id: 'mace_6',
+    name: { es: 'Ola de calor', en: 'Heat wave' },
+    description: {
+      es: 'Con maza. Inflige daño físico contundente grave a todos los enemigos.',
+      en: 'With mace. Deals heavy blunt physical damage to all enemies.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 28 },
+  },
+  mace_7: {
+    id: 'mace_7',
+    name: { es: 'Fractura craneal', en: 'Skull crack' },
+    description: {
+      es: 'Con maza. Inflige daño físico contundente colosal a un enemigo.',
+      en: 'With mace. Deals colossal blunt physical damage to one enemy.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 39 },
+  },
+  mace_5h: {
+    id: 'mace_5h',
+    name: { es: 'Juicio maestro', en: 'Master judgement' },
+    description: {
+      es: 'Con maza. Inflige daño físico contundente grave a un enemigo. Inflige mucho más daño a enemigos humanos o humanoides.',
+      en: 'With mace. Deals heavy blunt physical damage to one enemy. Inflicts far greater damage to human or humanoid enemies.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 17 },
+  },
+  mace_5m: {
+    id: 'mace_5pva',
+    name: { es: 'Juicio metálico', en: 'Metal judgement' },
+    description: {
+      es: 'Con maza. Inflige daño físico contundente grave a un enemigo. Inflige mucho más daño a enemigos equipados con armadura pesada.',
+      en: 'With mace. Deals heavy blunt physical damage to one enemy. Inflicts far greater damage enemies equipped with heavy armor.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 17 },
+  },
+  mace_5ci: {
+    id: 'mace_5pva',
+    name: { es: 'Juicio de otro mundo', en: 'Out of world judgement' },
+    description: {
+      es: 'Con maza. Inflige daño físico contundente grave a un enemigo. Inflige mucho más daño a enemigos celestiales e infernales.',
+      en: 'With mace. Deals heavy blunt physical damage to one enemy. Inflicts far greater damage to celestial and infernal creatures.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 17 },
+  },
+
+
+  // --- hammer ---
+    
+  hammer_1: {
+    id: 'hammer_1',
+    name: { es: 'Martillazo frontal', en: 'Hammer Strike' },
+    description: {
+      es: 'Con martillo. Inflige daño físico contundente leve a un enemigo.',
+      en: 'With hammer. Deals light blunt physical damage to one enemy.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  hammer_2: {
+    id: 'hammer_2',
+    name: { es: 'Giro espontáneo', en: 'Instant spin' },
+    description: {
+      es: 'Con martillo. Inflige daño físico contundente leve a todos los enemigos.',
+      en: 'With hammer. Deals light blunt physical damage to all enemies.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  hammer_3: {
+    id: 'hammer_3',
+    name: { es: 'Ofensiva', en: 'Bash' },
+    description: {
+      es: 'Con martillo. Inflige daño físico contundente medio a un enemigo.',
+      en: 'With hammer. Deals medium blunt physical damage to one enemy.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  hammer_4: {
+    id: 'hammer_4',
+    name: { es: 'Bola de demolición', en: 'Wrecking ball' },
+    description: {
+      es: 'Con martillo. Inflige daño físico contundente medio a todos los enemigos.',
+      en: 'With hammer. Deals medium blunt physical damage to all enemies.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  hammer_5: {
+    id: 'hammer_5',
+    name: { es: 'Home run', en: 'Home run' },
+    description: {
+      es: 'Con martillo. Inflige daño físico contundente grave a un enemigo.',
+      en: 'With hammer. Deals heavy blunt physical damage to one enemy.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 12 },
+  },
+  hammer_6: {
+    id: 'hammer_6',
+    name: { es: 'Artes akásicas', en: 'Akasha arts' },
+    description: {
+      es: 'Con martillo. Inflige daño físico contundente grave a todos los enemigos. Probalidad ligeramente más alta de crítico.',
+      en: 'With hammer. Deals heavy blunt physical damage to all enemies. Slightly higher chance of critical hit.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 28 },
+  },
+  hammer_7: {
+    id: 'hammer_7',
+    name: { es: 'Prensa de titán', en: 'Titan press' },
+    description: {
+      es: 'Con martillo. Inflige daño físico contundente severo a un enemigo.',
+      en: 'With hammer. Deals severe blunt physical damage to one enemy.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  hammer_8: {
+    id: 'hammer_8',
+    name: { es: 'Apocalipsis Real', en: 'Royal apocalypse' },
+    description: {
+      es: 'Con martillo y maza. Inflige daño físico contundente extremo a un enemigo.',
+      en: 'With hammer and mace. Deals extreme blunt physical damage to one enemy.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 46 },
+  },
+
+
+  // --- shield ---
+    
+  shield_1: {
+    id: 'shield_1',
+    name: { es: 'Placaje escudero', en: 'Shield bash' },
+    description: {
+      es: 'Con escudo. Inflige daño físico contundente leve a un enemigo. El daño será mayor según la Resistencia del atacante.',
+      en: 'With shield. Deals light blunt physical damage to one enemy. Deals larger damage depending on the attacker\'s Resistance.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 5 },
+  },
+  shield_2: {
+    id: 'shield_2',
+    name: { es: 'Muro de hierro', en: 'Iron wall' },
+    description: {
+      es: 'Con escudo. Inflige daño físico contundente leve a todos los enemigos. El daño será mayor según la Resistencia del atacante.',
+      en: 'With shield. Deals light blunt physical damage to all enemies. Deals larger damage depending on the attacker\'s Resistance.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 12 },
+  },
+  shield_3: {
+    id: 'shield_3',
+    name: { es: 'Embestida escudera', en: 'Shield charge' },
+    description: {
+      es: 'Con escudo. Inflige daño físico contundente medio a un enemigo. El daño será mayor según la Resistencia del atacante.',
+      en: 'With shield. Deals medium blunt physical damage to one enemy. Deals larger damage depending on the attacker\'s Resistance.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  shield_4: {
+    id: 'shield_4',
+    name: { es: 'Onda de choque', en: 'Shockwave' },
+    description: {
+      es: 'Con escudo. Inflige daño físico contundente medio a todos los enemigos. El daño será mayor según la Resistencia del atacante. Daño extra desde la fila de delante.',
+      en: 'With shield. Deals medium blunt physical damage to all enemies. Deals larger damage depending on the attacker\'s Resistance. Extra damage if in front row.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 22 },
+  },
+  shield_5: {
+    id: 'shield_5',
+    name: { es: 'Bastión implacable', en: 'Bloody dance' },
+    description: {
+      es: 'Con escudo. Inflige daño físico contundente grave a un enemigo. El daño será mayor según la Resistencia del atacante y sus niveles de aumento de defensa. Daño extra desde la fila de delante.',
+      en: 'With shield. Deals heavy blunt physical damage to one enemy. Deals larger damage depending on the attacker\'s Resistance and their defense buff level. Extra damage if in front row.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  shield_6: {
+    id: 'shield_6',
+    name: { es: 'Fortaleza viviente', en: 'Living fortress' },
+    description: {
+      es: 'Con escudo. Inflige daño físico contundente grave a todos los enemigos. El daño será mayor según la Resistencia del atacante.',
+      en: 'With shield. Deals heavy blunt physical damage to all enemies. Deals larger damage depending on the attacker\'s Resistance.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 30 },
+  },
+  shield_7: {
+    id: 'shield_7',
+    name: { es: 'Barrido inexpugnable', en: 'Formidable sweep' },
+    description: {
+      es: 'Con escudo. Inflige daño físico contundente severo a un enemigo. El daño será mayor según la Resistencia del atacante.',
+      en: 'With shield. Deals severe blunt physical damage to one enemy. Deals larger damage depending on the attacker\'s Resistance.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 22 },
+  },
+  shield_8: {
+    id: 'shield_8',
+    name: { es: 'Égida suprema', en: 'Supreme Aegis' },
+    description: {
+      es: 'Con escudo. Inflige daño físico contundente grave a todos los enemigos. El daño será mayor según la Resistencia del atacante y sus niveles de aumento de defensa. Daño extra desde la fila de delante. Aumenta en un grado la resistencia a todas las afinidades durante un turno. No acumulable.',
+      en: 'With shield. Deals heavy blunt physical damage to all enemies. Deals larger damage depending on the attacker\'s Resistance and their defense buff level. Extra damage if in front row. Increase resistence of all affinities by one grade for one turn. Does not stack.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 51 },
+  },
+
+
+  // --- lance ---
+    
+  lance_1: {
+    id: 'lance_1',
+    name: { es: 'Pinchazo', en: 'Spike' },
+    description: {
+      es: 'Con lanza. Inflige daño físico perforante leve a un enemigo.',
+      en: 'With lance. Deals light pierce physical damage to one enemy.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  lance_2: {
+    id: 'lance_2',
+    name: { es: 'Barrido perforante', en: 'Piercing sweep' },
+    description: {
+      es: 'Con lanza. Inflige daño físico perforante leve a todos los enemigos.',
+      en: 'With lance. Deals light pierce physical damage to all enemies.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  lance_3: {
+    id: 'lance_3',
+    name: { es: 'Perforación potente', en: 'Power pierce' },
+    description: {
+      es: 'Con lanza. Inflige daño físico perforante medio a un enemigo.',
+      en: 'With lance. Deals medium pierce physical damage to one enemy.',
     },
     element: 'pierce',
     cost: { kind: 'mp', amount: 8 },
   },
-  precise_shot: {
-    id: 'precise_shot',
-    name: { es: 'Disparo certero', en: 'Precise shot' },
+  lance_4: {
+    id: 'lance_4',
+    name: { es: 'Colmillo de dragón', en: 'Dragon fang' },
     description: {
-      es: 'Inflige daño perforante con probabilidad de crítico.',
-      en: 'Deals piercing damage with a high critical chance.',
+      es: 'Con lanza. Inflige daño físico perforante medio a todos los enemigos.',
+      en: 'With lance. Deals medium pierce physical damage to all enemies.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  lance_5: {
+    id: 'lance_5',
+    name: { es: 'Dragón ascendente', en: 'Ascending dragon' },
+    description: {
+      es: 'Con lanza. Inflige daño físico perforante grave a un enemigo.',
+      en: 'With lance. Deals heavy pierce physical damage to one enemy.',
     },
     element: 'pierce',
     cost: { kind: 'mp', amount: 12 },
   },
-  piercing_arrow: {
-    id: 'piercing_arrow',
-    name: { es: 'Flecha perforante', en: 'Piercing arrow' },
+  lance_6: {
+    id: 'lance_6',
+    name: { es: 'Giro a reacción', en: 'Engine spinning' },
     description: {
-      es: 'Inflige daño perforante severo a un enemigo.',
-      en: 'Deals heavy piercing damage to one enemy.',
+      es: 'Con lanza. Inflige daño físico perforante grave a todos los enemigos.',
+      en: 'With lance. Deals heavy pierce physical damage to all enemies.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 28 },
+  },
+  lance_7: {
+    id: 'lance_7',
+    name: { es: 'Fuerza primigenia', en: 'Primal force' },
+    description: {
+      es: 'Con lanza. Inflige daño físico perforante severo a un enemigo.',
+      en: 'With lance. Deals severe pierce physical damage to one enemy.',
     },
     element: 'pierce',
     cost: { kind: 'mp', amount: 20 },
   },
+  lance_8: {
+    id: 'lance_8',
+    name: { es: 'Lanza de la justicia', en: 'Justice spear' },
+    description: {
+      es: 'Con lanza. Inflige daño físico perforante colosal a un enemigo.',
+      en: 'With lance. Deals severe pierce physical damage to one enemy.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 46 },
+  },
+
+  // --- rapier ---
+    
+  rapier_1: {
+    id: 'rapier_1',
+    name: { es: 'Estocada', en: 'Thrust' },
+    description: {
+      es: 'Con florete. Inflige daño físico perforante leve a un enemigo.',
+      en: 'With rapier. Deals light pierce physical damage to one enemy.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  rapier_2: {
+    id: 'rapier_2',
+    name: { es: 'Estrella esgrimista', en: 'Fencing star' },
+    description: {
+      es: 'Con florete. Inflige daño físico perforante leve a todos los enemigos.',
+      en: 'With rapier. Deals light pierce physical damage to all enemies.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  rapier_3: {
+    id: 'rapier_3',
+    name: { es: 'Estocada doble', en: 'Double thrust' },
+    description: {
+      es: 'Con florete. Inflige daño físico perforante leve a un enemigo dos veces.',
+      en: 'With rapier. Deals light pierce physical damage to one enemy twice.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  rapier_4: {
+    id: 'rapier_4',
+    name: { es: 'Rosa sangrienta', en: 'Bloody rose' },
+    description: {
+      es: 'Con florete. Inflige daño físico perforante medio a todos los enemigos.',
+      en: 'With rapier. Deals medium pierce physical damage to all enemies.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  rapier_5: {
+    id: 'rapier_5',
+    name: { es: 'Estocadas concentradas', en: 'Focus thrusts' },
+    description: {
+      es: 'Con florete. Inflige daño físico perforante leve a enemigos aleatorios entre 3 y 6 veces.',
+      en: 'With rapier. Deals heavy pierce physical damage to random enemies 3 to 6 times.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 12 },
+  },
+  rapier_6: {
+    id: 'rapier_6',
+    name: { es: 'Rapsodia mortal', en: 'Deadly Rhapsody' },
+    description: {
+      es: 'Con florete. Inflige daño físico perforante grave a todos los enemigos.',
+      en: 'With rapier. Deals heavy pierce physical damage to all enemies.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 28 },
+  },
+  rapier_7: {
+    id: 'rapier_7',
+    name: { es: 'Centenar de estocadas', en: 'Hundred thrusts' },
+    description: {
+      es: 'Con florete. Inflige daño físico perforante leve a enemigos aleatorios entre 14 y 18 veces.',
+      en: 'With rapier. Deals light pierce physical damage to random enemies 14 to 18 times.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  rapier_8: {
+    id: 'rapier_8',
+    name: { es: 'Gimnasia exquisita', en: 'Exquisite gymnastics' },
+    description: {
+      es: 'Con florete. Inflige daño físico perforante colosal a un enemigo.',
+      en: 'With rapier. Deals severe pierce physical damage to one enemy.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 46 },
+  },
+
+  // --- bow ---
+    
+  bow_1: {
+    id: 'bow_1',
+    name: { es: 'Disparo único', en: 'Single shot' },
+    description: {
+      es: 'Con arco. Inflige daño físico perforante leve a un enemigo. Solo se puede usar desde la fila de atrás.',
+      en: 'With bow. Deals light pierce physical damage to one enemy. Only from back row.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  bow_2: {
+    id: 'bow_2',
+    name: { es: 'Lluvia de flechas', en: 'Arrow rain' },
+    description: {
+      es: 'Con arco. Inflige daño físico perforante leve a todos los enemigos.',
+      en: 'With bow. Deals light pierce physical damage to all enemies.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  bow_3: {
+    id: 'bow_3',
+    name: { es: 'Disparo maldito', en: 'Hex shot' },
+    description: {
+      es: 'Con arco. Inflige daño físico perforante leve a un enemigo. Reduce el ataque, la defensa o la precisión y evasión del enemigo durante 1 turno.',
+      en: 'With bow. Deals light pierce physical damage to one enemy. Reduces enemy\'s attack, defense or hit and evasion for one turn.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  bow_4: {
+    id: 'bow_4',
+    name: { es: 'Salva salvaje', en: 'Wild salvo' },
+    description: {
+      es: 'Con arco. Inflige daño físico perforante leve a todos los enemigos 3 veces.',
+      en: 'With bow. Deals light pierce physical damage to all enemies 3 times.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  bow_5f: {
+    id: 'bow_5',
+    name: { es: 'Flecha antiflán', en: 'Flanbuster arrow' },
+    description: {
+      es: 'Con arco. Inflige daño físico perforante grave a un enemigo. Inflige mucho más daño a flanes e ignora sus resistencias.',
+      en: 'With bow. Deals heavy pierce physical damage to one enemy. Inflicts far greater damage to flans and ignores resistance.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 15 },
+  },
+  bow_5d: {
+    id: 'bow_5',
+    name: { es: 'Flecha matadragones', en: 'Dragonslayer arrow' },
+    description: {
+      es: 'Con arco. Inflige daño físico perforante grave a un enemigo. Inflige mucho más daño a dragones.',
+      en: 'With bow. Deals heavy pierce physical damage to one enemy. Inflicts far greater damage to dragons.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 15 },
+  },
+  bow_6: {
+    id: 'bow_6',
+    name: { es: 'Millar de flechas', en: 'Myriad arrows' },
+    description: {
+      es: 'Con arco. Inflige daño físico perforante leve a todos los enemigos 12 veces.',
+      en: 'With bow. Deals light pierce physical damage to all enemies 12 times.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 36 },
+  },
+
+  // --- crossbow ---
+    
+  crossbow_1: {
+    id: 'crossbow_1',
+    name: { es: 'Virote envenenado', en: 'Venomous Bolt' },
+    description: {
+      es: 'Con ballesta. Inflige daño físico perforante leve a un enemigo. Probabilidad baja de infligir veneno. Calcula el daño con la Constitución.',
+      en: 'With crossbow. Deals light pierce physical damage to one enemy. Low chance of inflicting poison. Calculates damage with Constitution.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 5 },
+  },
+  crossbow_2: {
+    id: 'crossbow_2',
+    name: { es: 'Virote encantado', en: 'Enchanted bolt' },
+    description: {
+      es: 'Con ballesta. Inflige daño físico perforante leve a todos los enemigos. Probabilidad baja de infligir desesperación. Calcula el daño con la Voluntad.',
+      en: 'With crossbow. Deals light pierce physical damage to all enemies. Low chance of inflicting despair. Calculates damage with Will.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 13 },
+  },
+  crossbow_3: {
+    id: 'crossbow_3',
+    name: { es: 'Ojo de halcón', en: 'Hawk shot' },
+    description: {
+      es: 'Con ballesta. Inflige daño físico perforante medio a un enemigo. Probabilidad baja de infligir parálisis. Calcula el daño con la Constitución.',
+      en: 'With crossbow. Deals medium pierce physical damage to one enemy. Low chance of inflicting paralysis. Calculates damage with Constitution.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 11 },
+  },
+  crossbow_4: {
+    id: 'crossbow_4',
+    name: { es: 'Virote atronador', en: 'Thunderous bolt' },
+    description: {
+      es: 'Con ballesta. Inflige daño físico perforante medio a todos los enemigos. Probabilidad baja de infligir confusión.',
+      en: 'With crossbow. Deals medium pierce physical damage to all enemies. Low chance of inflicting confusion.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  crossbow_5: {
+    id: 'crossbow_5',
+    name: { es: 'Virote explosivo', en: 'Explosive bolt' },
+    description: {
+      es: 'Con ballesta. Inflige daño físico perforante grave a un enemigo. Probabilidad baja de infligir quemadura. Calcula el daño con la Constitución.',
+      en: 'With crossbow. Deals heavy pierce physical damage to one enemy. Low chance of inflicting burn. Calculates damage with Constitution.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 14 },
+  },
+  crossbow_6: {
+    id: 'crossbow_6',
+    name: { es: 'Lluvia de acero', en: 'Steel rain' },
+    description: {
+      es: 'Con ballesta. Inflige daño físico perforante grave a todos los enemigos. Probabilidad baja de infligir sueño. Calcula el daño con la Voluntad.',
+      en: 'With crossbow. Deals heavy pierce physical damage to all enemies. Low chance of inflicting sleep. Calculates damage with Will.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 31 },
+  },
+  crossbow_7: {
+    id: 'crossbow_7',
+    name: { es: 'Milagro del ballestero', en: 'Crossbowman\'s miracle' },
+    description: {
+      es: 'Con ballesta. Inflige daño físico perforante severo a un enemigo. Calcula el daño con la Voluntad.',
+      en: 'With crossbow. Deals severe pierce physical damage to one enemy. Calculates damage with Will.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 21 },
+  },
+  crossbow_8: {
+    id: 'crossbow_8',
+    name: { es: 'Pralaya', en: 'Pralaya' },
+    description: {
+      es: 'Con arco y ballesta. Inflige daño físico perforante colosal a un enemigo. Calcula el daño con el atributo del enemigo más bajo entre Resistencia, Constitución y Voluntad.',
+      en: 'With bow and crossbow. Deals colossal pierce physical damage to one enemy. Calculates damage with enemy\'s lowest stat among Resistance, Constitution and Will.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 47 },
+  },
+
 
   // --- fire ---
   fire_1: {
@@ -1931,9 +2846,83 @@ export const ATTACKS: Record<string, Attack> = {
     cost: { kind: 'mp', amount: 9 },
   },
 
+  // --- overworld ---
+
+  overworld_1:{
+    id: 'overworld_1',
+    name: { es: 'Embestida', en: 'Barge past' },
+    description: {
+      es: 'Al recibir un combo de golpes de un enemigo en combate de acción, no comienza con desventaja.',
+      en: 'Getting hit in overworld combat doesn\'t result in battle disadvantage.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  overworld_2:{
+    id: 'overworld_2',
+    name: { es: 'Acción mejorada', en: 'Enhanced action' },
+    description: {
+      es: 'Los ataques realizados en combate de acción infligen más daño a los enemigos.',
+      en: 'Striking in overworld combat causes more damage.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  overworld_3:{
+    id: 'overworld_3',
+    name: { es: 'Cambiar las tornas', en: 'Surprise upset' },
+    description: {
+      es: 'Reduce drásticamente la dificultad de aturdir a enemigos de nivel superior en combate de acción.',
+      en: 'Drastically reduce difficulty to stun high level enemies in overworld combat.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  overworld_4:{
+    id: 'overworld_4',
+    name: { es: 'Cooperación mejorada', en: 'Enhanced cooperation' },
+    description: {
+      es: 'Aumenta mucho el daño de los compañeros en combates de acción.',
+      en: 'Greatly increases allies\' damage in overworld combat.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  overworld_5:{
+    id: 'overworld_5',
+    name: { es: 'Autorreflejo', en: 'Auto repel' },
+    description: {
+      es: 'Probabilidad de reflejar un ataque enemigo en combate de acción.',
+      en: 'Chance to reflect an enemy\'s attack in overworld combat.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  overworld_6:{
+    id: 'overworld_6',
+    name: { es: 'Baile elegante', en: 'Elegant dancing' },
+    description: {
+      es: 'Probabilidad de esquivar automáticamente un ataque enemigo en combate de acción.',
+      en: 'Chance to automatically dodge an enemy\'s attack in overworld combat.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  overworld_7:{
+    id: 'overworld_7',
+    name: { es: 'Sangre adinerada', en: 'Money bleed' },
+    description: {
+      es: 'Si el protagonista recibe un golpe en combate de acción, pierde monedas en lugar de perder HP.',
+      en: 'When the protagonist gets hit in overworld combat, they lose money instead of HP.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+
   
 
   // --- passive ---
+
 
 
   // --- line-exclusive ---

@@ -26,6 +26,8 @@ const cost = computed<CostView>(() => {
       return { text: `${amount}% HP`, modifier: 'is-hp' }
     case 'money':
       return { text: `$${amount}`, modifier: 'is-money' }
+    default:
+      return { text: `` }
   }
 })
 </script>

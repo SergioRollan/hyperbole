@@ -23,7 +23,7 @@ export type AttackElement =
   | 'passive'
 
 /** Resource consumed by an attack. */
-export type AttackCostKind = 'mp' | 'hp_percent' | 'money'
+export type AttackCostKind = 'mp' | 'hp_percent' | 'money'| 'none'
 
 export interface AttackCost {
   kind: AttackCostKind

@@ -15,6 +15,7 @@ export const warriorLine: EvolutionLine = {
     name: { es: 'Guerrero', en: 'Warrior' },
     attacks: [
       { attackId: 'slash_strike', level: 1 },
+      { attackId: 'overworld_1', level: 2 },
       { attackId: 'crushing_blow', level: 5 },
     ],
     evolutions: [
