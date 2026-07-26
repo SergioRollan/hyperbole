@@ -254,13 +254,23 @@ export const ATTACKS: Record<string, Attack> = {
   },
   sword_6: {
     id: 'sword_6',
-    name: { es: 'Miriada de cortes', en: 'Thousand cuts' },
+    name: { es: 'Gran corte aciago', en: 'Large fateful cut' },
     description: {
-      es: 'Con espada y katana. Inflige daño físico cortante colosal a todos los enemigos.',
-      en: 'With sword. Deals colossal slash physical damage to all enemies.',
+      es: 'Con espada. Inflige daño físico cortante grave a todos los enemigos.',
+      en: 'With sword. Deals heavy slash physical damage to all enemies.',
     },
     element: 'slash',
-    cost: { kind: 'mp', amount: 46 },
+    cost: { kind: 'mp', amount: 30 },
+  },
+  sword_7: {
+    id: 'sword_7',
+    name: { es: 'Sello de las sombras', en: 'Seal of shadows' },
+    description: {
+      es: 'Con espada. Inflige daño físico grave cortante, perforante y de maldición a un enemigo.',
+      en: 'With sword. Deals heavy slash, pierce and curse physical damage to all enemies.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 30 },
   },
 
   // --- katana ---
@@ -334,6 +344,16 @@ export const ATTACKS: Record<string, Attack> = {
     },
     element: 'slash',
     cost: { kind: 'mp', amount: 33 },
+  },
+  katana_8: {
+    id: 'katana_8',
+    name: { es: 'Hassou Tobi', en: 'Hassou Tobi' },
+    description: {
+      es: 'Con espada y katana. Inflige daño físico cortante colosal a todos los enemigos.',
+      en: 'With sword and katana. Deals colossal slash physical damage to all enemies.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 46 },
   },
 
   // --- axe ---
@@ -1938,7 +1958,7 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'almighty_1',
     name: { es: 'Megido', en: 'Megido' },
     description: {
-      es: 'Inflige daño mágico de maldición medio a todos los enemigos.',
+      es: 'Inflige daño mágico todopoderoso medio a todos los enemigos.',
       en: 'Deals medium almighty magic damage to all enemies.',
     },
     element: 'almighty',
@@ -1948,7 +1968,7 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'almighty_2',
     name: { es: 'Gidola', en: 'Gidola' },
     description: {
-      es: 'Inflige daño mágico de maldición grave a un enemigo.',
+      es: 'Inflige daño mágico todopoderoso grave a un enemigo.',
       en: 'Deals heavy almighty magic damage to one enemy.',
     },
     element: 'almighty',
@@ -1958,7 +1978,7 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'almighty_3',
     name: { es: 'Megidola', en: 'Megidola' },
     description: {
-      es: 'Inflige daño mágico de maldición grave a todos los enemigos.',
+      es: 'Inflige daño mágico todopoderoso grave a todos los enemigos.',
       en: 'Deals heavy almighty magic damage to all enemies.',
     },
     element: 'almighty',
@@ -1968,7 +1988,7 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'almighty_4',
     name: { es: 'Gidolaon', en: 'Gidolaon' },
     description: {
-      es: 'Inflige daño mágico de maldición severo a un enemigo.',
+      es: 'Inflige daño mágico todopoderoso severo a un enemigo.',
       en: 'Deals severe almighty magic damage to one enemy.',
     },
     element: 'almighty',
@@ -1978,7 +1998,7 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'almighty_5',
     name: { es: 'Megidolaon', en: 'Megidolaon' },
     description: {
-      es: 'Inflige daño mágico de maldición severo a todos los enemigos.',
+      es: 'Inflige daño mágico todopoderoso severo a todos los enemigos.',
       en: 'Deals severe almighty magic damage to all enemies.',
     },
     element: 'almighty',
@@ -3592,8 +3612,8 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'passive_up_46',
     name: { es: 'Mejorar nigromancia', en: 'Nigromance boost' },
     description: {
-      es: 'Cualquier daño infligido con nigromancia aumenta un +8%.',
-      en: 'Any damage dealt with nigromance magic increases by +8%.',
+      es: 'Cualquier daño infligido con nigromancia aumenta un +20%.',
+      en: 'Any damage dealt with nigromance magic increases by +20%.',
     },
     element: 'passive',
     cost: { kind: 'none', amount: 0 },
@@ -4048,6 +4068,16 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'passive',
     cost: { kind: 'none', amount: 0 },
   },
+  passive_spend_10:{
+    id: 'passive_spend_10',
+    name: { es: 'Maestro del tiempo', en: 'Time master' },
+    description: {
+      es: 'Reduce el consumo de MP de las habilidades de slow, haste y time en un 33%.',
+      en: 'Reduces MP cost of slow, haste and time skills by 33%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
 
 
   // --- line-exclusive ---
@@ -4255,17 +4285,616 @@ export const ATTACKS: Record<string, Attack> = {
   },
 
   // --- death ---
+
+  zombie_1:{
+    id: 'zombie_1',
+    name: { es: 'Animar cadáver', en: 'Animate corpse' },
+    description: {
+      es: 'El último enemigo derrotado por el atacante utilizará su habilidad contra el enemigo.',
+      en: 'Last enemy defeated by the attacker will use a skill against the enemy.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  zombie_2:{
+    id: 'zombie_2',
+    name: { es: 'Animar cadáver mejorado', en: 'Animate enhanced corpse' },
+    description: {
+      es: 'Los dos últimos enemigos derrotados por el atacante utilizarán sus habilidades contra el enemigo durante tres turnos. No acumulable.',
+      en: 'Last two enemies defeated by the attacker will use their respective skills against the enemy for three turns. Does not stack.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 15 },
+  },
+
+
   // --- space ---
+
+  space_1:{
+    id: 'space_1',
+    name: { es: 'Teletransporte', en: 'Teleport' },
+    description: {
+      es: 'Permite a un aliado actuar justo después del usuario, cambiando el orden del grupo.',
+      en: 'Allows and ally to act immediately after the user, changing the group order.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 19 },
+  },
+  space_2:{
+    id: 'space_2',
+    name: { es: 'Ursa Fuerza', en: 'Ursa Strength' },
+    description: {
+      es: 'Aumenta un 5% la Fuerza de todo el equipo aliado durante 5 turnos. Solo puede haber dos Ursas activas al mismo tiempo.',
+      en: 'Increases all allie\'s Strength by 5% for 5 turns. Only two Ursas can be active at the same time.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 5 },
+  },
+  space_3:{
+    id: 'space_3',
+    name: { es: 'Ursa Inteligencia', en: 'Ursa Intelligence' },
+    description: {
+      es: 'Aumenta un 5% la Inteligencia de todo el equipo aliado durante 5 turnos. Solo puede haber dos Ursas activas al mismo tiempo.',
+      en: 'Increases all allie\'s Intelligence by 5% for 5 turns. Only two Ursas can be active at the same time.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 5 },
+  },
+  space_4:{
+    id: 'space_4',
+    name: { es: 'Ursa Sabiduría', en: 'Ursa Wisdom' },
+    description: {
+      es: 'Aumenta un 5% la Sabiduría de todo el equipo aliado durante 5 turnos. Solo puede haber dos Ursas activas al mismo tiempo.',
+      en: 'Increases all allie\'s Wisdom by 5% for 5 turns. Only two Ursas can be active at the same time.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 5 },
+  },
+  space_5:{
+    id: 'space_5',
+    name: { es: 'Ursa Resistencia', en: 'Ursa Resistance' },
+    description: {
+      es: 'Aumenta un 5% la Resistencia de todo el equipo aliado durante 5 turnos. Solo puede haber dos Ursas activas al mismo tiempo.',
+      en: 'Increases all allie\'s Resistance by 5% for 5 turns. Only two Ursas can be active at the same time.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 5 },
+  },
+  space_6:{
+    id: 'space_6',
+    name: { es: 'Ursa Constitución', en: 'Ursa Constitution' },
+    description: {
+      es: 'Aumenta un 5% la Constitución de todo el equipo aliado durante 5 turnos. Solo puede haber dos Ursas activas al mismo tiempo.',
+      en: 'Increases all allie\'s Constitution by 5% for 5 turns. Only two Ursas can be active at the same time.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 5 },
+  },
+  space_7:{
+    id: 'space_7',
+    name: { es: 'Ursa Voluntad', en: 'Ursa Will' },
+    description: {
+      es: 'Aumenta un 5% la Voluntad de todo el equipo aliado durante 5 turnos. Solo puede haber dos Ursas activas al mismo tiempo.',
+      en: 'Increases all allie\'s Will by 5% for 5 turns. Only two Ursas can be active at the same time.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 5 },
+  },
+  space_8:{
+    id: 'space_8',
+    name: { es: 'Ursa Agilidad', en: 'Ursa Agility' },
+    description: {
+      es: 'Aumenta un 5% la Agilidad de todo el equipo aliado durante 5 turnos. Solo puede haber dos Ursas activas al mismo tiempo.',
+      en: 'Increases all allie\'s Agility by 5% for 5 turns. Only two Ursas can be active at the same time.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 5 },
+  },
+  space_9:{
+    id: 'space_9',
+    name: { es: 'Ursa Suerte', en: 'Ursa Luck' },
+    description: {
+      es: 'Aumenta un 10% la Suerte de todo el equipo aliado durante 5 turnos. Solo puede haber dos Ursas activas al mismo tiempo.',
+      en: 'Increases all allie\'s Luck by 10% for 5 turns. Only two Ursas can be active at the same time.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 5 },
+  },
+  space_10:{
+    id: 'space_10',
+    name: { es: 'Cassiopea', en: 'Cassiopeia' },
+    description: {
+      es: 'Aumenta un 5% la Inteligencia de todos los aliados durante 4 turnos. Durante este tiempo, todos los ataques mágicos y curaciones se calculan con Inteligencia, nunca con Sabiduría. No puede solaparse con Pleyades.',
+      en: 'Increases all allies Intelligence by 5% for 4 turns. During that time, all magic attacks and healings are calculated with Intelligence, never with Wisdom. Cannot be active at the same time as Pleiades.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  space_11:{
+    id: 'space_11',
+    name: { es: 'Pleyades', en: 'Pleiades' },
+    description: {
+      es: 'Aumenta un 5% la Sabiduría de todos los aliados durante 4 turnos. Durante este tiempo, todos los ataques mágicos y curaciones se calculan con Sabiduría, nunca con Inteligencia. No puede solaparse con Casiopea.',
+      en: 'Increases all allies Wisdom by 5% for 4 turns. During that time, all magic attacks and healings are calculated with Wisdom, never with Intelligence. Cannot be active at the same time as Cassiopeia.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  space_12:{
+    id: 'space_12',
+    name: { es: 'Aura espacial', en: 'Space aura' },
+    description: {
+      es: 'Aumenta la efectividad de Ursa, Pleyades y Casiopea en un 40%. Permite activar tres Ursas.',
+      en: 'Increases Ursa, Pleiades and Cassiopeia effects by 40%. Allow to activate three Ursas.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  space_13:{
+    id: 'space_13',
+    name: { es: 'Singularidad', en: 'Singularity' },
+    description: {
+      es: 'Inflige daño mágico grave todopoderoso y de bendición a todos los enemigos. El daño aumenta en un 25% por cada Ursa, Casiopea o Pleyades activa.',
+      en: 'Deals heavy magic almighty and bless damage to all enemies. Damage increases by +25% for every Ursa, Cassiopeia or Pleiades currently in field.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 59 },
+  },
+
   // --- time ---
+
+  time_1:{
+    id: 'time_1',
+    name: { es: 'Slow', en: 'Slow' },
+    description: {
+      es: 'Probabilidad media de decelerar a un enemigo durante 2 turnos. Un enemigo decelerado, cuando actúe, perderá un icono de turno extra aunque no falle, excepto si golpea una debilidad o con un golpe crítico, que solo gastaría un icono entero.',
+      en: 'Medium chances of decelerating an enemy for 2 turns. When a decelerated enemy acts, they will lose an extra press turn even if they don\'t miss, except when striking a weakness or a critical hit, where only one full press turn would be spent.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 6 },
+  },
+  time_2:{
+    id: 'time_2',
+    name: { es: 'Haste', en: 'Haste' },
+    description: {
+      es: 'Probabilidad media de acelerar a un aliado durante 2 turnos. Un aliado acelerado, cuando actúe, gastará medio icono de turno siempre, salvo que falle, que solo pierde un icono entero, o salvo que golpee una debilidad o un golpe crítico, que no gastaría nada.',
+      en: 'Medium chances of accelerating an ally for 2 turns. When an accelerated ally acts, they will spend only half a press turn, except attack is missed, in which case only one full press turn, o unless they strike a weakness or a critical hit, spending nothing at all.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 6 },
+  },
+  time_3:{
+    id: 'time_3',
+    name: { es: 'Slowga', en: 'Slowga' },
+    description: {
+      es: 'Probabilidad alta de decelerar a un enemigo durante 3 turnos. Un enemigo decelerado, cuando actúe, perderá un icono de turno extra aunque no falle, excepto si golpea una debilidad o con un golpe crítico, que solo gastaría un icono entero.',
+      en: 'High chances of decelerating an enemy for 3 turns. When a decelerated enemy acts, they will lose an extra press turn even if they don\'t miss, except when striking a weakness or a critical hit, where only one full press turn would be spent.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 11 },
+  },
+  time_4:{
+    id: 'time_4',
+    name: { es: 'Hastega', en: 'Hastega' },
+    description: {
+      es: 'Probabilidad alta de acelerar a un aliado durante 3 turnos. Un aliado acelerado, cuando actúe, gastará medio icono de turno siempre, salvo que falle, que solo pierde un icono entero, o salvo que golpee una debilidad o un golpe crítico, que no gastaría nada.',
+      en: 'High chances of accelerating an ally for 3 turns. When an accelerated ally acts, they will spend only half a press turn, except attack is missed, in which case only one full press turn, o unless they strike a weakness or a critical hit, spending nothing at all.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 11 },
+  },
+  time_5:{
+    id: 'time_5',
+    name: { es: 'Maslowga', en: 'Maslowga' },
+    description: {
+      es: 'Probabilidad media de decelerar a todos los enemigos durante 2 turnos. Un enemigo decelerado, cuando actúe, perderá un icono de turno extra aunque no falle, excepto si golpea una debilidad o con un golpe crítico, que solo gastaría un icono entero.',
+      en: 'Medium chances of decelerating all enemies for 2 turns. When a decelerated enemy acts, they will lose an extra press turn even if they don\'t miss, except when striking a weakness or a critical hit, where only one full press turn would be spent.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 30 },
+  },
+  time_6:{
+    id: 'time_6',
+    name: { es: 'Mahastega', en: 'Mahastega' },
+    description: {
+      es: 'Probabilidad media de acelerar a todos los aliados durante 2 turnos. Un aliado acelerado, cuando actúe, gastará medio icono de turno siempre, salvo que falle, que solo pierde un icono entero, o salvo que golpee una debilidad o un golpe crítico, que no gastaría nada.',
+      en: 'Medium chances of accelerating all allies for 2 turns. When an accelerated ally acts, they will spend only half a press turn, except attack is missed, in which case only one full press turn, o unless they strike a weakness or a critical hit, spending nothing at all.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 30 },
+  },
+  time_7:{
+    id: 'time_7',
+    name: { es: 'Slowdyne', en: 'Slowdyne' },
+    description: {
+      es: 'Decelera a un enemigo durante 3 turnos. Un enemigo decelerado, cuando actúe, perderá un icono de turno extra aunque no falle, excepto si golpea una debilidad o con un golpe crítico, que solo gastaría un icono entero.',
+      en: 'Decelerates an enemy for 3 turns. When a decelerated enemy acts, they will lose an extra press turn even if they don\'t miss, except when striking a weakness or a critical hit, where only one full press turn would be spent.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 30 },
+  },
+  time_8:{
+    id: 'time_8',
+    name: { es: 'Hastedyne', en: 'Hastedyne' },
+    description: {
+      es: 'Acelera a un aliado durante 3 turnos. Un aliado acelerado, cuando actúe, gastará medio icono de turno siempre, salvo que falle, que solo pierde un icono entero, o salvo que golpee una debilidad o un golpe crítico, que no gastaría nada.',
+      en: 'Accelerates an ally for 3 turns. When an accelerated ally acts, they will spend only half a press turn, except attack is missed, in which case only one full press turn, o unless they strike a weakness or a critical hit, spending nothing at all.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 30 },
+  },
+  time_9:{
+    id: 'time_9',
+    name: { es: 'Hastedyne', en: 'Hastedyne' },
+    description: {
+      es: 'Acelera a un aliado durante 3 turnos. Un aliado acelerado, cuando actúe, gastará medio icono de turno siempre, salvo que falle, que solo pierde un icono entero, o salvo que golpee una debilidad o un golpe crítico, que no gastaría nada.',
+      en: 'Accelerates an ally for 3 turns. When an accelerated ally acts, they will spend only half a press turn, except attack is missed, in which case only one full press turn, o unless they strike a weakness or a critical hit, spending nothing at all.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 30 },
+  },
+  time_10:{
+    id: 'time_10',
+    name: { es: 'Viaje al pasado', en: 'Time rewind' },
+    description: {
+      es: 'Devuelve a todos los aliados o a todos los enemigos a su estado del turno anterior. No revierte las muertes.',
+      en: 'Returns all allies or all enemies to the state they were in last turn. Does not undo deaths.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 24 },
+  },
+  time_11:{
+    id: 'time_11',
+    name: { es: 'Viaje al futuro', en: 'Time travel' },
+    description: {
+      es: 'El usuario volverá al estado en el que se encuentra justo después de lanzar esta habilidad cuando el enemigo haya actuado dos veces.',
+      en: 'User will return to their current state after using this skill when the enemy has acted twice.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 75 },
+  },
+  time_12:{
+    id: 'time_12',
+    name: { es: 'Aura temporal', en: 'Time aura' },
+    description: {
+      es: 'Aumenta la probabilidad de acierto de las habilidades Slow y Haste en un 35%. El viaje al futuro y el paro del tiempo aumentan su efecto un turno más.',
+      en: 'Increases chance of Slow and Haste skills hit by 35%. Time travel and time stop increase their effect by one more turn.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  time_13:{
+    id: 'time_13',
+    name: { es: 'Paro del tiempo', en: 'Time stop' },
+    description: {
+      es: 'El usuario detiene el tiempo y puede atacar dos veces más sin gastar ningún icono de turno. Durante el tiempo parado, aumenta la probabilidad de realizar golpes críticos en un +50%.',
+      en: 'User stops time and can attack twice further without spending any press turn icons. During stopped time, critical hit rate increases by +50%',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 95 },
+  },
+
+
   // --- weapon magic ---
+
+  weaponm_1:{
+    id: 'weaponm_1',
+    name: { es: 'Golpe agi', en: 'Agi strike' },
+    description: {
+      es: 'Con espada, florete o lanza. Inflige daño leve físico de fuego a un enemigo.',
+      en: 'With sword, rapier or spear. Deals light physical fire damage to one enemy.',
+    },
+    element: 'fire',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  weaponm_2:{
+    id: 'weaponm_2',
+    name: { es: 'Golpe bufu', en: 'Bufu strike' },
+    description: {
+      es: 'Con espada, florete o lanza. Inflige daño leve físico de hielo a un enemigo.',
+      en: 'With sword, rapier or spear. Deals light physical ice damage to one enemy.',
+    },
+    element: 'ice',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  weaponm_3:{
+    id: 'weaponm_3',
+    name: { es: 'Golpe garu', en: 'Garu strike' },
+    description: {
+      es: 'Con espada, florete o lanza. Inflige daño leve físico de viento a un enemigo.',
+      en: 'With sword, rapier or spear. Deals light physical wind damage to one enemy.',
+    },
+    element: 'wind',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  weaponm_4:{
+    id: 'weaponm_4',
+    name: { es: 'Golpe zio', en: 'Zio strike' },
+    description: {
+      es: 'Con espada, florete o lanza. Inflige daño leve físico de trueno a un enemigo.',
+      en: 'With sword, rapier or spear. Deals light physical thunder damage to one enemy.',
+    },
+    element: 'thunder',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  weaponm_5:{
+    id: 'weaponm_5',
+    name: { es: 'Golpe agidyne', en: 'Agidyne strike' },
+    description: {
+      es: 'Con espada, florete o lanza. Inflige daño grave físico de fuego a un enemigo.',
+      en: 'With sword, rapier or spear. Deals heavy physical fire damage to one enemy.',
+    },
+    element: 'fire',
+    cost: { kind: 'mp', amount: 13 },
+  },
+  weaponm_6:{
+    id: 'weaponm_6',
+    name: { es: 'Golpe bufudyne', en: 'Bufudyne strike' },
+    description: {
+      es: 'Con espada, florete o lanza. Inflige daño grave físico de hielo a un enemigo.',
+      en: 'With sword, rapier or spear. Deals heavy physical ice damage to one enemy.',
+    },
+    element: 'ice',
+    cost: { kind: 'mp', amount: 13 },
+  },
+  weaponm_7:{
+    id: 'weaponm_7',
+    name: { es: 'Golpe garudyne', en: 'Garudyne strike' },
+    description: {
+      es: 'Con espada, florete o lanza. Inflige daño grave físico de viento a un enemigo.',
+      en: 'With sword, rapier or spear. Deals heavy physical wind damage to one enemy.',
+    },
+    element: 'wind',
+    cost: { kind: 'mp', amount: 13 },
+  },
+  weaponm_8:{
+    id: 'weaponm_8',
+    name: { es: 'Golpe ziodyne', en: 'Ziodyne strike' },
+    description: {
+      es: 'Con espada, florete o lanza. Inflige daño grave físico de trueno a un enemigo.',
+      en: 'With sword, rapier or spear. Deals heavy physical thunder damage to one enemy.',
+    },
+    element: 'thunder',
+    cost: { kind: 'mp', amount: 13 },
+  },
+  weaponm_9:{
+    id: 'weaponm_9',
+    name: { es: 'Golpe hama', en: 'Hama strike' },
+    description: {
+      es: 'Con espada, florete o lanza. Inflige daño medio físico de bendición a un enemigo.',
+      en: 'With sword, rapier or spear. Deals medium physical bless damage to one enemy.',
+    },
+    element: 'light',
+    cost: { kind: 'mp', amount: 9 },
+  },
+  weaponm_10:{
+    id: 'weaponm_10',
+    name: { es: 'Golpe mudo', en: 'Mudo strike' },
+    description: {
+      es: 'Con espada, florete o lanza. Inflige daño medio físico de maldición a un enemigo.',
+      en: 'With sword, rapier or spear. Deals medium physical curse damage to one enemy.',
+    },
+    element: 'dark',
+    cost: { kind: 'mp', amount: 9 },
+  },
+  weaponm_11:{
+    id: 'weaponm_11',
+    name: { es: 'Aramasa', en: 'Aramasa' },
+    description: {
+      es: 'Con espada, florete o lanza. Inflige daño colosal físico todopoderoso a un enemigo.',
+      en: 'With sword, rapier or spear. Deals colossal physical almighty damage to one enemy.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 49 },
+  },
+
+
   // --- counter ---
+
+  counter_1:{
+    id: 'counter_1',
+    name: { es: 'Contraataque', en: 'Counter' },
+    description: {
+      es: 'Probabilidad de 35% de repeler los ataques físicos recibidos durante el próximo turno del enemigo.',
+      en: '35% chance of repelling physical damages taken during next enemy turn.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  counter_2:{
+    id: 'counter_2',
+    name: { es: 'Contraataque mágico', en: 'Magic counter' },
+    description: {
+      es: 'Probabilidad de 35% de repeler los ataques mágicos recibidos durante el próximo turno del enemigo.',
+      en: '35% chance of repelling magic damages taken during next enemy turn.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 5 },
+  },
+  counter_3:{
+    id: 'counter_3',
+    name: { es: 'Contraataque maestro', en: 'Master counter' },
+    description: {
+      es: 'Probabilidad de 70% de repeler todos los ataques recibidos durante el próximo turno del enemigo.',
+      en: '70% chance of repelling all damages taken during next enemy turn.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 10 },
+  },
+
+
   // --- protection ---
+
+  protection_1:{
+    id: 'protection_1',
+    name: { es: 'Resolución noble', en: 'Noble resolve' },
+    description: {
+      es: 'Reduce a la mitad todo el daño sufrido si el combate comenzó con emboscada en desventaja.',
+      en: 'Halves all damage taken when party is ambushed.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  protection_2:{
+    id: 'protection_2',
+    name: { es: 'Proclamación de caballero', en: 'Knight\'s proclamation' },
+    description: {
+      es: 'Atrae la atención de los enemigos y recibe los ataques individuales dirigidos a otros compañeros durante 1 turno (algunas habilidades ignoran este efecto).',
+      en: 'Draws enemy attention and takes attacks for allies for 1 turn (certain skills ignore this effect).',
+    },
+    element: 'support',
+    cost: { kind: 'hp_percent', amount: 2 },
+  },
+  protection_3:{
+    id: 'protection_3',
+    name: { es: 'Proclamación de caballero sagrado', en: 'Holy knight\'s proclamation' },
+    description: {
+      es: 'Entra en guardia y atrae la atención de los enemigos y recibe los ataques individuales dirigidos a otros compañeros durante 1 turno (algunas habilidades ignoran este efecto).',
+      en: 'Guards and draws enemy attention and takes attacks for allies for 1 turn (certain skills ignore this effect).',
+    },
+    element: 'support',
+    cost: { kind: 'hp_percent', amount: 4 },
+  },
+  protection_4:{
+    id: 'protection_4',
+    name: { es: 'Protección divina', en: 'Holy protection' },
+    description: {
+      es: 'El usuario puede equipar dos escudos. Con dos escudos equipados, reduce a la mitad todo el daño recibido durante toda la batalla.',
+      en: 'User can equip two shields. With two shields equipped, halves all damage taken during the whole battle.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  protection_5:{
+    id: 'protection_5',
+    name: { es: 'Protección contra la muerte', en: 'Death protection' },
+    description: {
+      es: 'El usuario otorga a un aliado un efecto de "Aguante".',
+      en: 'User grants an ally one "Endure" effect.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 50 },
+  },
+
+
   // --- leadership ---
+
+  leadership_1:{
+    id: 'leadership_1',
+    name: { es: 'Formación de vigor 1', en: 'Formation of vigor 1' },
+    description: {
+      es: 'Mueve a todos los aliados a la fila delantera y sube su ataque 1 nivel durante 3 turnos.',
+      en: 'Moves all allies to the front row and raises their attack 1 level for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 21 },
+  },
+  leadership_2:{
+    id: 'leadership_2',
+    name: { es: 'Formación de coraza 1', en: 'Formation of shelter 1' },
+    description: {
+      es: 'Mueve a todos los aliados a la fila trasera y sube su defensa 1 nivel durante 3 turnos.',
+      en: 'Moves all allies to the back row and raises their defense 1 level for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 21 },
+  },
+  leadership_3:{
+    id: 'leadership_3',
+    name: { es: 'Formación de vigor 2', en: 'Formation of vigor 2' },
+    description: {
+      es: 'Mueve a todos los aliados a la fila delantera y sube su ataque 2 niveles durante 3 turnos.',
+      en: 'Moves all allies to the front row and raises their attack 2 levels for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 37 },
+  },
+  leadership_4:{
+    id: 'leadership_4',
+    name: { es: 'Formación de coraza 2', en: 'Formation of shelter 2' },
+    description: {
+      es: 'Mueve a todos los aliados a la fila trasera y sube su defensa 2 niveles durante 3 turnos.',
+      en: 'Moves all allies to the back row and raises their defense 2 levels for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 37 },
+  },
+  leadership_5:{
+    id: 'leadership_5',
+    name: { es: 'Formación de vigor 3', en: 'Formation of vigor 3' },
+    description: {
+      es: 'Mueve a todos los aliados a la fila delantera y sube su ataque 3 niveles durante 3 turnos.',
+      en: 'Moves all allies to the front row and raises their attack 3 levels for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 53 },
+  },
+  leadership_6:{
+    id: 'leadership_6',
+    name: { es: 'Formación de coraza 3', en: 'Formation of shelter 3' },
+    description: {
+      es: 'Mueve a todos los aliados a la fila trasera y sube su defensa 3 niveles durante 3 turnos.',
+      en: 'Moves all allies to the back row and raises their defense 3 levels for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 53 },
+  },
+  leadership_7:{
+    id: 'leadership_7',
+    name: { es: 'Espíritu de liderazgo', en: 'Leadership spirit' },
+    description: {
+      es: 'El usuario aumenta su propio ataque, defensa, precisión y evasión en 2 niveles durante 3 turnos.',
+      en: 'User raises their own attack, defense, hit and evasion by 2 levels for three turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 43 },
+  },
+
+
   // --- music ---
+
+  music_1:{
+    id: 'music_1',
+    name: { es: 'Canción aterradora', en: 'Fearful song' },
+    description: {
+      es: 'Inflige daño todopoderoso muy leve a todos los enemigos.',
+      en: 'Deals very light almighty damage to all enemies.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 0 },
+  },
+
+
   // --- tricks ---
+
+  tricks_1:{
+    id: 'tricks_1',
+    name: { es: 'Entregar MP', en: 'Gift MP' },
+    description: {
+      es: 'Otorga a un aliado el 20% de sus propios MP máximos (o todos si se queda a cero).',
+      en: 'Gives one ally 20% of own max MP (or all if not that many remaining).',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 0 },
+  },
+
+
   // --- money ---
+
+
+
   // --- objects ---
+
+
+
   // --- survival ---
+
+
+
   // --- others ---
+
+
+  // --- protagonist ---
+
 
 }

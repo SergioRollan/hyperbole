@@ -61,7 +61,7 @@ export const CLASS_STATS: Record<string, StatBonuses> = {
   // --- Druid line ---
   druid: sb(0, 0, 2, 0, 0, 2, 0, 1),
   summoner: sb(0, 0, 4, 0, 0, 3, 0, 4),
-  spiritualist: sb(0, 5, 5, 0, 0, 7, 1, 4),
+  spiritualist: sb(0, 6, 6, 0, 0, 5, 1, 4),
   necromancer: sb(0, 0, 7, 0, 0, 3, 0, 4),
   scientist: sb(0, 0, 4, 0, 1, 5, 0, 1),
   astromancer: sb(0, 0, 5, 2, 1, 8, 0, 6),
