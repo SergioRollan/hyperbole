@@ -642,31 +642,31 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'hammer_3',
     name: { es: 'Ofensiva', en: 'Bash' },
     description: {
-      es: 'Con martillo. Inflige daño físico contundente medio a un enemigo.',
-      en: 'With hammer. Deals medium blunt physical damage to one enemy.',
+      es: 'Con martillo. Inflige daño físico contundente medio a un enemigo. Baja el ataque del usuario en un nivel durante 3 turnos.',
+      en: 'With hammer. Deals medium blunt physical damage to one enemy. Lowers user attack by one level for 3 turns.',
     },
     element: 'blunt',
-    cost: { kind: 'mp', amount: 8 },
+    cost: { kind: 'mp', amount: 5 },
   },
   hammer_4: {
     id: 'hammer_4',
     name: { es: 'Bola de demolición', en: 'Wrecking ball' },
     description: {
-      es: 'Con martillo. Inflige daño físico contundente medio a todos los enemigos.',
-      en: 'With hammer. Deals medium blunt physical damage to all enemies.',
+      es: 'Con martillo. Inflige daño físico contundente medio a todos los enemigos. Baja la precisión y evasión del usuario en un nivel durante 3 turnos.',
+      en: 'With hammer. Deals medium blunt physical damage to all enemies. Lowers user hit/evasion by one level for 3 turns.',
     },
     element: 'blunt',
-    cost: { kind: 'mp', amount: 18 },
+    cost: { kind: 'mp', amount: 12 },
   },
   hammer_5: {
     id: 'hammer_5',
     name: { es: 'Home run', en: 'Home run' },
     description: {
-      es: 'Con martillo. Inflige daño físico contundente grave a un enemigo.',
-      en: 'With hammer. Deals heavy blunt physical damage to one enemy.',
+      es: 'Con martillo. Inflige daño físico contundente grave a un enemigo. Baja la defensa del usuario en un nivel durante 3 turnos.',
+      en: 'With hammer. Deals heavy blunt physical damage to one enemy. Lowers user defense by one level for 3 turns.',
     },
     element: 'blunt',
-    cost: { kind: 'mp', amount: 12 },
+    cost: { kind: 'mp', amount: 9 },
   },
   hammer_6: {
     id: 'hammer_6',
@@ -692,11 +692,11 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'hammer_8',
     name: { es: 'Apocalipsis Real', en: 'Royal apocalypse' },
     description: {
-      es: 'Con martillo y maza. Inflige daño físico contundente extremo a un enemigo.',
-      en: 'With hammer and mace. Deals extreme blunt physical damage to one enemy.',
+      es: 'Con martillo y maza. Inflige daño físico contundente extremo a un enemigo. Baja el ataque, defensa, precisión y evasión del usuario en un nivel durante 3 turnos.',
+      en: 'With hammer and mace. Deals extreme blunt physical damage to one enemy. Lowers user attack, defense and hit/evasion by one level for 3 turns.',
     },
     element: 'blunt',
-    cost: { kind: 'mp', amount: 46 },
+    cost: { kind: 'mp', amount: 34 },
   },
 
 
@@ -1994,6 +1994,56 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'almighty',
     cost: { kind: 'mp', amount: 66 },
   },
+  almighty_7: {
+    id: 'almighty_7',
+    name: { es: 'Drenar HP', en: 'Life drain' },
+    description: {
+      es: 'Inflige daño mágico leve todopoderoso a un enemigo y se cura los HP arrebatados.',
+      en: 'Deals light almighty magic damage to one enemy and heals the HP taken.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  almighty_8: {
+    id: 'almighty_8',
+    name: { es: 'Drenar MP', en: 'Spirit drain' },
+    description: {
+      es: 'Inflige daño mágico leve todopoderoso a un enemigo a sus MP, y se cura los MP arrebatados.',
+      en: 'Deals light almighty magic damage to one enemy\'s MP, and heals the MP taken.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  almighty_9: {
+    id: 'almighty_9',
+    name: { es: 'Drenar esencia', en: 'Essence drain' },
+    description: {
+      es: 'Inflige daño mágico medio todopoderoso a un enemigo a sus HP y sus MP, y se cura todo lo arrebatado.',
+      en: 'Deals medium almighty magic damage to one enemy\'s HP and MP, and heals both.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 12 },
+  },
+  almighty_10: {
+    id: 'almighty_10',
+    name: { es: 'Aliento fétido', en: 'Foul Breath' },
+    description: {
+      es: 'Duplica la probabilidad de un enemigo de recibir estados alterados durante 4 turnos.',
+      en: 'Doubles susceptibility to all ailments of one enemy for 4 turns.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  almighty_11: {
+    id: 'almighty_11',
+    name: { es: 'Aire estancado', en: 'Stagnant air' },
+    description: {
+      es: 'Duplica la probabilidad de todos los enemigos y todos los aliados de recibir estados alterados durante 4 turnos.',
+      en: 'Doubles susceptibility to all ailments of all enemies and all allies for 4 turns.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 8 },
+  },
 
   // --- status ---
   ailment_burn: {
@@ -2340,7 +2390,7 @@ export const ATTACKS: Record<string, Attack> = {
   },
   ailm_5: {
     id: 'ailm_5',
-    name: { es: 'Energy drop', en: 'Energy drop' },
+    name: { es: 'Gota de energía', en: 'Energy drop' },
     description: {
       es: 'Cura la confusión/miedo/desesperación/furia de un aliado.',
       en: "Cure Confusion/Fear/Despair/Rage of one ally.",
@@ -2350,7 +2400,7 @@ export const ATTACKS: Record<string, Attack> = {
   },
   ailm_6: {
     id: 'ailm_6',
-    name: { es: 'Energy shower', en: 'Energy shower' },
+    name: { es: 'Lluvia de energía', en: 'Energy shower' },
     description: {
       es: 'Cura la confusión/miedo/desesperación/furia de todos los aliados.',
       en: "Cure Confusion/Fear/Despair/Rage of all allies.",
@@ -2360,7 +2410,7 @@ export const ATTACKS: Record<string, Attack> = {
   },
   ailm_7: {
     id: 'ailm_7',
-    name: { es: 'Amrita drop', en: 'Amrita drop' },
+    name: { es: 'Gota de amrita', en: 'Amrita drop' },
     description: {
       es: 'Cura todos los estados alterados de un aliado.',
       en: "Cure all ailments of one ally.",
@@ -2370,7 +2420,7 @@ export const ATTACKS: Record<string, Attack> = {
   },
   ailm_8: {
     id: 'ailm_8',
-    name: { es: 'Amrita shower', en: 'Amrita shower' },
+    name: { es: 'Lluvia de amrita', en: 'Amrita shower' },
     description: {
       es: 'Cura todos los estados alterados de todos los aliados.',
       en: "Cure all ailments of all allies.",
@@ -3518,6 +3568,36 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'passive',
     cost: { kind: 'none', amount: 0 },
   },
+  passive_up_44:{
+    id: 'passive_up_44',
+    name: { es: 'Mejorar absorción', en: 'Drain boost' },
+    description: {
+      es: 'Cualquier daño infligido con magia de absorción aumenta un +20%.',
+      en: 'Any damage dealt with drain magic increases by +20%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_45:{
+    id: 'passive_up_45',
+    name: { es: 'Mejorar invocaciones', en: 'Summon boost' },
+    description: {
+      es: 'Cualquier daño infligido con magia de invocación aumenta un +5%.',
+      en: 'Any damage dealt with summon magic increases by +5%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_46:{
+    id: 'passive_up_46',
+    name: { es: 'Mejorar nigromancia', en: 'Nigromance boost' },
+    description: {
+      es: 'Cualquier daño infligido con nigromancia aumenta un +8%.',
+      en: 'Any damage dealt with nigromance magic increases by +8%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
   passive_ev_1:{
     id: 'passive_ev_1',
     name: { es: 'Evadir fuego', en: 'Dodge fire' },
@@ -3798,6 +3878,26 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'passive',
     cost: { kind: 'none', amount: 0 },
   },
+  passive_reg_7:{
+    id: 'passive_reg_7',
+    name: { es: 'Sanación rápida', en: 'Fast-heal' },
+    description: {
+      es: 'Los estados alterados terminan en la mitad de turnos de lo normal.',
+      en: 'Status ailments get healed in half the number of turns.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_reg_8:{
+    id: 'passive_reg_8',
+    name: { es: 'Sanación instantánea', en: 'Insta-heal' },
+    description: {
+      es: 'Los estados alterados siempre se desvanecen al siguiente turno.',
+      en: 'Status ailments get healed in one turn.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
   passive_auto_1:{
     id: 'passive_auto_1',
     name: { es: 'Maestro del ataque', en: 'Attack Master' },
@@ -3951,5 +4051,221 @@ export const ATTACKS: Record<string, Attack> = {
 
 
   // --- line-exclusive ---
+
+  // --- summon ---
+  passive_summon_1:{
+    id: 'passive_summon_1',
+    name: { es: 'Invocar tauro', en: 'Summon tauros' },
+    description: {
+      es: 'Inflige daño mágico contundente leve a un enemigo. Ignora resistencias.',
+      en: 'Deals light blunt magical damage to one enemy. Ignores resistances.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  passive_summon_2:{
+    id: 'passive_summon_2',
+    name: { es: 'Invocar soldado esquelético', en: 'Summon duskbone soldier' },
+    description: {
+      es: 'Inflige daño mágico cortante leve a un enemigo. Ignora resistencias.',
+      en: 'Deals light slash magical damage to one enemy. Ignores resistances.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  passive_summon_3:{
+    id: 'passive_summon_3',
+    name: { es: 'Invocar goblin', en: 'Summon goblin' },
+    description: {
+      es: 'Inflige daño mágico perforante leve a un enemigo. Ignora resistencias.',
+      en: 'Deals light pierce magical damage to one enemy. Ignores resistances.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  passive_summon_4:{
+    id: 'passive_summon_4',
+    name: { es: 'Invocar rey guptauro', en: 'Summon guptauros king' },
+    description: {
+      es: 'Inflige daño mágico contundente grave a todos los enemigos. Ignora resistencias.',
+      en: 'Deals heavy blunt magical damage to all enemies. Ignores resistances.',
+    },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 42 },
+  },
+  passive_summon_5:{
+    id: 'passive_summon_5',
+    name: { es: 'Invocar caballero esquelético', en: 'Summon duskbone knight' },
+    description: {
+      es: 'Inflige daño mágico cortante grave a todos los enemigos. Ignora resistencias.',
+      en: 'Deals heavy slash magical damage to all enemies. Ignores resistances.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 42 },
+  },
+  passive_summon_6:{
+    id: 'passive_summon_6',
+    name: { es: 'Invocar rey goblin', en: 'Summon king goblin' },
+    description: {
+      es: 'Inflige daño mágico perforante grave a todos los enemigos. Ignora resistencias.',
+      en: 'Deals heavy pierce magical damage to all enemies. Ignores resistances.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 42 },
+  },
+  passive_summon_7:{
+    id: 'passive_summon_7',
+    name: { es: 'Invocar hada', en: 'Summon fairy' },
+    description: {
+      es: 'Inflige daño mágico de hielo leve dos veces y mágico nuclear leve dos veces a un enemigo. Ignora resistencias.',
+      en: 'Deals light ice magic damage twice and light nuclear magic damage twice to one enemy. Ignores resistances.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 22 },
+  },
+  passive_summon_8:{
+    id: 'passive_summon_8',
+    name: { es: 'Invocar cocatriz', en: 'Summon cocatrice' },
+    description: {
+      es: 'Inflige daño mágico de trueno medio una vez y mágico de maldición medio una vez a todos los enemigos. Ignora resistencias.',
+      en: 'Deals medium thunder magic damage once and medium curse magic damage once to all enemies. Ignores resistances.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 28 },
+  },
+  passive_summon_9:{
+    id: 'passive_summon_9',
+    name: { es: 'Invocar bestia de lava', en: 'Summon lava beast' },
+    description: {
+      es: 'Inflige daño mágico grave todopoderoso a todos los enemigos y baja su precisión y evasión en un nivel durante 3 turnos. Ignora resistencias.',
+      en: 'Deals heavy almighty magic damage to all enemies, and decreases their hit/evasion in one level for three turns. Ignores resistances.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 52 },
+  },
+  passive_summon_10:{
+    id: 'passive_summon_10',
+    name: { es: 'Invocar León Águila', en: 'Summon Eagle Lion' },
+    description: {
+      es: 'Inflige daño mágico leve de viento a todos los enemigos entre 10 y 15 veces. Ignora resistencias.',
+      en: 'Deals light wind magic damage to all enemies 10 to 15 times. Ignores resistances.',
+    },
+    element: 'wind',
+    cost: { kind: 'mp', amount: 55 },
+  },
+  passive_summon_11:{
+    id: 'passive_summon_11',
+    name: { es: 'Invocar azotamentes', en: 'Summon illithid' },
+    description: {
+      es: 'Inflige daño mágico grave psíquico a todos los enemigos 2 veces. Ignora resistencias.',
+      en: 'Deals heavy psychic magic damage to all enemies twice. Ignores resistances.',
+    },
+    element: 'psychic',
+    cost: { kind: 'mp', amount: 55 },
+  },
+  passive_summon_12:{
+    id: 'passive_summon_12',
+    name: { es: 'Invocar arcángel', en: 'Summon archangel' },
+    description: {
+      es: 'Inflige daño mágico grave de bendición a un enemigo 3 veces. Probabilidad baja de infligir miedo. Ignora resistencias.',
+      en: 'Deals heavy bless magic damage to one enemy 3 times. Low chance of inflicting fear. Ignores resistances.',
+    },
+    element: 'light',
+    cost: { kind: 'mp', amount: 55 },
+  },
+  passive_summon_13:{
+    id: 'passive_summon_13',
+    name: { es: 'Invocar hombre lagarto', en: 'Summon lizardman' },
+    description: {
+      es: 'Inflige daño mágico severo de trueno a todos los enemigos. Probabilidad baja de infligir lavado de cerebro. Ignora resistencias.',
+      en: 'Deals heavy thunder magic damage to all enemies. Low chance of inflicting brainwash. Ignores resistances.',
+    },
+    element: 'thunder',
+    cost: { kind: 'mp', amount: 55 },
+  },
+  passive_summon_14:{
+    id: 'passive_summon_14',
+    name: { es: 'Invocar gárgola', en: 'Summon gargoyle' },
+    description: {
+      es: 'Inflige daño mágico severo de fuego a un enemigo. Probabilidad baja de infligir sueño. Ignora resistencias.',
+      en: 'Deals severe fire magic damage to one enemy. Low chance of inflicting sleep. Ignores resistances.',
+    },
+    element: 'fire',
+    cost: { kind: 'mp', amount: 65 },
+  },
+  passive_summon_15:{
+    id: 'passive_summon_15',
+    name: { es: 'Invocar rey del cementerio', en: 'Summon undead king' },
+    description: {
+      es: 'Inflige daño mágico grave de maldición a todos los enemigos entre 2 y 3 veces. Probabilidad baja de infligir desesperación. Ignora resistencias.',
+      en: 'Deals heavy psychic magic damage to all enemies 2 to 3 times. Low chance of inflicting despair. Ignores resistances.',
+    },
+    element: 'dark',
+    cost: { kind: 'mp', amount: 65 },
+  },
+  passive_summon_16:{
+    id: 'passive_summon_16',
+    name: { es: 'Invocar yeti', en: 'Summon yeti' },
+    description: {
+      es: 'Inflige daño mágico medio de hielo a todos los enemigos entre 4 y 5 veces. Probabilidad baja de infligir mareo. Ignora resistencias.',
+      en: 'Deals medium ice magic damage to all enemies 4 to 5 times. Low chance of inflicting dizzy. Ignores resistances.',
+    },
+    element: 'ice',
+    cost: { kind: 'mp', amount: 65 },
+  },
+  passive_summon_17:{
+    id: 'passive_summon_17',
+    name: { es: 'Invocar minotauro', en: 'Summon minotaur' },
+    description: {
+      es: 'Inflige daño mágico severo nuclear a un enemigo. Probabilidad baja de infligir quemadura. Ignora resistencias.',
+      en: 'Deals severe nuclear magic damage to one enemy. Low chance of inflicting burn. Ignores resistances.',
+    },
+    element: 'nuclear',
+    cost: { kind: 'mp', amount: 65 },
+  },
+  passive_summon_18:{
+    id: 'passive_summon_18',
+    name: { es: 'Invocar dios caído', en: 'Summon fallen god' },
+    description: {
+      es: 'Inflige daño mágico severo cortante, contundente y perforante a un enemigo y disminuye su ataque y su defensa en un nivel durante 3 turnos. Ignora resistencias.',
+      en: 'Deals severe blunt, slash and pierce magic damage to one enemy and decreases their attack and defense by one level for 3 turns. Ignores resistances.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 85 },
+  },
+  passive_summon_19:{
+    id: 'passive_summon_19',
+    name: { es: 'Invocar noctiluca', en: 'Summon noctiluca' },
+    description: {
+      es: 'Cura cualquier estado alterado de un aliado y le hace recuperar un 20% de los HP durante los siguientes 4 turnos.',
+      en: 'Cures status ailments of one ally and grants them 20% HP recovery for the next 4 turns.',
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 25 },
+  },
+  passive_summon_20:{
+    id: 'passive_summon_19',
+    name: { es: 'Invocar amor fraternal', en: 'Summon family grace' },
+    description: {
+      es: 'Cura una cantidad grande HP de todos los aliados y cura sus estados alterados.',
+      en: 'Greatly restores HP and cures status ailments of all allies.',
+    },
+    element: 'heal',
+    cost: { kind: 'mp', amount: 45 },
+  },
+
+  // --- death ---
+  // --- space ---
+  // --- time ---
+  // --- weapon magic ---
+  // --- counter ---
+  // --- protection ---
+  // --- leadership ---
+  // --- music ---
+  // --- tricks ---
+  // --- money ---
+  // --- objects ---
+  // --- survival ---
+  // --- others ---
 
 }
