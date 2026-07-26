@@ -22,6 +22,71 @@ import type { Attack } from '../../domain'
  */
 export const ATTACKS: Record<string, Attack> = {
 
+  
+  // --- grimorio y bastón ---
+
+
+  grimoire_1: {
+    id: 'grimoire_1',
+    name: { es: 'Lección introductoria', en: 'Introduction lecture' },
+    description: {
+      es: 'Con grimorio. Inflige daño físico contundente medio a un enemigo.',
+      en: 'With grimoire. Deals medium blunt physical damage to one enemy.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  grimoire_2: {
+    id: 'grimoire_2',
+    name: { es: 'Lección magistral', en: 'Master lecture' },
+    description: {
+      es: 'Con grimorio. Inflige daño físico contundente medio a todos los enemigos.',
+      en: 'With grimoire. Deals medium blunt physical damage to one enemy.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  grimoire_3: {
+    id: 'grimoire_3',
+    name: { es: 'Lección supervisada', en: 'Supervised lecture' },
+    description: {
+      es: 'Con grimorio. Inflige daño físico contundente grave a un enemigo.',
+      en: 'With grimoire. Deals heavy blunt physical damage to one enemy.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  staff_1: {
+    id: 'staff_1',
+    name: { es: 'Bastonazo', en: 'Staff blow' },
+    description: {
+      es: 'Con bastón. Inflige daño físico contundente medio a un enemigo.',
+      en: 'With staff. Deals medium blunt physical damage to one enemy.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  staff_2: {
+    id: 'staff_2',
+    name: { es: 'Bronca', en: 'Ruction' },
+    description: {
+      es: 'Con bastón. Inflige daño físico contundente medio a todos los enemigos.',
+      en: 'With staff. Deals medium blunt physical damage to one enemy.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 10 },
+  },
+  staff_3: {
+    id: 'staff_3',
+    name: { es: 'Gran bastonazo', en: 'Staff big blow' },
+    description: {
+      es: 'Con bastón. Inflige daño físico contundente grave a un enemigo.',
+      en: 'With staff. Deals heavy blunt physical damage to one enemy.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 10 },
+  },
+
   // --- dagger ---
   
   dagger_1: {
@@ -116,6 +181,16 @@ export const ATTACKS: Record<string, Attack> = {
   },
   dagger_8: {
     id: 'dagger_8',
+    name: { es: 'Diluvio de dagas', en: 'Flood of daggers' },
+    description: {
+      es: 'Con daga. Después de terminar el turno del jugador, infligirá daño físico cortante grave a todos los enemigos, una vez por cada aliado que haya actuado después.',
+      en: 'With dagger. After player turn is over, deals heavy slash physical damage to all enemies, once for every ally that has acted after.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 44 },
+  },
+  dagger_9: {
+    id: 'dagger_9',
     name: { es: 'Cortos sueños', en: 'Swift dreams' },
     description: {
       es: 'Con daga. Inflige daño cortante extremo a un enemigo que se vuelve poderoso según la agilidad del atacante.',
@@ -484,7 +559,7 @@ export const ATTACKS: Record<string, Attack> = {
     name: { es: 'Aplastamiento', en: 'Crushing blow' },
     description: {
       es: 'Con maza. Inflige daño físico contundente grave a un enemigo. Baja su precisión y evasión en un nivel durante un turno.',
-      en: 'With mace. Deals heavy blunt physical damage to one enemy. Lowers enemy\'s precision/evasion by one level for one turn.',
+      en: 'With mace. Deals heavy blunt physical damage to one enemy. Lowers enemy\'s hit/evasion by one level for one turn.',
     },
     element: 'blunt',
     cost: { kind: 'mp', amount: 15 },
@@ -858,8 +933,8 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'rapier_7',
     name: { es: 'Centenar de estocadas', en: 'Hundred thrusts' },
     description: {
-      es: 'Con florete. Inflige daño físico perforante leve a enemigos aleatorios entre 14 y 18 veces.',
-      en: 'With rapier. Deals light pierce physical damage to random enemies 14 to 18 times.',
+      es: 'Con florete. Inflige daño físico perforante muy leve a enemigos aleatorios entre 16 y 20 veces.',
+      en: 'With rapier. Deals very light pierce physical damage to random enemies 16 to 20 times.',
     },
     element: 'pierce',
     cost: { kind: 'mp', amount: 20 },
@@ -917,8 +992,18 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'pierce',
     cost: { kind: 'mp', amount: 18 },
   },
-  bow_5f: {
+  bow_5: {
     id: 'bow_5',
+    name: { es: 'Diana', en: 'Bull\'s eye' },
+    description: {
+      es: 'Con arco. Inflige daño físico perforante grave a un enemigo. Inflige mucho más daño a enemigos con algún estado alterado.',
+      en: 'With bow. Deals heavy pierce physical damage to one enemy. Deals far greater damage to enemies with status ailments.',
+    },
+    element: 'pierce',
+    cost: { kind: 'mp', amount: 17 },
+  },
+  bow_5f: {
+    id: 'bow_5f',
     name: { es: 'Flecha antiflán', en: 'Flanbuster arrow' },
     description: {
       es: 'Con arco. Inflige daño físico perforante grave a un enemigo. Inflige mucho más daño a flanes e ignora sus resistencias.',
@@ -928,7 +1013,7 @@ export const ATTACKS: Record<string, Attack> = {
     cost: { kind: 'mp', amount: 15 },
   },
   bow_5d: {
-    id: 'bow_5',
+    id: 'bow_5d',
     name: { es: 'Flecha matadragones', en: 'Dragonslayer arrow' },
     description: {
       es: 'Con arco. Inflige daño físico perforante grave a un enemigo. Inflige mucho más daño a dragones.',
@@ -2430,7 +2515,7 @@ export const ATTACKS: Record<string, Attack> = {
     name: { es: 'Sukukaja', en: 'Sukukaja' },
     description: {
       es: 'Aumenta la precisión y la evasión de un aliado en un nivel durante 3 turnos.',
-      en: "Increases one ally's precision/evasion by one level for 3 turns.",
+      en: "Increases one ally's hit/evasion by one level for 3 turns.",
     },
     element: 'support',
     cost: { kind: 'mp', amount: 8 },
@@ -2440,7 +2525,7 @@ export const ATTACKS: Record<string, Attack> = {
     name: { es: 'Masukukaja', en: 'Masukukaja' },
     description: {
       es: 'Aumenta la precisión y la evasión de todos los aliados en un nivel durante 3 turnos.',
-      en: "Increases all allies precision/evasion by one level for 3 turns.",
+      en: "Increases all allies hit/evasion by one level for 3 turns.",
     },
     element: 'support',
     cost: { kind: 'mp', amount: 24 },
@@ -2450,7 +2535,7 @@ export const ATTACKS: Record<string, Attack> = {
     name: { es: 'Sukunda', en: 'Sukunda' },
     description: {
       es: 'Disminuye la precisión y la evasión de un enemigo en un nivel durante 3 turnos.',
-      en: "Decreases one enemy's precision/evasion by one level for 3 turns.",
+      en: "Decreases one enemy's hit/evasion by one level for 3 turns.",
     },
     element: 'support',
     cost: { kind: 'mp', amount: 8 },
@@ -2460,7 +2545,7 @@ export const ATTACKS: Record<string, Attack> = {
     name: { es: 'Masukunda', en: 'Masukunda' },
     description: {
       es: 'Disminuye la precisión y la evasión de todos los enemigos en un nivel durante 3 turnos.',
-      en: "Decreases all enemies precision/evasion by one level for 3 turns.",
+      en: "Decreases all enemies hit/evasion by one level for 3 turns.",
     },
     element: 'support',
     cost: { kind: 'mp', amount: 24 },
@@ -2470,7 +2555,7 @@ export const ATTACKS: Record<string, Attack> = {
     name: { es: 'Subidón', en: 'Heat riser' },
     description: {
       es: 'Aumenta el ataque, la defensa, la precisión y la evasión de un aliado en un nivel durante 3 turnos.',
-      en: "Increases one ally's attack/defense/precision/evasion by one level for 3 turns.",
+      en: "Increases one ally's attack/defense/hit/evasion by one level for 3 turns.",
     },
     element: 'support',
     cost: { kind: 'mp', amount: 30 },
@@ -2480,7 +2565,7 @@ export const ATTACKS: Record<string, Attack> = {
     name: { es: 'Debilitar', en: 'Debilitate' },
     description: {
       es: 'Disminuye el ataque, la defensa, la precisión y la evasión de un enemigo en un nivel durante 3 turnos.',
-      en: "Decreases one enemy's attack/defense/precision/evasion by one level for 3 turns.",
+      en: "Decreases one enemy's attack/defense/hit/evasion by one level for 3 turns.",
     },
     element: 'support',
     cost: { kind: 'mp', amount: 30 },
@@ -2490,7 +2575,7 @@ export const ATTACKS: Record<string, Attack> = {
     name: { es: 'Hyakka Ryouran', en: 'Hyakka Ryouran' },
     description: {
       es: 'Aumenta el ataque, la defensa, la precisión y la evasión de todos los aliados en un nivel durante 3 turnos.',
-      en: "Increases all allies attack/defense/precision/evasion by one level for 3 turns.",
+      en: "Increases all allies attack/defense/hit/evasion by one level for 3 turns.",
     },
     element: 'support',
     cost: { kind: 'mp', amount: 90 },
@@ -2500,7 +2585,7 @@ export const ATTACKS: Record<string, Attack> = {
     name: { es: 'Jaque mate', en: 'Checkmate' },
     description: {
       es: 'Disminuye el ataque, la defensa, la precisión y la evasión de todos los enemigos en un nivel durante 3 turnos.',
-      en: "Decreases all enemies attack/defense/precision/evasion by one level for 3 turns.",
+      en: "Decreases all enemies attack/defense/hit/evasion by one level for 3 turns.",
     },
     element: 'support',
     cost: { kind: 'mp', amount: 90 },
@@ -2580,7 +2665,7 @@ export const ATTACKS: Record<string, Attack> = {
     name: { es: 'Gran resurgimiento', en: 'Great resurface' },
     description: {
       es: 'La siguiente resurrección aumentará el ataque, la defensa, la precisión y la evasión del aliado en dos niveles durante 3 turnos.',
-      en: "The next revival will increase the ally's attack/defense/precision/evasion by two levels for 3 turns.",
+      en: "The next revival will increase the ally's attack/defense/hit/evasion by two levels for 3 turns.",
     },
     element: 'support',
     cost: { kind: 'mp', amount: 25 },
@@ -2923,6 +3008,946 @@ export const ATTACKS: Record<string, Attack> = {
 
   // --- passive ---
 
+  passive_atr_1:{
+    id: 'passive_1',
+    name: { es: 'Más ataque físico', en: 'Enhance physical attack' },
+    description: {
+      es: 'El daño de cualquier ataque calculado con Fuerza aumenta un +5%.',
+      en: 'Any damage calculated with Strength increases by +5%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_atr_2:{
+    id: 'passive_2',
+    name: { es: 'Más ataque elemental', en: 'Enhance elemental attack' },
+    description: {
+      es: 'El daño de cualquier ataque calculado con Inteligencia aumenta un +5%.',
+      en: 'Any damage calculated with Intelligence increases by +5%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_atr_3:{
+    id: 'passive_3',
+    name: { es: 'Más ataque espiritual', en: 'Enhance spiritual attack' },
+    description: {
+      es: 'El daño de cualquier ataque calculado con Sabiduría aumenta un +5%.',
+      en: 'Any damage calculated with Wisdom increases by +5%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_atr_4:{
+    id: 'passive_4',
+    name: { es: 'Más defensa física', en: 'Enhance physical defense' },
+    description: {
+      es: 'El daño de cualquier ataque recibido que se calcule con Resistencia disminuye un 5%.',
+      en: 'Any damage received that is calculated with Resistance decreases by 5%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_atr_5:{
+    id: 'passive_5',
+    name: { es: 'Más defensa elemental', en: 'Enhance elemental defense' },
+    description: {
+      es: 'El daño de cualquier ataque recibido que se calcule con Inteligencia disminuye un 5%.',
+      en: 'Any damage received that is calculated with Intelligence decreases by 5%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_atr_6:{
+    id: 'passive_6',
+    name: { es: 'Más defensa espiritual', en: 'Enhance spiritual defense' },
+    description: {
+      es: 'El daño de cualquier ataque recibido que se calcule con Sabiduría disminuye un 5%.',
+      en: 'Any damage received that is calculated with Wisdom decreases by 5%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_atr_7:{
+    id: 'passive_7',
+    name: { es: 'Más HP', en: 'Enhance HP' },
+    description: {
+      es: 'Aumenta los HP máximos en un +15%.',
+      en: 'Increases max HP by +15%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_atr_8:{
+    id: 'passive_8',
+    name: { es: 'Más MP', en: 'Enhance MP' },
+    description: {
+      es: 'Aumenta los MP máximos en un +6%.',
+      en: 'Increases max MP by +6%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_1:{
+    id: 'passive_up_1',
+    name: { es: 'Aumentar fuego', en: 'Fire boost' },
+    description: {
+      es: 'Cualquier daño de fuego infligido aumenta un +5%.',
+      en: 'Any fire damage dealt increases by +5%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_2:{
+    id: 'passive_up_2',
+    name: { es: 'Amplificar fuego', en: 'Fire amp' },
+    description: {
+      es: 'Cualquier daño de fuego infligido aumenta un +10%.',
+      en: 'Any fire damage dealt increases by +10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_3:{
+    id: 'passive_up_3',
+    name: { es: 'Aumentar hielo', en: 'Ice boost' },
+    description: {
+      es: 'Cualquier daño de hielo infligido aumenta un +5%.',
+      en: 'Any ice damage dealt increases by +5%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_4:{
+    id: 'passive_up_4',
+    name: { es: 'Amplificar hielo', en: 'Ice amp' },
+    description: {
+      es: 'Cualquier daño de hielo infligido aumenta un +10%.',
+      en: 'Any ice damage dealt increases by +10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_5:{
+    id: 'passive_up_5',
+    name: { es: 'Aumentar viento', en: 'Wind boost' },
+    description: {
+      es: 'Cualquier daño de viento infligido aumenta un +5%.',
+      en: 'Any wind damage dealt increases by +5%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_6:{
+    id: 'passive_up_6',
+    name: { es: 'Amplificar viento', en: 'Wind amp' },
+    description: {
+      es: 'Cualquier daño de viento infligido aumenta un +10%.',
+      en: 'Any wind damage dealt increases by +10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_7:{
+    id: 'passive_up_7',
+    name: { es: 'Aumentar trueno', en: 'Elec boost' },
+    description: {
+      es: 'Cualquier daño de trueno infligido aumenta un +5%.',
+      en: 'Any thunder damage dealt increases by +5%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_8:{
+    id: 'passive_up_8',
+    name: { es: 'Amplificar trueno', en: 'Elec amp' },
+    description: {
+      es: 'Cualquier daño de trueno infligido aumenta un +10%.',
+      en: 'Any thunder damage dealt increases by +10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_9:{
+    id: 'passive_up_9',
+    name: { es: 'Aumentar nuclear', en: 'Nuke boost' },
+    description: {
+      es: 'Cualquier daño nuclear infligido aumenta un +5%.',
+      en: 'Any nuclear damage dealt increases by +5%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_10:{
+    id: 'passive_up_10',
+    name: { es: 'Amplificar nuclear', en: 'Nuke amp' },
+    description: {
+      es: 'Cualquier daño nuclear infligido aumenta un +10%.',
+      en: 'Any nuclear damage dealt increases by +10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_11:{
+    id: 'passive_up_11',
+    name: { es: 'Aumentar psíquico', en: 'Psi boost' },
+    description: {
+      es: 'Cualquier daño psíquico infligido aumenta un +5%.',
+      en: 'Any psychic damage dealt increases by +5%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_12:{
+    id: 'passive_up_12',
+    name: { es: 'Amplificar psíquico', en: 'Psi amp' },
+    description: {
+      es: 'Cualquier daño psíquico infligido aumenta un +10%.',
+      en: 'Any psychic damage dealt increases by +10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_13:{
+    id: 'passive_up_13',
+    name: { es: 'Aumentar todopoderoso', en: 'Almighty boost' },
+    description: {
+      es: 'Cualquier daño todopoderoso infligido aumenta un +8%.',
+      en: 'Any almighty damage dealt increases by +8%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_14:{
+    id: 'passive_up_14',
+    name: { es: 'Aumentar cortante', en: 'Slash boost' },
+    description: {
+      es: 'Cualquier daño cortante infligido aumenta un +8%.',
+      en: 'Any slash damage dealt increases by +8%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_15:{
+    id: 'passive_up_15',
+    name: { es: 'Aumentar contundente', en: 'Blunt boost' },
+    description: {
+      es: 'Cualquier daño contundente infligido aumenta un +8%.',
+      en: 'Any blunt damage dealt increases by +8%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_16:{
+    id: 'passive_up_16',
+    name: { es: 'Aumentar perforante', en: 'Pierce boost' },
+    description: {
+      es: 'Cualquier daño perforante infligido aumenta un +8%.',
+      en: 'Any pierce damage dealt increases by +8%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_17:{
+    id: 'passive_up_17',
+    name: { es: 'Aumentar bendición', en: 'Bless boost' },
+    description: {
+      es: 'Cualquier daño de bendición infligido aumenta un +8%.',
+      en: 'Any bless damage dealt increases by +8%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_18:{
+    id: 'passive_up_18',
+    name: { es: 'Aumentar maldición', en: 'Curse boost' },
+    description: {
+      es: 'Cualquier daño de maldición infligido aumenta un +8%.',
+      en: 'Any curse damage dealt increases by +8%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_19:{
+    id: 'passive_up_19',
+    name: { es: 'Aumentar Hama', en: 'Hama boost' },
+    description: {
+      es: 'Aumenta la probabilidad de muerte instantánea cuando se utilizan habilidades de bendición.',
+      en: 'Increases insta-kill chances when using bless skills.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_20:{
+    id: 'passive_up_20',
+    name: { es: 'Aumentar Mudo', en: 'Mudo boost' },
+    description: {
+      es: 'Aumenta la probabilidad de muerte instantánea cuando se utilizan habilidades de maldición.',
+      en: 'Increases insta-kill chances when using curse skills.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_21:{
+    id: 'passive_up_21',
+    name: { es: 'Aumentar curación', en: 'Heal boost' },
+    description: {
+      es: 'Aumenta la cantidad de HP restaurados a aliados al utilizar habilidades de curación.',
+      en: 'Increases HP restored to allies with healing skills.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_22:{
+    id: 'passive_up_22',
+    name: { es: 'Amplificar debilidad', en: 'Weakness boost' },
+    description: {
+      es: 'Cualquier daño infligido a una debilidad enemiga aumenta un +15%.',
+      en: 'Any enemy weakness damage dealt increases by +15%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_23:{
+    id: 'passive_up_23',
+    name: { es: 'Aumentar daño básico', en: 'Normal boost' },
+    description: {
+      es: 'Cualquier daño infligido con un ataque básico con arma aumenta un +20%.',
+      en: 'Any normal weapon attack damage dealt increases by +20%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_24:{
+    id: 'passive_up_24',
+    name: { es: 'Mejorar espada', en: 'Improve sword' },
+    description: {
+      es: 'Cualquier daño infligido con espada aumenta un +9%.',
+      en: 'Any damage dealt with a sword increases by +9%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_25:{
+    id: 'passive_up_25',
+    name: { es: 'Mejorar katana', en: 'Improve katana' },
+    description: {
+      es: 'Cualquier daño infligido con katana aumenta un +9%.',
+      en: 'Any damage dealt with a katana increases by +9%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_26:{
+    id: 'passive_up_26',
+    name: { es: 'Mejorar florete', en: 'Improve rapier' },
+    description: {
+      es: 'Cualquier daño infligido con florete aumenta un +9%.',
+      en: 'Any damage dealt with a rapier increases by +9%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_27:{
+    id: 'passive_up_27',
+    name: { es: 'Mejorar lanza', en: 'Improve spear' },
+    description: {
+      es: 'Cualquier daño infligido con lanza aumenta un +9%.',
+      en: 'Any damage dealt with a spear increases by +9%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_28:{
+    id: 'passive_up_28',
+    name: { es: 'Mejorar hacha', en: 'Improve axe' },
+    description: {
+      es: 'Cualquier daño infligido con hacha aumenta un +9%.',
+      en: 'Any damage dealt with an axe increases by +9%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_29:{
+    id: 'passive_up_29',
+    name: { es: 'Mejorar maza', en: 'Improve mace' },
+    description: {
+      es: 'Cualquier daño infligido con maza aumenta un +9%.',
+      en: 'Any damage dealt with a mace increases by +9%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_30:{
+    id: 'passive_up_30',
+    name: { es: 'Mejorar martillo', en: 'Improve hammer' },
+    description: {
+      es: 'Cualquier daño infligido con martillo aumenta un +9%.',
+      en: 'Any damage dealt with a hammer increases by +9%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_31:{
+    id: 'passive_up_31',
+    name: { es: 'Mejorar daga', en: 'Improve dagger' },
+    description: {
+      es: 'Cualquier daño infligido con daga aumenta un +9%.',
+      en: 'Any damage dealt with dagger increases by +9%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_32:{
+    id: 'passive_up_32',
+    name: { es: 'Mejorar arco', en: 'Improve bow' },
+    description: {
+      es: 'Cualquier daño infligido con arco aumenta un +9%.',
+      en: 'Any damage dealt with bow increases by +9%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_33:{
+    id: 'passive_up_33',
+    name: { es: 'Mejorar ballesta', en: 'Improve crossbow' },
+    description: {
+      es: 'Cualquier daño infligido con ballesta aumenta un +9%.',
+      en: 'Any damage dealt with crossbow increases by +9%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_34:{
+    id: 'passive_up_34',
+    name: { es: 'Mejorar robo', en: 'Improve stealing' },
+    description: {
+      es: 'Aumenta muchísimo la probabilidad de éxito de la habilidad Robar.',
+      en: 'Makes it extremely likely to Steal successfully.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_35:{
+    id: 'passive_up_35',
+    name: { es: 'Mejorar quemadura', en: 'Burn boost' },
+    description: {
+      es: 'Aumenta la probalidad de quemar en 25%.',
+      en: 'Increases probability of inflicting burn by 25%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_36:{
+    id: 'passive_up_36',
+    name: { es: 'Mejorar congelación', en: 'Freeze boost' },
+    description: {
+      es: 'Aumenta la probalidad de congelar en 25%.',
+      en: 'Increases probability of inflicting freeze by 25%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_37:{
+    id: 'passive_up_37',
+    name: { es: 'Mejorar parálisis', en: 'Paralysis boost' },
+    description: {
+      es: 'Aumenta la probalidad de palizar en 25%.',
+      en: 'Increases probability of inflicting paralysis by 25%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_38:{
+    id: 'passive_up_38',
+    name: { es: 'Mejorar mareo', en: 'Dizzy boost' },
+    description: {
+      es: 'Aumenta la probalidad de provocar mareo en 25%.',
+      en: 'Increases probability of inflicting dizzy by 25%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_39:{
+    id: 'passive_up_39',
+    name: { es: 'Mejorar veneno', en: 'Poison boost' },
+    description: {
+      es: 'Aumenta la probalidad de envenenar en 25%.',
+      en: 'Increases probability of inflicting poison by 25%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_40:{
+    id: 'passive_up_40',
+    name: { es: 'Mejorar amnesia', en: 'Amnesia boost' },
+    description: {
+      es: 'Aumenta la probalidad de provocar amnesia en 25%.',
+      en: 'Increases probability of inflicting amnesia by 25%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_41:{
+    id: 'passive_up_41',
+    name: { es: 'Mejorar furia', en: 'Rage boost' },
+    description: {
+      es: 'Aumenta la probalidad de provocar furia en 25%.',
+      en: 'Increases probability of inflicting rage by 25%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_42:{
+    id: 'passive_up_42',
+    name: { es: 'Mejorar daño monetario', en: 'Money damage boost' },
+    description: {
+      es: 'Cualquier daño infligido con ataques que gastan dinero aumenta un +8%.',
+      en: 'Any damage dealt with skills that cost money increases by +8%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_43:{
+    id: 'passive_up_43',
+    name: { es: 'Mejorar magia de armas', en: 'Weapon magic boost' },
+    description: {
+      es: 'Cualquier daño infligido con magia de armas aumenta un +8%.',
+      en: 'Any damage dealt with weapon magic increases by +8%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_ev_1:{
+    id: 'passive_ev_1',
+    name: { es: 'Evadir fuego', en: 'Dodge fire' },
+    description: {
+      es: 'Aumenta la evasión contra ataques de fuego en un 10%.',
+      en: 'Increases dodge rate against fire attacks by 10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_ev_2:{
+    id: 'passive_ev_2',
+    name: { es: 'Evadir hielo', en: 'Dodge ice' },
+    description: {
+      es: 'Aumenta la evasión contra ataques de hielo en un 10%.',
+      en: 'Increases dodge rate against ice attacks by 10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_ev_3:{
+    id: 'passive_ev_3',
+    name: { es: 'Evadir viento', en: 'Dodge wind' },
+    description: {
+      es: 'Aumenta la evasión contra ataques de hielo en un 10%.',
+      en: 'Increases dodge rate against ice attacks by 10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_ev_4:{
+    id: 'passive_ev_4',
+    name: { es: 'Evadir trueno', en: 'Dodge elec' },
+    description: {
+      es: 'Aumenta la evasión contra ataques de trueno en un 10%.',
+      en: 'Increases dodge rate against thunder attacks by 10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_ev_5:{
+    id: 'passive_ev_5',
+    name: { es: 'Evadir nuclear', en: 'Dodge nuke' },
+    description: {
+      es: 'Aumenta la evasión contra ataques nucleares en un 10%.',
+      en: 'Increases dodge rate against nuclear attacks by 10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_ev_6:{
+    id: 'passive_ev_6',
+    name: { es: 'Evadir psíquico', en: 'Dodge psi' },
+    description: {
+      es: 'Aumenta la evasión contra ataques psíquicos en un 10%.',
+      en: 'Increases dodge rate against psychic attacks by 10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_ev_7:{
+    id: 'passive_ev_7',
+    name: { es: 'Evadir bendición', en: 'Dodge bless' },
+    description: {
+      es: 'Aumenta la evasión contra ataques de bendición en un 10%.',
+      en: 'Increases dodge rate against bless attacks by 10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_ev_8:{
+    id: 'passive_ev_8',
+    name: { es: 'Evadir maldición', en: 'Dodge curse' },
+    description: {
+      es: 'Aumenta la evasión contra ataques de maldición en un 10%.',
+      en: 'Increases dodge rate against curse attacks by 10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_ev_9:{
+    id: 'passive_ev_9',
+    name: { es: 'Evadir cortante', en: 'Dodge slash' },
+    description: {
+      es: 'Aumenta la evasión contra ataques cortantes en un 10%.',
+      en: 'Increases dodge rate against slash attacks by 10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_ev_10:{
+    id: 'passive_ev_10',
+    name: { es: 'Evadir contundente', en: 'Dodge blunt' },
+    description: {
+      es: 'Aumenta la evasión contra ataques contundentes en un 10%.',
+      en: 'Increases dodge rate against blunt attacks by 10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_ev_11:{
+    id: 'passive_ev_11',
+    name: { es: 'Evadir perforante', en: 'Dodge pierce' },
+    description: {
+      es: 'Aumenta la evasión contra ataques perforantes en un 10%.',
+      en: 'Increases dodge rate against pierce attacks by 10%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_resist_1:{
+    id: 'passive_resist_1',
+    name: { es: 'Resistir fuego', en: 'Resist fire' },
+    description: {
+      es: 'Sustituye afinidad a fuego Débil y Neutro por Resistente.',
+      en: 'Changes fire Weakness and Neutral affinity to Resist',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_resist_2:{
+    id: 'passive_resist_2',
+    name: { es: 'Resistir hielo', en: 'Resist ice' },
+    description: {
+      es: 'Sustituye afinidad a hielo Débil y Neutro por Resistente.',
+      en: 'Changes ice Weakness and Neutral affinity to Resist',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_resist_3:{
+    id: 'passive_resist_3',
+    name: { es: 'Resistir viento', en: 'Resist wind' },
+    description: {
+      es: 'Sustituye afinidad a viento Débil y Neutro por Resistente.',
+      en: 'Changes wind Weakness and Neutral affinity to Resist',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_resist_4:{
+    id: 'passive_resist_4',
+    name: { es: 'Resistir trueno', en: 'Resist elec' },
+    description: {
+      es: 'Sustituye afinidad a trueno Débil y Neutro por Resistente.',
+      en: 'Changes thunder Weakness and Neutral affinity to Resist',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_resist_5:{
+    id: 'passive_resist_5',
+    name: { es: 'Resistir nuclear', en: 'Resist nuke' },
+    description: {
+      es: 'Sustituye afinidad a nuclear Débil y Neutro por Resistente.',
+      en: 'Changes nuclear Weakness and Neutral affinity to Resist',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_resist_6:{
+    id: 'passive_resist_6',
+    name: { es: 'Resistir psíquico', en: 'Resist psi' },
+    description: {
+      es: 'Sustituye afinidad a psíquico Débil y Neutro por Resistente.',
+      en: 'Changes psychic Weakness and Neutral affinity to Resist',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_resist_7:{
+    id: 'passive_resist_7',
+    name: { es: 'Resistir bendición', en: 'Resist bless' },
+    description: {
+      es: 'Sustituye afinidad a bendición Débil y Neutro por Resistente.',
+      en: 'Changes bless Weakness and Neutral affinity to Resist',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_resist_8:{
+    id: 'passive_resist_8',
+    name: { es: 'Resistir maldición', en: 'Resist curse' },
+    description: {
+      es: 'Sustituye afinidad a maldición Débil y Neutro por Resistente.',
+      en: 'Changes curse Weakness and Neutral affinity to Resist',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_resist_9:{
+    id: 'passive_resist_9',
+    name: { es: 'Resistir cortante', en: 'Resist slash' },
+    description: {
+      es: 'Sustituye afinidad a cortante Débil y Neutro por Resistente.',
+      en: 'Changes slash Weakness and Neutral affinity to Resist',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_resist_10:{
+    id: 'passive_resist_10',
+    name: { es: 'Resistir contundente', en: 'Resist blunt' },
+    description: {
+      es: 'Sustituye afinidad a contundente Débil y Neutro por Resistente.',
+      en: 'Changes blunt Weakness and Neutral affinity to Resist',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_resist_11:{
+    id: 'passive_resist_11',
+    name: { es: 'Resistir perforante', en: 'Resist pierce' },
+    description: {
+      es: 'Sustituye afinidad a perforante Débil y Neutro por Resistente.',
+      en: 'Changes pierce Weakness and Neutral affinity to Resist',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_reg_1:{
+    id: 'passive_reg_1',
+    name: { es: 'Regenerar 1', en: 'Regenerate 1' },
+    description: {
+      es: 'Recupera el 2% de sus HP máximos cada turno.',
+      en: 'Recovers 2% of max HP every turn.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_reg_2:{
+    id: 'passive_reg_2',
+    name: { es: 'Regenerar 2', en: 'Regenerate 2' },
+    description: {
+      es: 'Recupera el 4% de sus HP máximos cada turno.',
+      en: 'Recovers 4% of max HP every turn.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_reg_3:{
+    id: 'passive_reg_3',
+    name: { es: 'Regenerar 3', en: 'Regenerate 3' },
+    description: {
+      es: 'Recupera el 6% de sus HP máximos cada turno.',
+      en: 'Recovers 6% of max HP every turn.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_reg_4:{
+    id: 'passive_reg_4',
+    name: { es: 'Vigorizar 1', en: 'Invigorate 1' },
+    description: {
+      es: 'Recupera el 1% de sus MP máximos cada turno.',
+      en: 'Recovers 1% of max MP every turn.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_reg_5:{
+    id: 'passive_reg_5',
+    name: { es: 'Vigorizar 2', en: 'Invigorate 2' },
+    description: {
+      es: 'Recupera el 2% de sus MP máximos cada turno.',
+      en: 'Recovers 2% of max MP every turn.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_reg_6:{
+    id: 'passive_reg_6',
+    name: { es: 'Vigorizar 3', en: 'Invigorate 3' },
+    description: {
+      es: 'Recupera el 3% de sus MP máximos cada turno.',
+      en: 'Recovers 3% of max MP every turn.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_auto_1:{
+    id: 'passive_auto_1',
+    name: { es: 'Maestro del ataque', en: 'Attack Master' },
+    description: {
+      es: 'Lanza Tarukaja al comenzar el combate.',
+      en: 'Casts Tarukaja at the start of the battle.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_auto_2:{
+    id: 'passive_auto_2',
+    name: { es: 'Maestro de la defensa', en: 'Defense Master' },
+    description: {
+      es: 'Lanza Rakukaja al comenzar el combate.',
+      en: 'Casts Rakukaja at the start of the battle.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_auto_3:{
+    id: 'passive_auto_3',
+    name: { es: 'Maestro de la velocidad', en: 'Speed Master' },
+    description: {
+      es: 'Lanza Sukukaja al comenzar el combate.',
+      en: 'Casts Sukukaja at the start of the battle.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_sturdy_1:{
+    id: 'passive_sturdy_1',
+    name: { es: 'Aguante', en: 'Endure' },
+    description: {
+      es: 'Sobrevive un ataque mortal con 1 HP (una vez por combate).',
+      en: 'Survives one fatal blow with 1 HP remaining (once per battle).',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_sturdy_2:{
+    id: 'passive_sturdy_2',
+    name: { es: 'Alma inmortal', en: 'Enduring soul' },
+    description: {
+      es: 'Sobrevive un ataque mortal con vida completa (una vez por combate).',
+      en: 'Survives one fatal blow with full HP (once per battle).',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_sturdy_3:{
+    id: 'passive_sturdy_3',
+    name: { es: 'Truco de supervivencia', en: 'Survival trick' },
+    description: {
+      es: 'Sobrevive un ataque de muerte instantánea con 1 HP (una vez por combate).',
+      en: 'Survives one insta-kill attack with 1 HP remaining (once per battle).',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_spend_1:{
+    id: 'passive_spend_1',
+    name: { es: 'Maestro de las armas', en: 'Arms master' },
+    description: {
+      es: 'Reduce el consumo de MP de las habilidades físicas en un 33%.',
+      en: 'Reduces MP cost of physical skills by 33%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_spend_2:{
+    id: 'passive_spend_2',
+    name: { es: 'Maestro de la mente', en: 'Mind master' },
+    description: {
+      es: 'Reduce el consumo de MP de las habilidades elementales en un 33%.',
+      en: 'Reduces MP cost of elemental skills by 33%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_spend_3:{
+    id: 'passive_spend_3',
+    name: { es: 'Maestro del alma', en: 'Soul master' },
+    description: {
+      es: 'Reduce el consumo de MP de las habilidades espirituales en un 33%.',
+      en: 'Reduces MP cost of spiritual skills by 33%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_spend_4:{
+    id: 'passive_spend_4',
+    name: { es: 'Maestro del poder', en: 'Power master' },
+    description: {
+      es: 'Reduce el consumo de MP de las habilidades todopoderosas en un 33%.',
+      en: 'Reduces MP cost of spiritual skills by 33%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_spend_5:{
+    id: 'passive_spend_5',
+    name: { es: 'Maestro de las heridas', en: 'Wound master' },
+    description: {
+      es: 'Reduce el consumo de MP de las habilidades de curación en un 33%.',
+      en: 'Reduces MP cost of healing skills by 33%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_spend_6:{
+    id: 'passive_spend_6',
+    name: { es: 'Maestro de la tumba', en: 'Grave master' },
+    description: {
+      es: 'Reduce el consumo de MP de las habilidades de resurrección en un 33%.',
+      en: 'Reduces MP cost of revival skills by 33%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_spend_7:{
+    id: 'passive_spend_7',
+    name: { es: 'Maestro de las artes', en: 'Arts master' },
+    description: {
+      es: 'Reduce el consumo de HP de las habilidades que consumen HP en un 50%.',
+      en: 'Reduces HP cost of skills that cost HP by 50%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_spend_8:{
+    id: 'passive_spend_8',
+    name: { es: 'Maestro de las gangas', en: 'Bargain master' },
+    description: {
+      es: 'Reduce el coste de dinero de las habilidades que consumen dinero en un 50%.',
+      en: 'Reduces money cost of skills that cost money by 50%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_spend_9:{
+    id: 'passive_spend_9',
+    name: { es: 'Maestro de la miscelánea', en: 'Misc master' },
+    description: {
+      es: 'Reduce el consumo de MP de las habilidades de estados alterados y de apoyo en un 33%.',
+      en: 'Reduces MP cost of status and support skills by 33%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
 
 
   // --- line-exclusive ---

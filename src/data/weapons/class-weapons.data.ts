@@ -25,9 +25,9 @@ export const CLASS_WEAPONS: Record<string, ClassWeaponry> = {
   // --- Healer line ---
   healer: { weapons: ['staff'], signature: 'staff' },
   cleric: { weapons: ['staff'], signature: 'staff' },
-  sacromancer: { weapons: ['staff', 'grimoire'], signature: 'staff' },
-  sage: { weapons: ['staff'], signature: 'staff' },
-  heretic: { weapons: ['staff'], signature: 'staff' },
+  sacromancer: { weapons: ['staff', 'grimoire'], signature: 'grimoire' },
+  sage: { weapons: ['staff', 'grimoire'], signature: 'staff' },
+  heretic: { weapons: ['staff', 'dagger'], signature: 'staff' },
 
   // --- Thief line ---
   thief: { weapons: ['dagger'], signature: 'dagger' },
@@ -53,7 +53,7 @@ export const CLASS_WEAPONS: Record<string, ClassWeaponry> = {
   paladin: { weapons: ['spear'], signature: 'spear' },
   knight: { weapons: ['spear', 'shield'], signature: 'spear' },
   squire: { weapons: ['spear', 'shield'], signature: 'shield' },
-  guardian: { weapons: ['spear', 'axe', 'shield'], signature: 'shield' },
+  guardian: { weapons: ['spear', 'hammer', 'shield'], signature: 'shield' },
   rider: { weapons: ['spear', 'sword'], signature: 'spear' },
   valkyrie: { weapons: ['spear', 'sword', 'staff'], signature: 'spear' },
   dark_paladin: { weapons: ['sword', 'rapier', 'shield'], signature: 'sword' },
@@ -70,7 +70,7 @@ export const CLASS_WEAPONS: Record<string, ClassWeaponry> = {
   // --- Captain line ---
   captain: { weapons: ['axe'], signature: 'axe' },
   commander: { weapons: ['axe', 'shield'], signature: 'axe' },
-  general: { weapons: ['axe', 'hammer', 'shield'], signature: 'axe' },
+  general: { weapons: ['axe', 'spear', 'shield'], signature: 'axe' },
 
   // --- Artist line ---
   artist: { weapons: ['rapier'], signature: 'rapier' },
@@ -79,12 +79,12 @@ export const CLASS_WEAPONS: Record<string, ClassWeaponry> = {
   dancer: { weapons: ['dagger', 'katana', 'rapier'], signature: 'rapier' },
   charlatan: { weapons: ['dagger', 'mace'], signature: 'dagger' },
   trickster: { weapons: ['dagger', 'mace', 'crossbow'], signature: 'dagger' },
-  magnate: { weapons: ['dagger', 'rapier', 'crossbow'], signature: 'dagger' },
+  magnate: { weapons: ['dagger', 'spear', 'sword'], signature: 'spear' },
 
   // --- Explorer line ---
   explorer: { weapons: ['dagger', 'mace', 'bow'], signature: 'mace' },
   survivor: { weapons: ['dagger', 'mace', 'bow'], signature: 'mace' },
-  apothecary: { weapons: ['dagger', 'mace', 'staff'], signature: 'staff' },
+  apothecary: { weapons: ['mace', 'fist', 'grimoire'], signature: 'mace' },
   hunter: { weapons: ['dagger', 'mace', 'bow'], signature: 'mace' },
 }
 
