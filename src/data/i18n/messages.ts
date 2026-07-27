@@ -26,6 +26,7 @@ export const MESSAGES = {
   },
   levelAbbr: { es: 'Nv', en: 'Lv' },
   line: { es: 'Línea', en: 'Line' },
+  phase: { es: 'Fase', en: 'Phase' },
   selectPrompt: {
     es: 'Selecciona una clase para ver sus bonus y ataques.',
     en: 'Select a class to view its stat bonuses and attacks.',

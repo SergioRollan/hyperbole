@@ -343,14 +343,14 @@ export const ATTACKS: Record<string, Attack> = {
       en: 'With katana. Deals light slash physical damage to one enemy 11 to 14 times.',
     },
     element: 'slash',
-    cost: { kind: 'mp', amount: 33 },
+    cost: { kind: 'mp', amount: 32 },
   },
   katana_8: {
     id: 'katana_8',
     name: { es: 'Hassou Tobi', en: 'Hassou Tobi' },
     description: {
-      es: 'Con espada y katana. Inflige daño físico cortante colosal a todos los enemigos.',
-      en: 'With sword and katana. Deals colossal slash physical damage to all enemies.',
+      es: 'Con espada y katana. Inflige daño físico cortante medio a todos los enemigos entre 5 y 9 veces. El número de golpes dependerá de la Agilidad y la Precisión.',
+      en: 'With sword and katana. Deals medium slash physical damage to all enemies 5 to 9 times. More hits depending on user\'s Agility and Precision.',
     },
     element: 'slash',
     cost: { kind: 'mp', amount: 46 },
@@ -1044,7 +1044,7 @@ export const ATTACKS: Record<string, Attack> = {
   },
   bow_6: {
     id: 'bow_6',
-    name: { es: 'Millar de flechas', en: 'Myriad arrows' },
+    name: { es: 'Millar de flechas', en: 'Thousand arrows' },
     description: {
       es: 'Con arco. Inflige daño físico perforante leve a todos los enemigos 12 veces.',
       en: 'With bow. Deals light pierce physical damage to all enemies 12 times.',
@@ -1129,8 +1129,8 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'crossbow_8',
     name: { es: 'Pralaya', en: 'Pralaya' },
     description: {
-      es: 'Con arco y ballesta. Inflige daño físico perforante colosal a un enemigo. Calcula el daño con el atributo del enemigo más bajo entre Resistencia, Constitución y Voluntad.',
-      en: 'With bow and crossbow. Deals colossal pierce physical damage to one enemy. Calculates damage with enemy\'s lowest stat among Resistance, Constitution and Will.',
+      es: 'Con arco y ballesta. Inflige daño físico perforante colosal a un enemigo. Calcula el daño con la Precisión del atacante y con el atributo del enemigo más bajo entre Resistencia, Constitución y Voluntad del enemigo.',
+      en: 'With bow and crossbow. Deals colossal pierce physical damage to one enemy. Calculates damage with user\'s Hit and with enemy\'s lowest stat among Resistance, Constitution and Will.',
     },
     element: 'pierce',
     cost: { kind: 'mp', amount: 47 },
@@ -3838,6 +3838,56 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'passive',
     cost: { kind: 'none', amount: 0 },
   },
+  passive_resist_12:{
+    id: 'passive_resist_12',
+    name: { es: 'Resistir quemadura/mareo', en: 'Resist burn/dizzy' },
+    description: {
+      es: 'Disminuye enormemente la probabilidad de ser afligido con quemadura o con mareo.',
+      en: 'Hugely decreases chance of being inflicted burn or dizzy.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_resist_13:{
+    id: 'passive_resist_13',
+    name: { es: 'Resistir veneno/furia', en: 'Resist poison/rage' },
+    description: {
+      es: 'Disminuye enormemente la probabilidad de ser afligido con veneno o con furia.',
+      en: 'Hugely decreases chance of being inflicted poison or rage.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_resist_14:{
+    id: 'passive_resist_14',
+    name: { es: 'Resistir congelación/parálisis', en: 'Resist freeze/paralysis' },
+    description: {
+      es: 'Disminuye enormemente la probabilidad de ser afligido con congelación o con parálisis.',
+      en: 'Hugely decreases chance of being inflicted freeze or paralysis.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_resist_15:{
+    id: 'passive_resist_15',
+    name: { es: 'Resistir lavado de cerebro/amnesia', en: 'Resist brainwash/amnesia' },
+    description: {
+      es: 'Disminuye enormemente la probabilidad de ser afligido con lavado de cerebro o con amnesia.',
+      en: 'Hugely decreases chance of being inflicted brainwash or amnesia.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_resist_16:{
+    id: 'passive_resist_16',
+    name: { es: 'Resistir miedo/desesperación/sueño', en: 'Resist fear/despair/sleep' },
+    description: {
+      es: 'Disminuye enormemente la probabilidad de ser afligido con miedo, con desesperación o con sueño.',
+      en: 'Hugely decreases chance of being inflicted fear, despair or sleep.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
   passive_reg_1:{
     id: 'passive_reg_1',
     name: { es: 'Regenerar 1', en: 'Regenerate 1' },
@@ -3950,7 +4000,7 @@ export const ATTACKS: Record<string, Attack> = {
   },
   passive_sturdy_1:{
     id: 'passive_sturdy_1',
-    name: { es: 'Aguante', en: 'Endure' },
+    name: { es: 'Último aliento', en: 'Endure' },
     description: {
       es: 'Sobrevive un ataque mortal con 1 HP (una vez por combate).',
       en: 'Survives one fatal blow with 1 HP remaining (once per battle).',
@@ -3972,8 +4022,8 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'passive_sturdy_3',
     name: { es: 'Truco de supervivencia', en: 'Survival trick' },
     description: {
-      es: 'Sobrevive un ataque de muerte instantánea con 1 HP (una vez por combate).',
-      en: 'Survives one insta-kill attack with 1 HP remaining (once per battle).',
+      es: 'Sobrevive un ataque de muerte instantánea con 1 HP (una vez por combate). Sobrevive cualquier ataque con 1 HP si tiene los HP al máximo.',
+      en: 'Survives one insta-kill attack with 1 HP remaining (once per battle). Survives any attack with 1 HP if HP bar is full.',
     },
     element: 'passive',
     cost: { kind: 'none', amount: 0 },
@@ -4843,8 +4893,8 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'leadership_7',
     name: { es: 'Espíritu de liderazgo', en: 'Leadership spirit' },
     description: {
-      es: 'El usuario aumenta su propio ataque, defensa, precisión y evasión en 2 niveles durante 3 turnos.',
-      en: 'User raises their own attack, defense, hit and evasion by 2 levels for three turns.',
+      es: 'Aumenta su propio ataque, defensa, precisión y evasión en 2 niveles durante 3 turnos.',
+      en: 'Raises own attack, defense, hit and evasion by 2 levels for three turns.',
     },
     element: 'support',
     cost: { kind: 'mp', amount: 43 },
@@ -4857,11 +4907,61 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'music_1',
     name: { es: 'Canción aterradora', en: 'Fearful song' },
     description: {
-      es: 'Inflige daño todopoderoso muy leve a todos los enemigos.',
-      en: 'Deals very light almighty damage to all enemies.',
+      es: 'Solo artista, bardo o bailarín. Inflige daño todopoderoso muy leve a todos los enemigos.',
+      en: 'Only artist, bardo or dancer. Deals very light almighty damage to all enemies.',
     },
     element: 'almighty',
     cost: { kind: 'mp', amount: 0 },
+  },
+  music_2:{
+    id: 'music_2',
+    name: { es: 'Último baile', en: 'Last dance' },
+    description: {
+      es: 'Solo artista, bardo o bailarín. Inflige daño físico cortante a un enemigo, mayor cuantos menos HP restantes se tenga al atacar.',
+      en: 'Only artist, bardo or dancer. Deals slash physical damage, greater the lower HP remaining when used.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 7 },
+  },
+  music_3:{
+    id: 'music_3',
+    name: { es: 'Mimético', en: 'Mimick' },
+    description: {
+      es: 'Solo artista, bardo o bailarín. Inflige daño físico cortante a un enemigo, mayor cuantos menos HP restantes se tenga al atacar.',
+      en: 'Only artist, bardo or dancer. Deals slash physical damage, greater the lower HP remaining when used.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 12 },
+  },
+  music_4:{
+    id: 'music_4',
+    name: { es: 'Coreografía olímpica', en: 'Olympic choreography' },
+    description: {
+      es: 'Solo artista, bardo o bailarín. Inflige daño físico cortante a un enemigo, mayor cuantos más HP restantes se tenga al atacar.',
+      en: 'Only artist, bardo or dancer. Deals slash physical damage, greater the higher HP remaining when used.',
+    },
+    element: 'slash',
+    cost: { kind: 'mp', amount: 30 },
+  },
+  music_5:{
+    id: 'music_5',
+    name: { es: 'Perfect inspiration', en: 'Olympic choreography' },
+    description: {
+      es: 'Aumenta el ataque, la defensa, la precisión y la evasión de todos los aliados en un nivel durante 3 turnos al principio del combate.',
+      en: "Increases all allies attack/defense/hit/evasion by one level for 3 turns at the start of battle.",
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  music_6:{
+    id: 'music_6',
+    name: { es: 'Canción de turno extra', en: 'Extra turn song' },
+    description: {
+      es: 'Añade tres medios iconos de acción y salta el turno a un aliado elegido.',
+      en: "Adds two half press turns and skip the turn to a selected ally.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 77 },
   },
 
 
@@ -4877,24 +4977,571 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'support',
     cost: { kind: 'mp', amount: 0 },
   },
+  tricks_2:{
+    id: 'tricks_2',
+    name: { es: 'Truco del embaucador', en: 'Faker\'s roguery' },
+    description: {
+      es: 'Coste: 20% MP. Probabilidad baja de infligir, en orden, lavado de cerebro, amnesia o miedo a un enemigo. Probabilidad de eliminar un icono de turno, eliminar dos, añadir uno, añadir dos o no hacer nada.',
+      en: 'Cost: 20% MP. Low chance of inflicting, ir order, brainwash, amnesia or fear to one enemy. Chance of erasing one press turn, erasing two, adding one, adding two or doing nothing.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 0 },
+  },
+  tricks_3:{
+    id: 'tricks_3',
+    name: { es: 'Truco maestro del embaucador', en: 'Faker\'s master roguery' },
+    description: {
+      es: 'Coste: 25% MP. Probabilidad baja de infligir, en orden, sueño, lavado de cerebro, amnesia, desesperación o miedo a un enemigo. Probabilidad de eliminar un icono de turno, eliminar dos, añadir uno, añadir dos o no hacer nada. La probabilidad de añadir es el doble que la de quitar.',
+      en: 'Cost: 25% MP. Low chance of inflicting, ir order, sleep, brainwash, amnesia, despair or fear to one enemy. Chance of erasing one press turn, erasing two, adding one, adding two or doing nothing. Chance of adding is double the chance of erasing.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 0 },
+  },
+  tricks_4:{
+    id: 'tricks_4',
+    name: { es: 'Maestro de los trucos', en: 'Roguery Master' },
+    description: {
+      es: 'Aumenta ligeramente la probabilidad de los estados alterados y disminuye enormemente la probabilidad de perder iconos de turno al utilizar trucos de embaucador, y reduce su coste a la mitad.',
+      en: 'Slightly increases chance of inflicting status ailments and greatly decreases chance of losing press turn icons when using faker rogueries, and halves the MP cost.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
 
 
   // --- money ---
 
+  money_1:{
+    id: 'money_1',
+    name: { es: 'Ataque monetario', en: 'Gold attack' },
+    description: {
+      es: 'Inflige daño leve físico todopoderoso a un enemigo.',
+      en: 'Deals weak physical Almighty damage to one enemy.',
+    },
+    element: 'almighty',
+    cost: { kind: 'money', amount: 500 },
+  },
+  money_2:{
+    id: 'money_2',
+    name: { es: 'Compra de libertad', en: 'Freedom purchase' },
+    description: {
+      es: 'Huye de cualquier batalla convencional. El coste se duplica si el grupo sufre una emboscada.',
+      en: 'Flees out of any conventional battle. Cost doubles when group is ambushed.',
+    },
+    element: 'support',
+    cost: { kind: 'money', amount: 100 },
+  },
+  money_3:{
+    id: 'money_3',
+    name: { es: 'Tragaperras', en: 'Fortune slots' },
+    description: {
+      es: 'Baja precisión, pero todos los golpes realizan golpes críticos de daño físico todopoderoso leve a un enemigo.',
+      en: 'Low hit rate, but all hits deal critical physical light Almighty damage to one enemy.',
+    },
+    element: 'almighty',
+    cost: { kind: 'money', amount: 777 },
+  },
+  money_4:{
+    id: 'money_4',
+    name: { es: 'Estela de oro', en: 'Gold rush' },
+    description: {
+      es: 'Inflige daño físico todopoderoso grave a todos los enemigos.',
+      en: 'Deals heavy physical almighty damage to all enemies.',
+    },
+    element: 'almighty',
+    cost: { kind: 'money', amount: 2500 },
+  },
+  money_5:{
+    id: 'money_5',
+    name: { es: 'Soldadito de oro', en: 'Golden soldier' },
+    description: {
+      es: 'Inflige daño físico todopoderoso severo a un enemigo, con alta probabilidad de golpe crítico.',
+      en: 'Deals severe physical almighty damage to one enemy, with high crit rate.',
+    },
+    element: 'almighty',
+    cost: { kind: 'money', amount: 9999 },
+  },
+  money_6:{
+    id: 'money_6',
+    name: { es: 'Alcance del dinero', en: 'Money reach' },
+    description: {
+      es: 'Otorga a un aliado el efecto de aumentar el alcance de todos sus ataques a todos los enemigos durante un turno.',
+      en: 'Grants an ally the effect of allowing all attacks to hit all enemies for one turn.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 25 },
+  },
+  money_7:{
+    id: 'money_7',
+    name: { es: 'Poder del dinero', en: 'Money power' },
+    description: {
+      es: 'Otorga a un aliado el efecto de que sus ataques a todos los enemigos solo golpeen a un enemigo, pero con el doble de potencia.',
+      en: 'Grants an ally the effect of making all attacks targeting all enemies target one enemy instead, but with double the power.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 55 },
+  },
 
 
   // --- objects ---
 
+  objects_1:{
+    id: 'objects_1',
+    name: { es: 'Eficiencia química', en: 'Chemical efficiency' },
+    description: {
+      es: 'Utiliza un objeto ofensivo que multiplica su daño por 1\'5.',
+      en: 'Uses one damage item that multiplies its damage times 1\'5.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  objects_2:{
+    id: 'objects_2',
+    name: { es: 'Remedio rápido', en: 'Quick remedy' },
+    description: {
+      es: 'Utiliza un objeto de curar estados alterados sin gastar ningún icono de turno.',
+      en: 'Uses one status ailment healing item without spending any press turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 12 },
+  },
+  objects_3:{
+    id: 'objects_3',
+    name: { es: 'Eficiencia médica', en: 'Medical efficiency' },
+    description: {
+      es: 'Utiliza un objeto curativo que duplica los HP que recupera.',
+      en: 'Uses one healing item that doubles the number of HP it recovers.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 5 },
+  },
+  objects_4:{
+    id: 'objects_4',
+    name: { es: 'Objecto doble', en: 'Double item' },
+    description: {
+      es: 'Utiliza dos objetos.',
+      en: 'Uses two items.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 8 },
+  },
+  objects_5:{
+    id: 'objects_5',
+    name: { es: 'Tratamiento rápido', en: 'Quick treatment' },
+    description: {
+      es: 'Utiliza un objeto de curación sin gastar ningún icono de turno y triplica los HP que recupera.',
+      en: 'Uses one healing item without spending any press turns and recover three times as much HP.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 24 },
+  },
+  objects_6:{
+    id: 'objects_6',
+    name: { es: 'Experimento perfecto', en: 'Perfect experiment' },
+    description: {
+      es: 'Utiliza un objeto ofensivo sin gastar ningún icono de turno y cuadruplica los HP que daña.',
+      en: 'Uses one damage item without spending any press turns and deals for times as much damage.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 28 },
+  },
 
 
   // --- survival ---
 
+  survival_1:{
+    id: 'survival_1',
+    name: { es: 'Investigar', en: 'Research' },
+    description: {
+      es: 'Revela una afinidad aleatoria de un enemigo que no haya sido revelada hasta el momento.',
+      en: 'Reveals one enemy\'s affinity that has not been revealed yet.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 3 },
+  },
+  survival_2:{
+    id: 'survival_2',
+    name: { es: 'Investigación profunda', en: 'Thorough investigation' },
+    description: {
+      es: 'Revela todas las afinidades de un enemigo.',
+      en: 'Reveals all of one enemy\'s affinities.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 18 },
+  },
+  survival_3:{
+    id: 'survival_3',
+    name: { es: 'Marca del cazador', en: 'Hunter\'s mark' },
+    description: {
+      es: 'Coloca un blanco en un enemigo. La próxima vez que ese enemigo reciba daño, recibirá más del doble de lo normal. No puede haber dos blancos al mismo tiempo.',
+      en: 'Places a target in one enemy. Next time that enemy receives damage, it will be more than doubled. Cannot place two targets at the same time.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 15 },
+  },
+  survival_4:{
+    id: 'survival_4',
+    name: { es: 'Insight', en: 'Perspicacia' },
+    description: {
+      es: 'Coloca un blanco en un enemigo. La próxima vez que ese enemigo reciba daño físico, recibirá un golpe crítico garantizado. No puede haber dos blancos al mismo tiempo.',
+      en: 'Places a target in one enemy. Next time that enemy receives physical damage, it will be a guaranteed critical hit. Cannot place two targets at the same time.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 22 },
+  },
+
+  // --- weakness injection ---
+
+  weakness_1:{
+    id: 'weakness_1',
+    name: { es: 'Hipnosis física 1', en: 'Physical hypnosis 1' },
+    description: {
+      es: 'Crea una debilidad puntual a una afinidad aleatoria entre cortante, contundente y perforante a un enemigo.',
+      en: 'Creates a one-time weakness to one random affinity among slash, blunt and pierce to one enemy.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 33 },
+  },
+  weakness_2:{
+    id: 'weakness_2',
+    name: { es: 'Hipnosis elemental 1', en: 'Elemental hypnosis 1' },
+    description: {
+      es: 'Crea una debilidad puntual a una afinidad aleatoria entre fuego, hielo, trueno y viento a un enemigo.',
+      en: 'Creates a one-time weakness to one random affinity among fire, ice, thunder and wind to one enemy.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 33 },
+  },
+  weakness_3:{
+    id: 'weakness_3',
+    name: { es: 'Hipnosis espiritual 1', en: 'Spirit hypnosis 1' },
+    description: {
+      es: 'Crea una debilidad puntual a una afinidad aleatoria entre nuclear, psíquico, bendición y maldición a un enemigo.',
+      en: 'Creates a one-time weakness to one random affinity among nuclear, psychic, bless and curse to one enemy.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 33 },
+  },
+  weakness_4:{
+    id: 'weakness_4',
+    name: { es: 'Hipnosis general', en: 'General hypnosis 1' },
+    description: {
+      es: 'Crea una debilidad puntual a una afinidad aleatoria a un enemigo.',
+      en: 'Creates a one-time weakness to one random affinity to one enemy.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 24 },
+  },
+  weakness_5:{
+    id: 'weakness_5',
+    name: { es: 'Hipnosis física 2', en: 'Physical hypnosis 2' },
+    description: {
+      es: 'Crea una debilidad puntual a cortante, contundente y perforante a un enemigo. Cuando una de ellas desaparezca, el resto lo harán también.',
+      en: 'Creates a one-time weakness to slash, blunt and pierce to one enemy. When one wears out, the others will as well.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 54 },
+  },
+  weakness_6:{
+    id: 'weakness_6',
+    name: { es: 'Hipnosis elemental 2', en: 'Elemental hypnosis 2' },
+    description: {
+      es: 'Crea una debilidad puntual a fuego, hielo, trueno y viento a un enemigo. Cuando una de ellas desaparezca, el resto lo harán también.',
+      en: 'Creates a one-time weakness to fire, ice, thunder and wind to one enemy. When one wears out, the others will as well.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 54 },
+  },
+  weakness_7:{
+    id: 'weakness_7',
+    name: { es: 'Hipnosis espiritual 2', en: 'Spirit hypnosis 2' },
+    description: {
+      es: 'Crea una debilidad puntual a nuclear, psíquico, bendición y maldición a un enemigo. Cuando una de ellas desaparezca, el resto lo harán también.',
+      en: 'Creates a one-time weakness to nuclear, psychic, bless and curse to one enemy. When one wears out, the others will as well.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 54 },
+  },
 
 
-  // --- others ---
+  // --- monk ---
+  
+  monk_1:{
+    id: 'monk_1',
+    name: { es: 'Grito de guerra', en: 'Battle cry' },
+    description: {
+      es: 'Aumenta su propio ataque y su propia defensa en un nivel durante 2 turnos.',
+      en: 'Raises own attack and defense by one level for 2 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 4 },
+  },
+  monk_2:{
+    id: 'monk_2',
+    name: { es: 'Discípulo diligente', en: 'Diligent disciple' },
+    description: {
+      es: 'Incrementa la probabilidad de infligir golpes críticos en un +5%.',
+      en: 'Increases chance of inflicting critical hits by +5%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  monk_3:{
+    id: 'monk_3',
+    name: { es: 'Meditación', en: 'Meditation' },
+    description: {
+      es: 'Cura una cantidad moderada HP propios y cura confusión, quemadura, veneno, mareo y furia.',
+      en: 'Moderately heals own HP and cures confusion, burn, poison, dizzy and rage.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  monk_4:{
+    id: 'monk_4',
+    name: { es: 'Espíritu de adversidad', en: 'Spirit of adversity' },
+    description: {
+      es: 'Con baja vida aumenta en un +20% la probabilidad de infligir golpes críticos.',
+      en: 'When low in HP, +20% chance of dealing critical hits.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  monk_5:{
+    id: 'monk_5',
+    name: { es: 'Maestro de la evasión', en: 'Dodge master' },
+    description: {
+      es: 'Inmunidad a golpes críticos.',
+      en: 'Cannot be dealt critical hits.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  monk_6:{
+    id: 'monk_6',
+    name: { es: 'Puños mágicos', en: 'Magical fists' },
+    description: {
+      es: 'Los golpes básicos con puños o habilidades de puños no calculan el daño con la Resistencia sino con el valor más bajo entre Resistencia, Constitución y Voluntad.',
+      en: 'Normal attacks with fists and fist skills don\'t calculate damage with Resistance but with the lowest of Resistance, Constitution and Will.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  monk_7:{
+    id: 'monk_7',
+    name: { es: 'Defensa innata', en: 'Innate defense' },
+    description: {
+      es: 'Defensa +15% sin tener armadura pesada equipada.',
+      en: 'While not wearing heavy armor, defense +15%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  monk_8:{
+    id: 'monk_8',
+    name: { es: 'Maestro de la batalla', en: 'Battle Master' },
+    description: {
+      es: 'Inmunidad a todos los estados alterados.',
+      en: 'Immunity to all status ailments.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
 
+  
+  // --- warrior ---
 
-  // --- protagonist ---
+  warrior_1:{
+    id: 'warrior_1',
+    name: { es: 'Doble golpe', en: 'Double hit' },
+    description: {
+      es: 'Los ataques básicos golpean dos veces',
+      en: 'Normal attacks hit twice.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  warrior_2:{
+    id: 'warrior_2',
+    name: { es: 'Postura dura', en: 'Sturdy stance' },
+    description: {
+      es: 'No puede esquivar, pero siempre recibe daño reducido a la mitad.',
+      en: 'Cannot dodge, but all damage is reduced to half.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  warrior_3:{
+    id: 'warrior_3',
+    name: { es: 'Remontada victoriosa', en: 'Comeback victory' },
+    description: {
+      es: 'Recupera 20% de HP al derrotar a un enemigo.',
+      en: 'Recovers 20% HP after defeating an enemy.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  warrior_4:{
+    id: 'warrior_4',
+    name: { es: 'Confianza ciega', en: 'Blind trust' },
+    description: {
+      es: 'Cuando transcurre un turno entero sin infligir daño, al siguiente turno las habilidades con espada y katana infligirán el doble de daño e ignorarán aumentos y penalizaciones en precisión y evasión.',
+      en: 'When user spends one full turn without attacking, the next turn all sword and katana attacks will inflict double the damage, and ignore buffs and debuffs in hit and evasion.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  warrior_5:{
+    id: 'warrior_5',
+    name: { es: 'Todo o nada', en: 'All-in' },
+    description: {
+      es: 'Reduce ligeramente la precisión de todas las habilidades de maza y martillo, pero incrementa considerablemente su daño.',
+      en: 'Slightly reduces hit rate of all mace and hammer skills, but makes them considerably stronger.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  warrior_6:{
+    id: 'warrior_6',
+    name: { es: 'Dejarse la piel', en: 'Giving it all' },
+    description: {
+      es: 'Aumenta en un 5% el daño de todas las habilidades físicas, pero pierde un 4% de HP cada vez que inflige daño a un enemigo.',
+      en: 'Increases all physical skills damage by 5%, but loses 4% HP for every damage inflicted.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  warrior_7:{
+    id: 'warrior_7',
+    name: { es: 'Maestro de la puntería', en: 'Aim Master' },
+    description: {
+      es: 'Si durante un turno entero no cambia de fila, en el siguiente ataque aumenta su precisión un +15%.',
+      en: 'If stays in the same row for one whole turn, next attack increases hit rate by +15%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  
+  // --- protagonist --- [Passive] Increases likelihood of receiving rare items after battles by 20%.
 
+  protagonist_1:{
+    id: 'protagonist_1',
+    name: { es: 'Persecución grupal', en: 'Cooperative chase' },
+    description: {
+      es: 'Los compañeros atacan de forma muchísimo más frecuente a los enemigos en combate de acción.',
+      en: 'Partners attack much more frequently in overworld combat.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  protagonist_2:{
+    id: 'protagonist_2',
+    name: { es: 'Cazatesoros', en: 'Treasure hunter' },
+    description: {
+      es: 'Aumenta la probabilidad de recibir objetos raros tras la batalla en 20%.',
+      en: 'Increases likelihood of receiving rare items after battles by 20%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  protagonist_3:{
+    id: 'protagonist_3',
+    name: { es: 'Líder supremo', en: 'Supreme leader' },
+    description: {
+      es: 'Aumenta los HP máximos en +15%, los MP máximos +6% y todos los demás atributos en +4%. Acumulable con otros efectos.',
+      en: 'Increases max HP by +15%, max MP by +6% and all other characteristics by 4%. Stacks.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  protagonist_4:{
+    id: 'protagonist_4',
+    name: { es: 'Ejecución noble', en: 'Noble defeat' },
+    description: {
+      es: 'Si un ataque mata a al menos un enemigo, no pierde ningún icono de turno.',
+      en: 'No press turns are lost when an attack defeat an enemy.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  protagonist_5:{
+    id: 'protagonist_5',
+    name: { es: 'Esquiva noble', en: 'Noble dodge' },
+    description: {
+      es: 'Cuando esquiva o anula un ataque enemigo, este pierde un icono de turno más de lo normal.',
+      en: 'Makes enemies lose one more press turn when dodging or nullifying an attack.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  protagonist_6:{
+    id: 'protagonist_6',
+    name: { es: 'Prueba de valor', en: 'Hero\'s proving' },
+    description: {
+      es: 'Aumenta su propio ataque, defensa, precisión y evasión en 3 niveles durante 3 turnos.',
+      en: 'Raises own attack, defense, hit and evasion by 3 levels for three turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 69 },
+  },
+  protagonist_7:{
+    id: 'protagonist_7',
+    name: { es: 'Infinite morale', en: 'Moral infinita' },
+    description: {
+      es: 'Recupera el 4% de los HP y el 2% de los MP cada turno.',
+      en: 'Recovers 4% HP and 2% MP every turn.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  protagonist_8:{
+    id: 'protagonist_8',
+    name: { es: 'Grito heroico', en: 'Hero\'s cry' },
+    description: {
+      es: 'Añade 4 medios iconos de turno (una vez por combate).',
+      en: 'Adds 4 half press turn icons (once per battle).',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 1 },
+  },
+  protagonist_9:{
+    id: 'protagonist_9',
+    name: { es: 'Espada de armagedón', en: 'Armaggedon blade' },
+    description: {
+      es: 'Inflige daño leve mágico todopoderoso a un enemigo. Siempre golpea debilidad del enemigo.',
+      en: 'Deals light magic almighty damage to an enemy. Always strikes as weakness.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 60 },
+  },
+  protagonist_10:{
+    id: 'protagonist_10',
+    name: { es: 'Resistir todo', en: 'Resist all' },
+    description: {
+      es: 'Cambia todas las afinidades con debilidad o neutras a resistencias.',
+      en: 'Changes all weakness and neutral affinities to resist.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  protagonist_11:{
+    id: 'protagonist_11',
+    name: { es: 'Mil verdades', en: 'Myriad truths' },
+    description: {
+      es: 'Inflige daño grave mágico todopoderoso a todos los enemigos 4 veces.',
+      en: 'Deals heavy magic almighty damage to all enemies 4 times.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 99 },
+  },
+  protagonist_12:{
+    id: 'protagonist_12',
+    name: { es: 'Espada de la rebelión', en: 'Rebellion blade' },
+    description: {
+      es: 'Inflige daño extremo físico todopoderoso a un enemigo. Inflige el doble de daño si está aturdido.',
+      en: 'Deals extreme physical almighty damage to one enemy. Doubles damage if enemy is down.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 99 },
+  },
 
 }
