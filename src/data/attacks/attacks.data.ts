@@ -33,7 +33,7 @@ export const ATTACKS: Record<string, Attack> = {
       es: 'Con grimorio. Inflige daño físico contundente medio a un enemigo.',
       en: 'With grimoire. Deals medium blunt physical damage to one enemy.',
     },
-    element: 'slash',
+    element: 'blunt',
     cost: { kind: 'mp', amount: 4 },
   },
   grimoire_2: {
@@ -43,7 +43,7 @@ export const ATTACKS: Record<string, Attack> = {
       es: 'Con grimorio. Inflige daño físico contundente medio a todos los enemigos.',
       en: 'With grimoire. Deals medium blunt physical damage to one enemy.',
     },
-    element: 'slash',
+    element: 'blunt',
     cost: { kind: 'mp', amount: 10 },
   },
   grimoire_3: {
@@ -53,7 +53,7 @@ export const ATTACKS: Record<string, Attack> = {
       es: 'Con grimorio. Inflige daño físico contundente grave a un enemigo.',
       en: 'With grimoire. Deals heavy blunt physical damage to one enemy.',
     },
-    element: 'slash',
+    element: 'blunt',
     cost: { kind: 'mp', amount: 10 },
   },
   staff_1: {
@@ -63,7 +63,7 @@ export const ATTACKS: Record<string, Attack> = {
       es: 'Con bastón. Inflige daño físico contundente medio a un enemigo.',
       en: 'With staff. Deals medium blunt physical damage to one enemy.',
     },
-    element: 'slash',
+    element: 'blunt',
     cost: { kind: 'mp', amount: 4 },
   },
   staff_2: {
@@ -73,7 +73,7 @@ export const ATTACKS: Record<string, Attack> = {
       es: 'Con bastón. Inflige daño físico contundente medio a todos los enemigos.',
       en: 'With staff. Deals medium blunt physical damage to one enemy.',
     },
-    element: 'slash',
+    element: 'blunt',
     cost: { kind: 'mp', amount: 10 },
   },
   staff_3: {
@@ -83,7 +83,7 @@ export const ATTACKS: Record<string, Attack> = {
       es: 'Con bastón. Inflige daño físico contundente grave a un enemigo.',
       en: 'With staff. Deals heavy blunt physical damage to one enemy.',
     },
-    element: 'slash',
+    element: 'blunt',
     cost: { kind: 'mp', amount: 10 },
   },
 
@@ -451,6 +451,16 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'blunt',
     cost: { kind: 'hp_percent', amount: 6 },
   },
+  fists_1a: {
+    id: 'fists_1a',
+    name: { es: 'Terapia de choque', en: 'Zan therapy' },
+    description: {
+      es: 'Con puños. Inflige daño físico contundente leve a un enemigo. Probabilidad media de infligir amnesia.',
+      en: 'With fists. Deals light blunt physical damage to one enemy. Medium chance of inflicting amnesia.',
+    },
+    element: 'blunt',
+    cost: { kind: 'hp_percent', amount: 12 },
+  },
   fists_2: {
     id: 'fists_2',
     name: { es: 'Onda de golpes', en: 'Wave of blows' },
@@ -470,6 +480,16 @@ export const ATTACKS: Record<string, Attack> = {
     },
     element: 'blunt',
     cost: { kind: 'hp_percent', amount: 11 },
+  },
+  fists_3m: {
+    id: 'fists_3m',
+    name: { es: 'Finta craneal', en: 'Cranial feint' },
+    description: {
+      es: 'Con puños. Inflige daño físico contundente medio a un enemigo. Probabilidad media de infligir mareo.',
+      en: 'With fists. Deals medium blunt physical damage to one enemy. Medium chance of inflicting dizzy.',
+    },
+    element: 'blunt',
+    cost: { kind: 'hp_percent', amount: 16 },
   },
   fists_4: {
     id: 'fists_4',
@@ -625,7 +645,7 @@ export const ATTACKS: Record<string, Attack> = {
     cost: { kind: 'mp', amount: 17 },
   },
   mace_5ci: {
-    id: 'mace_5pva',
+    id: 'mace_5ci',
     name: { es: 'Juicio de otro mundo', en: 'Out of world judgement' },
     description: {
       es: 'Con maza. Inflige daño físico contundente grave a un enemigo. Inflige mucho más daño a enemigos celestiales e infernales.',
@@ -1680,7 +1700,7 @@ export const ATTACKS: Record<string, Attack> = {
   },
   psychic_9: {
     id: 'psychic_9',
-    name: { es: 'Psicorruptura', en: 'Psycho Break' },
+    name: { es: 'Psicorruptura', en: 'Psycho-break' },
     description: {
       es: 'Inflige daño mágico psíquico extremo a un enemigo, con probabilidad baja de infligir amnesia.',
       en: 'Deals extreme psychic magic damage to one enemy, with a low chance of inflicting forget.',
@@ -2063,6 +2083,36 @@ export const ATTACKS: Record<string, Attack> = {
     },
     element: 'almighty',
     cost: { kind: 'mp', amount: 8 },
+  },
+  almighty_12: {
+    id: 'almighty_12',
+    name: { es: 'Agibufudyne', en: 'Agibufudyne' },
+    description: {
+      es: 'Inflige daño mágico de fuego y de hielo graves a un enemigo.',
+      en: 'Deals heavy fire and ice magic damage to one enemy.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  almighty_13: {
+    id: 'almighty_13',
+    name: { es: 'Ziogarudyne', en: 'Ziogarudyne' },
+    description: {
+      es: 'Inflige daño mágico de trueno y de viento graves a un enemigo.',
+      en: 'Deals heavy thunder and wind magic damage to one enemy.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 20 },
+  },
+  almighty_14: {
+    id: 'almighty_14',
+    name: { es: 'Freipsiodyne', en: 'Freipsiodyne' },
+    description: {
+      es: 'Inflige daño mágico nuclear y psíquico graves a un enemigo.',
+      en: 'Deals heavy nuclear and psychic magic damage to one enemy.',
+    },
+    element: 'almighty',
+    cost: { kind: 'mp', amount: 20 },
   },
 
   // --- status ---
@@ -2724,8 +2774,8 @@ export const ATTACKS: Record<string, Attack> = {
     id: 'double_7',
     name: { es: 'Preparación médica', en: 'Medic tool warmup' },
     description: {
-      es: 'La siguiente curación o resurrección recuperará más del doble de HP.',
-      en: "The next heal or revival will recover more than double the HP.",
+      es: 'La siguiente curación o resurrección recuperará más del doble de HP y podrá sobrepasar los HP máximos. No aplica con Salvación.',
+      en: "The next heal or revival will recover more than double the HP and heal over max HP. Doesn\'t apply to Salvation.",
     },
     element: 'support',
     cost: { kind: 'mp', amount: 10 },
@@ -2802,7 +2852,7 @@ export const ATTACKS: Record<string, Attack> = {
   },
   protect_5:{
     id: 'protect_5',
-    name: { es: 'Muro de congelación cerebral', en: 'Brain freeze wall' },
+    name: { es: 'Muro de ventisca cerebral', en: 'Brain blizzard wall' },
     description: {
       es: 'Levanta una protección sobre un aliado que reduce a la mitad todo el daño de hielo y psíquico recibido y cubre debilidades innatas a ambos durante 3 turnos.',
       en: 'Erects a shield on one ally to halve ice and psychic damage received and cover innate weaknesses to them for 3 turns.',
@@ -2932,20 +2982,20 @@ export const ATTACKS: Record<string, Attack> = {
   },
   break_5:{
     id: 'break_5',
-    name: { es: 'Wind Break', en: 'Wind Break' },
+    name: { es: 'Thunder Break', en: 'Thunder Break' },
     description: {
-      es: 'Elimina resistencias a viento de todos los enemigos durante 3 turnos.',
-      en: 'Suppresses innate Wind resistances of all foes for 3 turns.',
+      es: 'Elimina resistencias a trueno de todos los enemigos durante 3 turnos.',
+      en: 'Suppresses innate Thunder resistances of all foes for 3 turns.',
     },
     element: 'support',
     cost: { kind: 'mp', amount: 6 },
   },
   break_6:{
     id: 'break_6',
-    name: { es: 'Thunder Break', en: 'Thunder Break' },
-    description: {
-      es: 'Elimina resistencias a trueno de todos los enemigos durante 3 turnos.',
-      en: 'Suppresses innate Thunder resistances of all foes for 3 turns.',
+      name: { es: 'Wind Break', en: 'Wind Break' },
+      description: {
+        es: 'Elimina resistencias a viento de todos los enemigos durante 3 turnos.',
+        en: 'Suppresses innate Wind resistances of all foes for 3 turns.',
     },
     element: 'support',
     cost: { kind: 'mp', amount: 6 },
@@ -2999,6 +3049,36 @@ export const ATTACKS: Record<string, Attack> = {
     },
     element: 'support',
     cost: { kind: 'mp', amount: 9 },
+  },
+  break_12:{
+    id: 'break_12',
+    name: { es: 'Bless Break', en: 'Bless Break' },
+    description: {
+      es: 'Elimina resistencias a bendición de todos los enemigos durante 3 turnos.',
+      en: 'Suppresses innate Bless resistances of all foes for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 7 },
+  },
+  break_13:{
+    id: 'break_13',
+    name: { es: 'Curse Break', en: 'Curse Break' },
+    description: {
+      es: 'Elimina resistencias a maldición de todos los enemigos durante 3 turnos.',
+      en: 'Suppresses innate Curse resistances of all foes for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 7 },
+  },
+  break_14:{
+    id: 'break_14',
+    name: { es: 'Physic Break', en: 'Physic Break' },
+    description: {
+      es: 'Elimina resistencias a cortante, contundente y perforante de todos los enemigos durante 3 turnos.',
+      en: 'Suppresses innate Blunt, Slash and Pierce resistances of all foes for 3 turns.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 20 },
   },
 
   // --- overworld ---
@@ -3073,13 +3153,23 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'passive',
     cost: { kind: 'none', amount: 0 },
   },
+  overworld_8:{
+    id: 'overworld_8',
+    name: { es: 'Alto voltaje', en: 'High voltage' },
+    description: {
+      es: 'En los combates que comiencen con emboscada a favor, probabilidad de golpe crítico +10%.',
+      en: 'Critical rate +10% when ambushing the enemy.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
 
   
 
   // --- passive ---
 
   passive_atr_1:{
-    id: 'passive_1',
+    id: 'passive_atr_1',
     name: { es: 'Más ataque físico', en: 'Enhance physical attack' },
     description: {
       es: 'El daño de cualquier ataque calculado con Fuerza aumenta un +5%.',
@@ -3089,7 +3179,7 @@ export const ATTACKS: Record<string, Attack> = {
     cost: { kind: 'none', amount: 0 },
   },
   passive_atr_2:{
-    id: 'passive_2',
+    id: 'passive_atr_2',
     name: { es: 'Más ataque elemental', en: 'Enhance elemental attack' },
     description: {
       es: 'El daño de cualquier ataque calculado con Inteligencia aumenta un +5%.',
@@ -3099,7 +3189,7 @@ export const ATTACKS: Record<string, Attack> = {
     cost: { kind: 'none', amount: 0 },
   },
   passive_atr_3:{
-    id: 'passive_3',
+    id: 'passive_atr_3',
     name: { es: 'Más ataque espiritual', en: 'Enhance spiritual attack' },
     description: {
       es: 'El daño de cualquier ataque calculado con Sabiduría aumenta un +5%.',
@@ -3109,7 +3199,7 @@ export const ATTACKS: Record<string, Attack> = {
     cost: { kind: 'none', amount: 0 },
   },
   passive_atr_4:{
-    id: 'passive_4',
+    id: 'passive_atr_4',
     name: { es: 'Más defensa física', en: 'Enhance physical defense' },
     description: {
       es: 'El daño de cualquier ataque recibido que se calcule con Resistencia disminuye un 5%.',
@@ -3119,7 +3209,7 @@ export const ATTACKS: Record<string, Attack> = {
     cost: { kind: 'none', amount: 0 },
   },
   passive_atr_5:{
-    id: 'passive_5',
+    id: 'passive_atr_5',
     name: { es: 'Más defensa elemental', en: 'Enhance elemental defense' },
     description: {
       es: 'El daño de cualquier ataque recibido que se calcule con Inteligencia disminuye un 5%.',
@@ -3129,7 +3219,7 @@ export const ATTACKS: Record<string, Attack> = {
     cost: { kind: 'none', amount: 0 },
   },
   passive_atr_6:{
-    id: 'passive_6',
+    id: 'passive_atr_6',
     name: { es: 'Más defensa espiritual', en: 'Enhance spiritual defense' },
     description: {
       es: 'El daño de cualquier ataque recibido que se calcule con Sabiduría disminuye un 5%.',
@@ -3139,7 +3229,7 @@ export const ATTACKS: Record<string, Attack> = {
     cost: { kind: 'none', amount: 0 },
   },
   passive_atr_7:{
-    id: 'passive_7',
+    id: 'passive_atr_7',
     name: { es: 'Más HP', en: 'Enhance HP' },
     description: {
       es: 'Aumenta los HP máximos en un +15%.',
@@ -3149,11 +3239,21 @@ export const ATTACKS: Record<string, Attack> = {
     cost: { kind: 'none', amount: 0 },
   },
   passive_atr_8:{
-    id: 'passive_8',
+    id: 'passive_atr_8',
     name: { es: 'Más MP', en: 'Enhance MP' },
     description: {
       es: 'Aumenta los MP máximos en un +6%.',
       en: 'Increases max MP by +6%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_atr_9:{
+    id: 'passive_atr_9',
+    name: { es: 'Más precisión', en: 'Enhance hit rate' },
+    description: {
+      es: 'Aumenta la precisión de los ataques en un +10%.',
+      en: 'Increases hit rate by +10%.',
     },
     element: 'passive',
     cost: { kind: 'none', amount: 0 },
@@ -3490,10 +3590,10 @@ export const ATTACKS: Record<string, Attack> = {
   },
   passive_up_34:{
     id: 'passive_up_34',
-    name: { es: 'Mejorar robo', en: 'Improve stealing' },
+    name: { es: 'Mejorar puños', en: 'Hardened fists' },
     description: {
-      es: 'Aumenta muchísimo la probabilidad de éxito de la habilidad Robar.',
-      en: 'Makes it extremely likely to Steal successfully.',
+      es: 'Cualquier daño infligido con puños aumenta un +4% y la probabilidad de golpe crítico en un +4%.',
+      en: 'Any damage dealt with fists increases by +4%, and critical rate increases by +4%.',
     },
     element: 'passive',
     cost: { kind: 'none', amount: 0 },
@@ -3614,6 +3714,26 @@ export const ATTACKS: Record<string, Attack> = {
     description: {
       es: 'Cualquier daño infligido con nigromancia aumenta un +20%.',
       en: 'Any damage dealt with nigromance magic increases by +20%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_47:{
+    id: 'passive_up_47',
+    name: { es: 'Mejorar escudo', en: 'Improve shield' },
+    description: {
+      es: 'Cualquier daño infligido con escudo aumenta un +9%.',
+      en: 'Any damage dealt with shield increases by +9%.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  passive_up_48:{
+    id: 'passive_up_48',
+    name: { es: 'Mejorar robo', en: 'Improve stealing' },
+    description: {
+      es: 'Aumenta muchísimo la probabilidad de éxito de la habilidad Robar.',
+      en: 'Makes it extremely likely to Steal successfully.',
     },
     element: 'passive',
     cost: { kind: 'none', amount: 0 },
@@ -3750,20 +3870,20 @@ export const ATTACKS: Record<string, Attack> = {
   },
   passive_resist_3:{
     id: 'passive_resist_3',
-    name: { es: 'Resistir viento', en: 'Resist wind' },
+    name: { es: 'Resistir trueno', en: 'Resist elec' },
     description: {
-      es: 'Sustituye afinidad a viento Débil y Neutro por Resistente.',
-      en: 'Changes wind Weakness and Neutral affinity to Resist',
+      es: 'Sustituye afinidad a trueno Débil y Neutro por Resistente.',
+      en: 'Changes thunder Weakness and Neutral affinity to Resist',
     },
     element: 'passive',
     cost: { kind: 'none', amount: 0 },
   },
   passive_resist_4:{
     id: 'passive_resist_4',
-    name: { es: 'Resistir trueno', en: 'Resist elec' },
+    name: { es: 'Resistir viento', en: 'Resist wind' },
     description: {
-      es: 'Sustituye afinidad a trueno Débil y Neutro por Resistente.',
-      en: 'Changes thunder Weakness and Neutral affinity to Resist',
+      es: 'Sustituye afinidad a viento Débil y Neutro por Resistente.',
+      en: 'Changes wind Weakness and Neutral affinity to Resist',
     },
     element: 'passive',
     cost: { kind: 'none', amount: 0 },
@@ -4133,8 +4253,8 @@ export const ATTACKS: Record<string, Attack> = {
   // --- line-exclusive ---
 
   // --- summon ---
-  passive_summon_1:{
-    id: 'passive_summon_1',
+  summon_1:{
+    id: 'summon_1',
     name: { es: 'Invocar tauro', en: 'Summon tauros' },
     description: {
       es: 'Inflige daño mágico contundente leve a un enemigo. Ignora resistencias.',
@@ -4143,8 +4263,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'blunt',
     cost: { kind: 'mp', amount: 8 },
   },
-  passive_summon_2:{
-    id: 'passive_summon_2',
+  summon_2:{
+    id: 'summon_2',
     name: { es: 'Invocar soldado esquelético', en: 'Summon duskbone soldier' },
     description: {
       es: 'Inflige daño mágico cortante leve a un enemigo. Ignora resistencias.',
@@ -4153,8 +4273,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'slash',
     cost: { kind: 'mp', amount: 8 },
   },
-  passive_summon_3:{
-    id: 'passive_summon_3',
+  summon_3:{
+    id: 'summon_3',
     name: { es: 'Invocar goblin', en: 'Summon goblin' },
     description: {
       es: 'Inflige daño mágico perforante leve a un enemigo. Ignora resistencias.',
@@ -4163,8 +4283,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'pierce',
     cost: { kind: 'mp', amount: 8 },
   },
-  passive_summon_4:{
-    id: 'passive_summon_4',
+  summon_4:{
+    id: 'summon_4',
     name: { es: 'Invocar rey guptauro', en: 'Summon guptauros king' },
     description: {
       es: 'Inflige daño mágico contundente grave a todos los enemigos. Ignora resistencias.',
@@ -4173,8 +4293,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'blunt',
     cost: { kind: 'mp', amount: 42 },
   },
-  passive_summon_5:{
-    id: 'passive_summon_5',
+  summon_5:{
+    id: 'summon_5',
     name: { es: 'Invocar caballero esquelético', en: 'Summon duskbone knight' },
     description: {
       es: 'Inflige daño mágico cortante grave a todos los enemigos. Ignora resistencias.',
@@ -4183,8 +4303,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'slash',
     cost: { kind: 'mp', amount: 42 },
   },
-  passive_summon_6:{
-    id: 'passive_summon_6',
+  summon_6:{
+    id: 'summon_6',
     name: { es: 'Invocar rey goblin', en: 'Summon king goblin' },
     description: {
       es: 'Inflige daño mágico perforante grave a todos los enemigos. Ignora resistencias.',
@@ -4193,8 +4313,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'pierce',
     cost: { kind: 'mp', amount: 42 },
   },
-  passive_summon_7:{
-    id: 'passive_summon_7',
+  summon_7:{
+    id: 'summon_7',
     name: { es: 'Invocar hada', en: 'Summon fairy' },
     description: {
       es: 'Inflige daño mágico de hielo leve dos veces y mágico nuclear leve dos veces a un enemigo. Ignora resistencias.',
@@ -4203,8 +4323,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'almighty',
     cost: { kind: 'mp', amount: 22 },
   },
-  passive_summon_8:{
-    id: 'passive_summon_8',
+  summon_8:{
+    id: 'summon_8',
     name: { es: 'Invocar cocatriz', en: 'Summon cocatrice' },
     description: {
       es: 'Inflige daño mágico de trueno medio una vez y mágico de maldición medio una vez a todos los enemigos. Ignora resistencias.',
@@ -4213,8 +4333,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'almighty',
     cost: { kind: 'mp', amount: 28 },
   },
-  passive_summon_9:{
-    id: 'passive_summon_9',
+  summon_9:{
+    id: 'summon_9',
     name: { es: 'Invocar bestia de lava', en: 'Summon lava beast' },
     description: {
       es: 'Inflige daño mágico grave todopoderoso a todos los enemigos y baja su precisión y evasión en un nivel durante 3 turnos. Ignora resistencias.',
@@ -4223,8 +4343,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'almighty',
     cost: { kind: 'mp', amount: 52 },
   },
-  passive_summon_10:{
-    id: 'passive_summon_10',
+  summon_10:{
+    id: 'summon_10',
     name: { es: 'Invocar León Águila', en: 'Summon Eagle Lion' },
     description: {
       es: 'Inflige daño mágico leve de viento a todos los enemigos entre 10 y 15 veces. Ignora resistencias.',
@@ -4233,8 +4353,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'wind',
     cost: { kind: 'mp', amount: 55 },
   },
-  passive_summon_11:{
-    id: 'passive_summon_11',
+  summon_11:{
+    id: 'summon_11',
     name: { es: 'Invocar azotamentes', en: 'Summon illithid' },
     description: {
       es: 'Inflige daño mágico grave psíquico a todos los enemigos 2 veces. Ignora resistencias.',
@@ -4243,8 +4363,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'psychic',
     cost: { kind: 'mp', amount: 55 },
   },
-  passive_summon_12:{
-    id: 'passive_summon_12',
+  summon_12:{
+    id: 'summon_12',
     name: { es: 'Invocar arcángel', en: 'Summon archangel' },
     description: {
       es: 'Inflige daño mágico grave de bendición a un enemigo 3 veces. Probabilidad baja de infligir miedo. Ignora resistencias.',
@@ -4253,8 +4373,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'light',
     cost: { kind: 'mp', amount: 55 },
   },
-  passive_summon_13:{
-    id: 'passive_summon_13',
+  summon_13:{
+    id: 'summon_13',
     name: { es: 'Invocar hombre lagarto', en: 'Summon lizardman' },
     description: {
       es: 'Inflige daño mágico severo de trueno a todos los enemigos. Probabilidad baja de infligir lavado de cerebro. Ignora resistencias.',
@@ -4263,8 +4383,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'thunder',
     cost: { kind: 'mp', amount: 55 },
   },
-  passive_summon_14:{
-    id: 'passive_summon_14',
+  summon_14:{
+    id: 'summon_14',
     name: { es: 'Invocar gárgola', en: 'Summon gargoyle' },
     description: {
       es: 'Inflige daño mágico severo de fuego a un enemigo. Probabilidad baja de infligir sueño. Ignora resistencias.',
@@ -4273,8 +4393,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'fire',
     cost: { kind: 'mp', amount: 65 },
   },
-  passive_summon_15:{
-    id: 'passive_summon_15',
+  summon_15:{
+    id: 'summon_15',
     name: { es: 'Invocar rey del cementerio', en: 'Summon undead king' },
     description: {
       es: 'Inflige daño mágico grave de maldición a todos los enemigos entre 2 y 3 veces. Probabilidad baja de infligir desesperación. Ignora resistencias.',
@@ -4283,8 +4403,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'dark',
     cost: { kind: 'mp', amount: 65 },
   },
-  passive_summon_16:{
-    id: 'passive_summon_16',
+  summon_16:{
+    id: 'summon_16',
     name: { es: 'Invocar yeti', en: 'Summon yeti' },
     description: {
       es: 'Inflige daño mágico medio de hielo a todos los enemigos entre 4 y 5 veces. Probabilidad baja de infligir mareo. Ignora resistencias.',
@@ -4293,8 +4413,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'ice',
     cost: { kind: 'mp', amount: 65 },
   },
-  passive_summon_17:{
-    id: 'passive_summon_17',
+  summon_17:{
+    id: 'summon_17',
     name: { es: 'Invocar minotauro', en: 'Summon minotaur' },
     description: {
       es: 'Inflige daño mágico severo nuclear a un enemigo. Probabilidad baja de infligir quemadura. Ignora resistencias.',
@@ -4303,8 +4423,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'nuclear',
     cost: { kind: 'mp', amount: 65 },
   },
-  passive_summon_18:{
-    id: 'passive_summon_18',
+  summon_18:{
+    id: 'summon_18',
     name: { es: 'Invocar dios caído', en: 'Summon fallen god' },
     description: {
       es: 'Inflige daño mágico severo cortante, contundente y perforante a un enemigo y disminuye su ataque y su defensa en un nivel durante 3 turnos. Ignora resistencias.',
@@ -4313,8 +4433,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'almighty',
     cost: { kind: 'mp', amount: 85 },
   },
-  passive_summon_19:{
-    id: 'passive_summon_19',
+  summon_19:{
+    id: 'summon_19',
     name: { es: 'Invocar noctiluca', en: 'Summon noctiluca' },
     description: {
       es: 'Cura cualquier estado alterado de un aliado y le hace recuperar un 20% de los HP durante los siguientes 4 turnos.',
@@ -4323,8 +4443,8 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'heal',
     cost: { kind: 'mp', amount: 25 },
   },
-  passive_summon_20:{
-    id: 'passive_summon_19',
+  summon_20:{
+    id: 'summon_19',
     name: { es: 'Invocar amor fraternal', en: 'Summon family grace' },
     description: {
       es: 'Cura una cantidad grande HP de todos los aliados y cura sus estados alterados.',
@@ -5308,7 +5428,7 @@ export const ATTACKS: Record<string, Attack> = {
   },
   monk_2:{
     id: 'monk_2',
-    name: { es: 'Discípulo diligente', en: 'Diligent disciple' },
+    name: { es: 'Discípulo diligente', en: 'Dilligent disciple' },
     description: {
       es: 'Incrementa la probabilidad de infligir golpes críticos en un +5%.',
       en: 'Increases chance of inflicting critical hits by +5%.',
@@ -5450,8 +5570,34 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'passive',
     cost: { kind: 'none', amount: 0 },
   },
+
+
+  // --- stealing ---
   
-  // --- protagonist --- [Passive] Increases likelihood of receiving rare items after battles by 20%.
+  stealing_1:{
+    id: 'stealing_1',
+    name: { es: 'Robar', en: 'Steal' },
+    description: {
+      es: 'Arrebata un objeto a un enemigo.',
+      en: 'Takes an object from one enemy.',
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 1 },
+  },
+  stealing_2:{
+    id: 'stealing_2',
+    name: { es: 'Bomba de humo', en: 'Smoke bomb' },
+    description: {
+      es: 'Aumenta enormemente la probabilidad de huir de los combates normales.',
+      en: 'Hugely increases chance of fleeing any normal battle.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+
+
+  
+  // --- protagonist ---
 
   protagonist_1:{
     id: 'protagonist_1',
