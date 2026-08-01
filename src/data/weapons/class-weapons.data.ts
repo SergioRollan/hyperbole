@@ -82,10 +82,10 @@ export const CLASS_WEAPONS: Record<string, ClassWeaponry> = {
   magnate: { weapons: ['dagger', 'spear', 'sword'], signature: 'spear' },
 
   // --- Explorer line ---
-  explorer: { weapons: ['dagger', 'mace', 'bow'], signature: 'mace' },
-  survivor: { weapons: ['dagger', 'mace', 'bow'], signature: 'mace' },
+  explorer: { weapons: ['axe', 'bow'], signature: 'bow' },
+  survivor: { weapons: ['mace', 'axe', 'bow'], signature: 'bow' },
   apothecary: { weapons: ['mace', 'fist', 'grimoire'], signature: 'mace' },
-  hunter: { weapons: ['dagger', 'mace', 'bow'], signature: 'mace' },
+  hunter: { weapons: ['dagger', 'axe', 'bow'], signature: 'bow' },
 }
 
 /** Returns the weaponry of that class only — never merged with ancestors. */

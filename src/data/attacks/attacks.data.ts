@@ -4891,7 +4891,27 @@ export const ATTACKS: Record<string, Attack> = {
   },
   leadership_7:{
     id: 'leadership_7',
-    name: { es: 'Espíritu de liderazgo', en: 'Leadership spirit' },
+    name: { es: 'Liderazgo de vanguardia', en: 'Vanguard boost' },
+    description: {
+      es: 'Mientras se encuentre en la fila delantera, aumenta el ataque físico de todos los aliados de su misma fila en un +10%.',
+      en: 'While in front row, increases all allies physical attack within the same row by +10%',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  leadership_8:{
+    id: 'leadership_8',
+    name: { es: 'Liderazgo de retaguardia', en: 'Rearguard boost' },
+    description: {
+      es: 'Mientras se encuentre en la fila trasera, aumenta el ataque elemental y espiritual de todos los aliados de su misma fila en un +10%.',
+      en: 'While in back row, increases all allies elemental and spiritual attacks within the same row by +10%',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
+  },
+  leadership_9:{
+    id: 'leadership_9',
+    name: { es: 'Espíritu de dirección', en: 'Leadership spirit' },
     description: {
       es: 'Aumenta su propio ataque, defensa, precisión y evasión en 2 niveles durante 3 turnos.',
       en: 'Raises own attack, defense, hit and evasion by 2 levels for three turns.',
@@ -5007,6 +5027,16 @@ export const ATTACKS: Record<string, Attack> = {
     element: 'passive',
     cost: { kind: 'none', amount: 0 },
   },
+  tricks_5:{
+    id: 'tricks_5',
+    name: { es: 'Traidor', en: 'Traitor' },
+    description: {
+      es: 'Disminuye el ataque, la defensa, la precisión y la evasión de un enemigo en dos niveles durante 3 turnos.',
+      en: "Decreases one enemy's attack/defense/hit/evasion by two levels for 3 turns.",
+    },
+    element: 'support',
+    cost: { kind: 'mp', amount: 58 },
+  },
 
 
   // --- money ---
@@ -5069,7 +5099,7 @@ export const ATTACKS: Record<string, Attack> = {
       en: 'Grants an ally the effect of allowing all attacks to hit all enemies for one turn.',
     },
     element: 'support',
-    cost: { kind: 'mp', amount: 25 },
+    cost: { kind: 'money', amount: 2000 },
   },
   money_7:{
     id: 'money_7',
@@ -5079,7 +5109,7 @@ export const ATTACKS: Record<string, Attack> = {
       en: 'Grants an ally the effect of making all attacks targeting all enemies target one enemy instead, but with double the power.',
     },
     element: 'support',
-    cost: { kind: 'mp', amount: 55 },
+    cost: { kind: 'money', amount: 5000 },
   },
 
 
@@ -5542,6 +5572,20 @@ export const ATTACKS: Record<string, Attack> = {
     },
     element: 'almighty',
     cost: { kind: 'mp', amount: 99 },
+  },
+
+
+
+
+  missingno:{
+    id: 'missingno',
+    name: { es: 'missingno', en: 'missingno' },
+    description: {
+      es: '.',
+      en: '.',
+    },
+    element: 'passive',
+    cost: { kind: 'none', amount: 0 },
   },
 
 }
