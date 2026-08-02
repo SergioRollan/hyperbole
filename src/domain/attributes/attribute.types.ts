@@ -1,6 +1,6 @@
 import type { LocalizedText } from '../i18n/locale.types'
 
-export type AttributeKey =
+export type CoreAttributeKey =
   | 'STR'
   | 'INT'
   | 'WIS'
@@ -10,6 +10,10 @@ export type AttributeKey =
   | 'AGI'
   | 'LCK'
 
+export type VitalAttributeKey = 'HP' | 'MP'
+
+export type AttributeKey = CoreAttributeKey | VitalAttributeKey
+
 export interface AttributeMeta {
   key: AttributeKey
   /** Long display name for the UI (localized). */
@@ -18,7 +22,8 @@ export interface AttributeMeta {
   abbr: LocalizedText
 }
 
-export const ATTRIBUTES: readonly AttributeMeta[] = [
+/** Core combat attributes (scale 0–8). */
+export const CORE_ATTRIBUTES: readonly AttributeMeta[] = [
   { key: 'STR', label: { es: 'Fuerza', en: 'Strength' }, abbr: { es: 'FUE', en: 'STR' } },
   { key: 'INT', label: { es: 'Inteligencia', en: 'Intelligence' }, abbr: { es: 'INT', en: 'INT' } },
   { key: 'WIS', label: { es: 'Sabiduría', en: 'Wisdom' }, abbr: { es: 'SAB', en: 'WIS' } },
@@ -29,5 +34,14 @@ export const ATTRIBUTES: readonly AttributeMeta[] = [
   { key: 'LCK', label: { es: 'Suerte', en: 'Luck' }, abbr: { es: 'SUE', en: 'LCK' } },
 ] as const
 
-/** Stat bonuses granted by a class (all eight attributes, scale 0–8). */
+/** Vital pools (scale 200–999). */
+export const VITAL_ATTRIBUTES: readonly AttributeMeta[] = [
+  { key: 'HP', label: { es: 'Puntos de vida', en: 'Hit points' }, abbr: { es: 'HP', en: 'HP' } },
+  { key: 'MP', label: { es: 'Puntos de magia', en: 'Magic points' }, abbr: { es: 'MP', en: 'MP' } },
+] as const
+
+/** @deprecated Use CORE_ATTRIBUTES or VITAL_ATTRIBUTES. */
+export const ATTRIBUTES = CORE_ATTRIBUTES
+
+/** Stat bonuses granted by a class (eight core attributes + HP/MP). */
 export type StatBonuses = Record<AttributeKey, number>

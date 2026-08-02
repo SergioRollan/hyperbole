@@ -8,7 +8,7 @@ import type {
   RpgClass,
   Weapon,
 } from '../domain'
-import { AFFINITY_LABELS, ATTACK_ELEMENTS, ATTRIBUTES, DAMAGE_ELEMENTS } from '../domain'
+import { AFFINITY_LABELS, ATTACK_ELEMENTS, CORE_ATTRIBUTES, DAMAGE_ELEMENTS, VITAL_ATTRIBUTES } from '../domain'
 import { affinitiesFor } from '../data/affinities/class-affinities.data'
 import { statValue } from '../data/stats/build-stat-bonuses'
 import { statsFor } from '../data/stats/class-stats.data'
@@ -27,6 +27,7 @@ export interface StatBonusEntry {
   label: LocalizedText
   abbr: LocalizedText
   value: number
+  kind: 'core' | 'vital'
 }
 
 /** Weapon resolved for the UI, flagged when it best defines the class. */
@@ -67,11 +68,25 @@ export function useClassDetails(rpgClass: Ref<RpgClass | undefined>) {
     const current = rpgClass.value
     if (!current) return []
     const bonuses = statsFor(current.id)
-    return ATTRIBUTES.map((meta) => ({
+    return CORE_ATTRIBUTES.map((meta) => ({
       key: meta.key,
       label: meta.label,
       abbr: meta.abbr,
       value: statValue(bonuses, meta.key),
+      kind: 'core' as const,
+    }))
+  })
+
+  const vitalBonuses = computed<StatBonusEntry[]>(() => {
+    const current = rpgClass.value
+    if (!current) return []
+    const bonuses = statsFor(current.id)
+    return VITAL_ATTRIBUTES.map((meta) => ({
+      key: meta.key,
+      label: meta.label,
+      abbr: meta.abbr,
+      value: statValue(bonuses, meta.key),
+      kind: 'vital' as const,
     }))
   })
 
@@ -102,5 +117,5 @@ export function useClassDetails(rpgClass: Ref<RpgClass | undefined>) {
     })
   })
 
-  return { attacks, statBonuses, weapons, affinities }
+  return { attacks, statBonuses, vitalBonuses, weapons, affinities }
 }

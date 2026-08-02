@@ -12,8 +12,8 @@ import AttackList from './AttackList.vue'
 
 const selection = useSelectionStore()
 const selectedClass = toRef(selection, 'selectedClass')
-const { attacks, statBonuses, weapons, affinities } = useClassDetails(selectedClass)
-const { t, tm } = useI18n()
+const { attacks, statBonuses, vitalBonuses, weapons, affinities } = useClassDetails(selectedClass)
+const { t, tm, formatLineLabel } = useI18n()
 
 const iconKey = computed(() => selection.selectedLine?.icon ?? '')
 </script>
@@ -26,12 +26,12 @@ const iconKey = computed(() => selection.selectedLine?.icon ?? '')
         <div>
           <h2 class="details__name">{{ t(selectedClass.name) }}</h2>
           <p v-if="selection.selectedLine" class="details__line">
-            {{ tm('line') }} {{ t(selection.selectedLine.name) }}
+            {{ formatLineLabel(selection.selectedLine.name) }}
           </p>
         </div>
       </header>
 
-      <StatBonusList :bonuses="statBonuses" />
+      <StatBonusList :bonuses="statBonuses" :vitals="vitalBonuses" />
       <AffinityTable :affinities="affinities" />
       <WeaponList :weapons="weapons" />
       <AttackList :attacks="attacks" />

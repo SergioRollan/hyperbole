@@ -1,10 +1,14 @@
 import type { AttributeKey, StatBonuses } from '../../domain'
 
-/** Maximum stat value; maps to 100% on the progress bar. */
+/** Maximum core stat value; maps to 100% on the progress bar. */
 export const STAT_BAR_MAX = 8
 
+/** Vital pool range for HP/MP progress bars. */
+export const VITAL_BAR_MIN = 30
+export const VITAL_BAR_MAX = 999
+
 /**
- * Builds a full StatBonuses object from spreadsheet order:
+ * Builds core StatBonuses from spreadsheet order:
  * STR, INT, WIS, RES, CON, WILL, AGI, LCK (scale 0–8).
  */
 export function sb(
@@ -16,6 +20,8 @@ export function sb(
   will = 0,
   agi = 0,
   lck = 0,
+  hp = 200,
+  mp = 200,
 ): StatBonuses {
   return {
     STR: str,
@@ -26,8 +32,11 @@ export function sb(
     WILL: will,
     AGI: agi,
     LCK: lck,
+    HP: hp,
+    MP: mp,
   }
 }
+
 
 export const EMPTY_STATS: StatBonuses = sb()
 

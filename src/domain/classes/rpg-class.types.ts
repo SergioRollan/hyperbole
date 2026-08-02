@@ -19,4 +19,5 @@ export interface RpgClass {
   name: LocalizedText
   attacks: LearnedAttack[]
   evolutions: RpgClass[]
+  phase?: number
 }

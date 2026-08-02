@@ -94,6 +94,13 @@ export const CLASS_AFFINITIES: Record<string, ClassAffinities> = {
   apothecary: { fire: 'weak', nuclear: 'null', thunder: 'null' },
   hunter: { fire: 'weak', ice: 'reflect', thunder: 'resist' },
 
+  protagonist: {
+    blunt: 'resist',
+    slash: 'resist',
+    pierce: 'resist',
+    light: 'null',
+    dark: 'null',
+  },
 }
 
 /** Returns the affinities of that class only — never merged with ancestors. */

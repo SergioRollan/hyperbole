@@ -24,12 +24,20 @@ export function useI18n() {
   /** Resolve a UI message by key. */
   const tm = (key: MessageKey): string => resolveLocalized(MESSAGES[key], locale.value)
 
+  /** "Línea Paladín" (es) / "Paladin line" (en). */
+  const formatLineLabel = (lineName: LocalizedText): string => {
+    const name = resolveLocalized(lineName, locale.value)
+    if (locale.value === 'en') return `${name} ${resolveLocalized(MESSAGES.line, locale.value)}`
+    return `${resolveLocalized(MESSAGES.line, locale.value)} ${name}`
+  }
+
   return {
     locale,
     locales: LOCALES,
     setLocale: (next: LocaleKey) => store.setLocale(next),
     t,
     tm,
+    formatLineLabel,
     isActive: computed(() => (key: LocaleKey) => key === locale.value),
   }
 }

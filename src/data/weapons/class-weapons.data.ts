@@ -86,6 +86,9 @@ export const CLASS_WEAPONS: Record<string, ClassWeaponry> = {
   survivor: { weapons: ['mace', 'axe', 'bow'], signature: 'bow' },
   apothecary: { weapons: ['bow', 'fist', 'axe'], signature: 'bow' },
   hunter: { weapons: ['dagger', 'mace', 'bow'], signature: 'mace' },
+
+  // --- Protagonist line ---
+  protagonist: { weapons: ['sword', 'rapier', 'grimoire'], signature: 'sword' },
 }
 
 /** Returns the weaponry of that class only — never merged with ancestors. */

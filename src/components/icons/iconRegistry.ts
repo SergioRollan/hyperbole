@@ -25,6 +25,7 @@ const LINE_ICONS: Record<string, string> = {
   explorer: 'game-icons:compass',
   captain: 'game-icons:captain-hat-profile',
   artist: 'game-icons:paint-brush',
+  protagonist: 'game-icons:crown',
 }
 
 /** Icons per attack element. */

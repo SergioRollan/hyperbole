@@ -23,7 +23,7 @@ const { t, tm } = useI18n()
 const hasEvolutions = computed(() => props.node.evolutions.length > 0)
 const isExpanded = computed(() => tree.isExpanded(props.node.id))
 const isSelected = computed(() => selection.selectedId === props.node.id)
-const phase = computed(() => props.depth + 1)
+const phase = computed(() => props.node.phase ?? props.depth + 1)
 
 function select(): void {
   router.push({ name: 'class', params: { classId: props.node.id } })

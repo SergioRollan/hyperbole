@@ -5661,7 +5661,7 @@ export const ATTACKS: Record<string, Attack> = {
   },
   protagonist_7:{
     id: 'protagonist_7',
-    name: { es: 'Infinite morale', en: 'Moral infinita' },
+    name: { es: 'Moral infinita', en: 'Infinite morale' },
     description: {
       es: 'Recupera el 4% de los HP y el 2% de los MP cada turno.',
       en: 'Recovers 4% HP and 2% MP every turn.',
