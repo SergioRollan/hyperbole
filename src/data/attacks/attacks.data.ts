@@ -3145,13 +3145,13 @@ export const ATTACKS: Record<string, Attack> = {
   },
   overworld_7:{
     id: 'overworld_7',
-    name: { es: 'Sangre adinerada', en: 'Money bleed' },
+    name: { es: 'Golpe milagroso', en: 'Miracle punch' },
     description: {
       es: 'Si el protagonista recibe un golpe en combate de acción, pierde monedas en lugar de perder HP.',
-      en: 'When the protagonist gets hit in overworld combat, they lose money instead of HP.',
+      en: 'Deals light blunt damage to 1 foe. Very low hit rate, but guaranteed critical hit.',
     },
-    element: 'passive',
-    cost: { kind: 'none', amount: 0 },
+    element: 'blunt',
+    cost: { kind: 'mp', amount: 8 },
   },
   overworld_8:{
     id: 'overworld_8',
