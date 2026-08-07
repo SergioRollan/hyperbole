@@ -3148,7 +3148,7 @@ export const ATTACKS: Record<string, Attack> = {
     name: { es: 'Golpe milagroso', en: 'Miracle punch' },
     description: {
       es: 'Si el protagonista recibe un golpe en combate de acción, pierde monedas en lugar de perder HP.',
-      en: 'Deals light blunt damage to 1 foe. Very low hit rate, but guaranteed critical hit.',
+      en: 'Deals light blunt physical damage to 1 foe. Very low hit rate, but guaranteed critical hit.',
     },
     element: 'blunt',
     cost: { kind: 'mp', amount: 8 },
@@ -5048,7 +5048,7 @@ export const ATTACKS: Record<string, Attack> = {
     name: { es: 'Canción aterradora', en: 'Fearful song' },
     description: {
       es: 'Solo artista, bardo o bailarín. Inflige daño todopoderoso muy leve a todos los enemigos.',
-      en: 'Only artist, bardo or dancer. Deals very light almighty damage to all enemies.',
+      en: 'Only artist, bard or dancer. Deals very light almighty damage to all enemies.',
     },
     element: 'almighty',
     cost: { kind: 'mp', amount: 0 },
@@ -5058,7 +5058,7 @@ export const ATTACKS: Record<string, Attack> = {
     name: { es: 'Último baile', en: 'Last dance' },
     description: {
       es: 'Solo artista, bardo o bailarín. Inflige daño físico cortante a un enemigo, mayor cuantos menos HP restantes se tenga al atacar.',
-      en: 'Only artist, bardo or dancer. Deals slash physical damage, greater the lower HP remaining when used.',
+      en: 'Only artist, bard or dancer. Deals slash physical damage, greater the lower HP remaining when used.',
     },
     element: 'slash',
     cost: { kind: 'mp', amount: 7 },
@@ -5068,7 +5068,7 @@ export const ATTACKS: Record<string, Attack> = {
     name: { es: 'Mimético', en: 'Mimick' },
     description: {
       es: 'Solo artista, bardo o bailarín. Inflige daño físico cortante a un enemigo, mayor cuantos menos HP restantes se tenga al atacar.',
-      en: 'Only artist, bardo or dancer. Deals slash physical damage, greater the lower HP remaining when used.',
+      en: 'Only artist, bard or dancer. Deals slash physical damage, greater the lower HP remaining when used.',
     },
     element: 'slash',
     cost: { kind: 'mp', amount: 12 },
@@ -5078,7 +5078,7 @@ export const ATTACKS: Record<string, Attack> = {
     name: { es: 'Coreografía olímpica', en: 'Olympic choreography' },
     description: {
       es: 'Solo artista, bardo o bailarín. Inflige daño físico cortante a un enemigo, mayor cuantos más HP restantes se tenga al atacar.',
-      en: 'Only artist, bardo or dancer. Deals slash physical damage, greater the higher HP remaining when used.',
+      en: 'Only artist, bard or dancer. Deals slash physical damage, greater the higher HP remaining when used.',
     },
     element: 'slash',
     cost: { kind: 'mp', amount: 30 },
