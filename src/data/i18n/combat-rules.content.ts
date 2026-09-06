@@ -173,6 +173,17 @@ export const COMBAT_RULES: CombatRulesContent = {
       },
     },
     {
+      topic: { es: 'Uso de armas', en: 'Weapons' },
+      ours: {
+        es: 'Conjunto definido de armas, cada línea usará una o más, y podrá tener equipada una en cada mano. Ningún tipo de arma es mejor que el resto, diferenciándose solo en los bonus que puedan recibir en el juego dando lugar a posibles combinaciones, y en el tipo de daño físico que infligen con los ataques básicos y con sus habilidades.',
+        en: 'Set of weapon types, each line may use one or more, and equip one per hand. No type is necessarily better than the others, the only differences are the possible bonus they may receive in-game allowing for combinations, and the type of damage they inflict with normal attack and skills.',
+      },
+      inspired: {
+        es: 'Cada linea tiene un arma que solo pueden utilizar sus arquetipos',
+        en: 'Every line has one weapon type which can be used only by its archetypes.',
+      },
+    },
+    {
       topic: { es: 'Disposición inicial', en: 'Initial availability' },
       ours: {
         es: '11 arquetipos a elegir al comienzo del juego. Los 17 confidentes desbloquean las evoluciones.',
