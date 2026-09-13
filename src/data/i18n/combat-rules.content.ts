@@ -179,8 +179,19 @@ export const COMBAT_RULES: CombatRulesContent = {
         en: 'Set of weapon types, each line may use one or more, and equip one per hand. No type is necessarily better than the others, the only differences are the possible bonus they may receive in-game allowing for combinations, and the type of damage they inflict with normal attack and skills.',
       },
       inspired: {
-        es: 'Cada linea tiene un arma que solo pueden utilizar sus arquetipos',
+        es: 'Cada línea tiene un arma que solo pueden utilizar sus arquetipos',
         en: 'Every line has one weapon type which can be used only by its archetypes.',
+      },
+    },
+    {
+      topic: { es: 'Promoción de clase', en: 'Class promotion' },
+      ours: {
+        es: 'Al finalizar cada fase, los arquetipos pueden promocionar a la siguiente fase, ganando una nueva habilidad y un nuevo bonus a una estadística. El único requisito será llegar al nivel máximo del arquetipo actual y haber alcanzado el rango del confidente necesario en cada caso.',
+        en: 'At the end of each stage, archetypes can promote to the next stage, gaining a new skill and a new bonus to a statistic. The only requirement is to reach the maximum level of the current archetype and have reached the required confidant rank in each case.',
+      },
+      inspired: {
+        es: 'En muchos casos, para promocionar al arquetipo evolucionado, se requiere haber alcanzado además un cierto nivel en otras líneas de arquetipos, factor que restringe a los jugadores las posibilidades de combinaciones que pueden llevar a cabo durante el juego.',
+        en: 'In many cases, in order to promote to the evolved archetype, it is required to have reached a certain level in other archetype lines, which restricts players\' ability to explore combinations they can carry out during the game.',
       },
     },
     {
